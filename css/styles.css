@@ -1,0 +1,184 @@
+/*
+header, div.container {                 /* bloc à supprimer 
+    border: solid 2px red;
+}
+*/
+body {
+    font-family: "Raleway";
+    display: flex;
+    justify-content: center;
+}
+div.container {
+    width: 1440px;
+    padding: 50px 50px 0px 50px;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+h1, h2 {
+    font-size: 22.1px;
+    margin: 0px;
+    display: inline-block;
+    font-weight: 700;
+}
+
+/* header */
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+nav {
+    display: flex;
+    margin-top: -50px;
+}
+nav a {
+    display: block;
+    width: 160px;
+    height: 60px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    line-height: 105px;
+    border-top: solid 5px transparent;
+}
+nav a:hover {
+    border-color: #0065fc;
+    color: #0065fc;
+}
+nav a:focus {
+    color: #0065fc;
+}
+
+
+.logo {
+    margin: -8px 20px;
+}
+.logo img {
+    width: 50%;
+}
+
+
+div.look-for-form {
+    padding-left: 5px;
+    margin-top: 47px;
+}
+h1 + p {
+    margin-top: 10px;
+}
+
+
+.text-input-field {
+    font-size: 18px;
+}
+.text-input-field span {
+    background-color: #f2f2f2;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    margin-top: -2px;
+    border-radius: 20px 0px 0px 20px;
+}
+.text-input-field > input {
+    border: solid 2px #f2f2f2;
+    height: 46px;
+    width: 220px;
+    font-weight: 700;
+    padding: 0px 0px 0px 15px;
+    margin-left: -5px;
+}
+.text-input-field input:focus {
+    outline: none;
+}
+button.desktop-version {
+    height: 50px;
+    margin-left: -5px;
+    padding: 0px 20px;
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+    background-color: #0065fc;
+    font-weight: 700;
+    color: white;
+}
+button.mobile-version {
+    display: none;
+}
+
+
+.filter {
+    margin: 30px 10px;
+    font-weight: 700;
+    font-size: 19px;
+}
+.filter-legend {
+    margin-right: 20px;
+}
+.filter input {
+    position: absolute;
+    opacity: 0;
+}
+.filter input:checked + label > span + span {
+    background-color: #0065FC;
+    color: white;
+}
+.filter label {
+    display: inline-block;
+    margin: 0px 10px;
+}
+.filter label > span {
+    display: inline-block;
+    position: relative; 
+    vertical-align: middle;
+    border-radius: 32px;
+}
+.filter label > span + span {
+    height: 48px;
+    line-height: 48px;
+    padding: 0px 20px 0px 56px;
+    margin-left: -50px;
+    border: solid 2px #d8d8d8;
+    z-index: 0;
+}
+.filter label > span + span::first-letter {
+    text-transform: uppercase;
+}
+.filter label:hover > span + span {
+    background-color: #f2f2f2;
+}
+.filter label > span:first-child {
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    background-color: #deebff;
+    z-index: 1;
+}
+.filter i {
+    color: #0065fc;
+}
+
+
+.info i, .info span {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 24px;
+}
+.info i {
+    border: solid 2px #f2f2f2;
+    border-radius: 16px;
+    color: #0065fc;
+}
+.info span {
+    margin-left: 10px;
+}
