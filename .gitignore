@@ -1,0 +1,2 @@
+# exclude all config files
+.vscode/*
