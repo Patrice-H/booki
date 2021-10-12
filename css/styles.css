@@ -10,7 +10,7 @@ body {
 }
 div.container {
     width: 1440px;
-    padding: 50px 50px 0px 50px;
+    /*padding: 50px 50px 0px 50px;*/
 }
 li {
     list-style-type: none;
@@ -25,9 +25,23 @@ h1, h2 {
     display: inline-block;
     font-weight: 700;
 }
+figcaption {
+    font-weight: 700;
+}
+.star-on {
+    color: #0065fc;
+}
+.star-off {
+    color: #d9d9d9;
+}
 
 /* header */
 
+header {
+    max-width: 1340px;
+    margin: 50px 50px 0;
+
+}
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -181,4 +195,76 @@ button.mobile-version {
 }
 .info span {
     margin-left: 10px;
+}
+
+/* main */
+
+main {
+    margin-top: 10px;
+}
+
+/* section.accommodations */
+
+section.accommodations {
+    background-color: #f2f2f2;
+    max-width: 880px;
+    margin-left: 50px;
+    padding: 0 40px 30px;
+    border-radius: 20px;
+}
+.accommodations h2 {
+    margin-top: 50px;
+}
+div.accommodations-content {
+    margin-top: 20px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+}
+div.card {
+    background-color: white;
+    width: 247px;
+    padding: 5px 0;
+    border-radius: 20px;
+}
+figure {
+    margin: 0px;
+}
+.accommodations img {
+    /*width: 250px;
+    margin-left: -10px;
+    margin-top: -25px;*/
+    margin-left: -2%;
+    margin-top: -10%;
+    width: 104%;
+    object-fit: cover;
+}
+.accommodations > p {
+    font-weight: 700;
+}
+.accommodations > p a:hover {
+    color: #0065fc;
+}
+.card figcaption, .card p {
+    margin: 10px 17px;
+}
+p.price {
+    font-size: 14px;
+}
+div.image {
+    margin: auto;
+    width: 237px;
+    height: 115px;
+    overflow: hidden;
+    
+    border-radius: 15px 15px 0px 0px;
+}
+
+/* aside */
+
+aside {
+    background-color: #f2f2f2;
+    width: 420px
 }
