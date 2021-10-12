@@ -1,8 +1,8 @@
-/*
-header, div.container {                 /* bloc à supprimer 
+
+header, div.container {                 /* bloc à supprimer */
     border: solid 2px red;
 }
-*/
+
 body {
     font-family: "Raleway";
     display: flex;
@@ -10,7 +10,9 @@ body {
 }
 div.container {
     width: 1440px;
-    /*padding: 50px 50px 0px 50px;*/
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
 }
 li {
     list-style-type: none;
@@ -38,11 +40,14 @@ figcaption {
 /* header */
 
 header {
-    max-width: 1340px;
-    margin: 50px 50px 0;
+    /*max-width: 1340px;*/
+    width: 93%;
+    margin-top: 50px;
+    padding: 0 50px;
 
 }
 .header-top {
+    /*width: 1340px;*/
     display: flex;
     justify-content: space-between;
 }
@@ -201,41 +206,48 @@ button.mobile-version {
 
 main {
     margin-top: 10px;
+    
+}
+div.main-top {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    padding: 0 50px;
 }
 
 /* section.accommodations */
 
 section.accommodations {
     background-color: #f2f2f2;
-    max-width: 880px;
-    margin-left: 50px;
+    max-width: 800px;
     padding: 0 40px 30px;
     border-radius: 20px;
+    flex-basis: 534px;
+    /*flex-basis: 741px;*/
+    flex-grow: 0.9;
 }
 .accommodations h2 {
     margin-top: 50px;
 }
 div.accommodations-content {
     margin-top: 20px;
-    height: 500px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: space-between;
+    /*height: 80%;
+    align-items: space-between;*/
 }
 div.card {
     background-color: white;
     width: 247px;
     padding: 5px 0;
+    margin-bottom: 40px;
     border-radius: 20px;
 }
 figure {
     margin: 0px;
 }
 .accommodations img {
-    /*width: 250px;
-    margin-left: -10px;
-    margin-top: -25px;*/
     margin-left: -2%;
     margin-top: -10%;
     width: 104%;
@@ -266,5 +278,71 @@ div.image {
 
 aside {
     background-color: #f2f2f2;
-    width: 420px
+    width: 420px;
+    /*margin-right: 50px;*/
+    border-radius: 20px;
+    /*order: 1;*/
+}
+.aside-top {
+    width: 340px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.aside-top p, .aside-top h2 {
+    margin-top: 50px;
+}
+.aside-top p {
+    font-size: 22.1px; 
+}
+.aside-top a:hover {
+    color: #0065fc;
+}
+div.aside-content {
+    height: 78%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.aside-card {
+    width: 340px;
+    height: 140px;
+    background-color: white;
+    /*margin: 10px auto;*/
+    margin: auto;
+    padding-top: 5px;
+    border-radius: 20px;
+}
+.aside-card figcaption, .aside-card p {
+    margin-left: 147px;
+}
+.aside-card figcaption {
+    margin-top: -115px;
+}
+.aside-card p.price {
+    margin-top: 10px;
+}
+.aside-card p.rate {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 10px;
+}
+aside img {
+    
+    width: 160%;
+    object-fit: cover;
+}
+div.image-popular-card {
+    margin-left: 5px;
+    width: 127px;
+    height: 135px;
+    line-height: 135px;
+    overflow: hidden;
+    border-radius: 15px 0 0 15px;
+}
+
+
+section.activities {
+    margin-top: 10px;
+    /*order: 3;*/
 }
