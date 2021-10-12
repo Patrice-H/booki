@@ -1,8 +1,8 @@
 
-header, div.container {                 /* bloc à supprimer */
+/*header, div.container, section, aside, footer {                 /* bloc à supprimer 
     border: solid 2px red;
 }
-
+*/
 body {
     font-family: "Raleway";
     display: flex;
@@ -215,7 +215,7 @@ div.main-top {
     padding: 0 50px;
 }
 
-/* section.accommodations */
+/* accommodations section */
 
 section.accommodations {
     background-color: #f2f2f2;
@@ -341,8 +341,40 @@ div.image-popular-card {
     border-radius: 15px 0 0 15px;
 }
 
+/* activities section */
 
 section.activities {
     margin-top: 10px;
     /*order: 3;*/
+}
+
+/* footer */
+
+footer {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+}
+footer div {
+    width: 400px;
+    margin-top: 40px;
+    padding: 0 40px;
+}
+footer div:nth-child(3) {
+    padding-bottom: 50px;
+}
+footer h3 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+footer ul {
+    padding: 0;
+    margin: 0;
+}
+
+footer li {
+    margin-top: 10px;
+}
+footer a:hover {
+    color: #0065fc;
 }
