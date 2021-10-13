@@ -21,14 +21,14 @@
         <link rel="stylesheet" href="./css/normalize.css" />
         <link rel="stylesheet" href="./css/styles.css" />
     </head>
-    <body>
-        <div class="container">
+    <body class="flex">
+        <div class="container flex">
             <header>
-                <div class="header-top">
+                <div class="header-top flex">
                     <div class="logo">
-                        <img src="images/logo/Booki.png" alt="Logo Booki" />
+                        <img src="images/logo/Booki.png" alt="Logotype Booki" />
                     </div>
-                    <nav>
+                    <nav class="flex">
                         <a href="#accomodations-anchor">Hébergements</a>
                         <a href="#activities-anchor">Activités</a>
                     </nav>
@@ -103,12 +103,12 @@
                 </div>
             </header>
             <main>
-                <div class="main-top">
+                <div class="main-top flex">
                     <section class="accommodations">
                         <h2 id="accomodations-anchor">Hébergements à Marseille</h2>
-                        <div class="accommodations-content">
+                        <div class="accommodations-content flex">
                             <a href="#">
-                                <div class="card">
+                                <div class="card accommodations-card">
                                     <figure>
                                         <div class="image">
                                             <img
@@ -129,7 +129,7 @@
                                 </div>
                             </a>
                             <a href="#">
-                                <div class="card">
+                                <div class="card accommodations-card">
                                     <figure>
                                         <div class="image">
                                             <img
@@ -150,7 +150,7 @@
                                 </div>
                             </a>
                             <a href="#">
-                                <div class="card">
+                                <div class="card accommodations-card">
                                     <figure>
                                         <div class="image">
                                             <img
@@ -171,7 +171,7 @@
                                 </div>
                             </a>
                             <a href="#">
-                                <div class="card">
+                                <div class="card accommodations-card">
                                     <figure>
                                         <div class="image">
                                             <img
@@ -192,7 +192,7 @@
                                 </div>
                             </a>
                             <a href="#">
-                                <div class="card">
+                                <div class="card accommodations-card">
                                     <figure>
                                         <div class="image">
                                             <img
@@ -213,7 +213,7 @@
                                 </div>
                             </a>
                             <a href="#">
-                                <div class="card">
+                                <div class="card accommodations-card">
                                     <figure>
                                         <div class="image">
                                             <img
@@ -237,15 +237,15 @@
                         <p><a href="#">Afficher plus</a></p>
                     </section>
                     <aside>
-                        <div class="aside-top">
+                        <div class="aside-top flex">
                             <h2>Les plus populaires</h2>
                             <p>
                                 <a href="#"><i class="fas fa-chart-line"></i></a>
                             </p>
                         </div>
-                        <div class="aside-content">
+                        <div class="aside-content flex">
                             <a href="#">
-                                <div class="aside-card">
+                                <div class="card aside-card">
                                     <figure>
                                         <div class="image-popular-card">
                                             <img
@@ -268,7 +268,7 @@
                                 </div>
                             </a>
                             <a href="#">
-                                <div class="aside-card">
+                                <div class="card aside-card">
                                     <figure>
                                         <div class="image-popular-card">
                                             <img
@@ -291,7 +291,7 @@
                                 </div>
                             </a>
                             <a href="#">
-                                <div class="aside-card">
+                                <div class="card aside-card">
                                     <figure>
                                         <div class="image-popular-card">
                                             <img
@@ -315,13 +315,12 @@
                             </a>
                         </div>
                     </aside>
-                </div>
-                
+                </div>               
                 <section class="activities">
                     <h2 id="activities-anchor">Activités à Marseille</h2>
-                    <div class="activities-content">
+                    <div class="activities-content flex">
                         <a href="#">
-                            <figure>
+                            <figure class="card activities-card">
                                 <div class="activities-image port-calanques">
                                     <img
                                         src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
@@ -331,9 +330,9 @@
                                 <figcaption>Vieux Port</figcaption>
                             </figure>
                         </a>
-                        <div class="middle-left">
+                        <div class="superimposed-cards flex">
                             <a href="#">
-                                <figure>
+                                <figure class="card activities-card">
                                     <div class="activities-image pomegues">
                                         <img
                                             src="./images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
@@ -344,7 +343,7 @@
                                 </figure>
                             </a>
                             <a href="#">
-                                <figure>
+                                <figure class="card activities-card">
                                     <div class="activities-image frioul">
                                         <img
                                             src="./images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
@@ -356,7 +355,7 @@
                             </a>
                         </div>
                         <a href="#">
-                            <figure>
+                            <figure class="card activities-card">
                                 <div class="activities-image port-calanques">
                                     <img
                                         src="./images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
@@ -366,9 +365,9 @@
                                 <figcaption>Parc National des Calanques</figcaption>
                             </figure>
                         </a>
-                        <div class="right">
+                        <div class="superimposed-cards flex">
                             <a href="#">
-                                <figure>
+                                <figure class="card activities-card">
                                     <div class="activities-image nd-la-garde">
                                         <img
                                             src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
@@ -379,7 +378,7 @@
                                 </figure>
                             </a>
                             <a href="#">
-                                <figure>
+                                <figure class="card activities-card">
                                     <div class="activities-image longchamp">
                                         <img
                                             src="./images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
@@ -393,7 +392,7 @@
                     </div>
                 </section>
             </main>
-            <footer>
+            <footer class="flex">
                 <div>
                     <h3>A propos</h3>
                     <ul>

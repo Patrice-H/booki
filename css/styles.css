@@ -5,14 +5,11 @@
 */
 body {
     font-family: "Raleway";
-    display: flex;
     justify-content: center;
 }
 div.container {
     width: 1440px;
-    display: flex;
     flex-direction: column;
-    /*align-items: center;*/
 }
 li {
     list-style-type: none;
@@ -21,69 +18,75 @@ a {
     text-decoration: none;
     color: black;
 }
+h1, h2, h3, ul, figure {
+    margin: 0px;
+}
 h1, h2 {
     font-size: 22.1px;
-    margin: 0px;
     display: inline-block;
+}
+button, 
+figcaption, 
+.text-input-field > input, 
+.filter, .accommodations > p {
     font-weight: 700;
 }
-figcaption {
-    font-weight: 700;
-}
-.star-on {
+.star-on, 
+nav a:hover, 
+.filter i, 
+.info i, 
+.accommodations > p a:hover, 
+.aside-top a:hover, 
+footer a:hover {
     color: #0065fc;
 }
 .star-off {
     color: #d9d9d9;
 }
+.text-input-field span, 
+.filter label:hover > span + span, 
+.accommodations, 
+aside, 
+footer {
+    background-color: #f2f2f2;
+}
+.flex {
+    display: flex;
+}
 
 /* header */
 
 header {
-    /*max-width: 1340px;*/
     width: 93%;
     margin-top: 50px;
     padding: 0 50px;
-
 }
 .header-top {
-    /*width: 1340px;*/
-    display: flex;
     justify-content: space-between;
 }
-
-
 nav {
-    display: flex;
     margin-top: -50px;
 }
 nav a {
     display: block;
     width: 160px;
     height: 60px;
-    text-decoration: none;
-    color: black;
     text-align: center;
     line-height: 105px;
     border-top: solid 5px transparent;
 }
 nav a:hover {
     border-color: #0065fc;
-    color: #0065fc;
 }
 nav a:focus {
-    color: #0065fc;
+    color: #0065fc;     /* bloc à supprimer (ne sert à rien) */
 }
-
-
 .logo {
     margin: -8px 20px;
 }
 .logo img {
     width: 50%;
 }
-
-
 div.look-for-form {
     padding-left: 5px;
     margin-top: 47px;
@@ -91,13 +94,10 @@ div.look-for-form {
 h1 + p {
     margin-top: 10px;
 }
-
-
 .text-input-field {
     font-size: 18px;
 }
 .text-input-field span {
-    background-color: #f2f2f2;
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -111,7 +111,6 @@ h1 + p {
     border: solid 2px #f2f2f2;
     height: 46px;
     width: 220px;
-    font-weight: 700;
     padding: 0px 0px 0px 15px;
     margin-left: -5px;
 }
@@ -125,7 +124,6 @@ button.desktop-version {
     border: none;
     border-radius: 0px 20px 20px 0px;
     background-color: #0065fc;
-    font-weight: 700;
     color: white;
 }
 button.mobile-version {
@@ -139,7 +137,6 @@ button:hover {
 
 .filter {
     margin: 30px 10px;
-    font-weight: 700;
     font-size: 19px;
 }
 .filter-legend {
@@ -174,9 +171,6 @@ button:hover {
 .filter label > span + span::first-letter {
     text-transform: uppercase;
 }
-.filter label:hover > span + span {
-    background-color: #f2f2f2;
-}
 .filter label > span:first-child {
     width: 52px;
     height: 52px;
@@ -203,7 +197,6 @@ label:hover {
 .info i {
     border: solid 2px #f2f2f2;
     border-radius: 16px;
-    color: #0065fc;
 }
 .info span {
     margin-left: 10px;
@@ -212,22 +205,22 @@ label:hover {
 /* main */
 
 main {
-    margin-top: 10px;
-    
+    margin-top: 10px;  
 }
 div.main-top {
-    display: flex;
     flex-wrap: wrap-reverse;
     justify-content: space-between;
     padding: 0 50px;
 }
+.card {
+    background-color: white;
+    border-radius: 20px;
+}
 
 /* accommodations section */
 
-section.accommodations {
-    background-color: #f2f2f2;
+.accommodations {
     max-width: 800px;
-    /*height: 100%;*/
     padding: 0 40px 40px;
     border-radius: 20px;
     flex-basis: 534px;
@@ -237,9 +230,8 @@ section.accommodations {
 .accommodations h2 {
     margin-top: 50px;
 }
-div.accommodations-content {
+.accommodations-content {
     margin-top: 20px;
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     /*height: 85%;*/
@@ -249,14 +241,9 @@ div.accommodations-content {
 .accommodations-content a {
     height: 217px;
 }
-div.card {
-    background-color: white;
+.accommodations-card {
     width: 247px;
     padding: 5px 0;
-    border-radius: 20px;
-}
-figure {
-    margin: 0px;
 }
 .accommodations img {
     margin-left: -2%;
@@ -266,12 +253,8 @@ figure {
 }
 .accommodations > p {
     margin: 40px 0 0;
-    font-weight: 700;
 }
-.accommodations > p a:hover {
-    color: #0065fc;
-}
-.card figcaption, .card p {
+.accommodations-card figcaption, .accommodations-card p {
     margin: 10px 17px;
 }
 p.price {
@@ -281,15 +264,13 @@ div.image {
     margin: auto;
     width: 237px;
     height: 115px;
-    overflow: hidden;
-    
+    overflow: hidden;  
     border-radius: 15px 15px 0px 0px;
 }
 
 /* aside */
 
 aside {
-    background-color: #f2f2f2;
     width: 420px;
     border-radius: 20px;
 }
@@ -299,7 +280,6 @@ aside a {
 .aside-top {
     width: 340px;
     margin: auto;
-    display: flex;
     justify-content: space-between;
 }
 .aside-top p, .aside-top h2 {
@@ -308,22 +288,16 @@ aside a {
 .aside-top p {
     font-size: 22.1px; 
 }
-.aside-top a:hover {
-    color: #0065fc;
-}
-div.aside-content {
+.aside-content {
     padding: 0 40px;
     height: 78%;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .aside-card {
     width: 340px;
     height: 140px;
-    background-color: white;
     padding-top: 5px;
-    border-radius: 20px;
 }
 .aside-card figcaption, .aside-card p {
     margin-left: 147px;
@@ -339,8 +313,7 @@ div.aside-content {
     vertical-align: bottom;
     margin-bottom: 10px;
 }
-aside img {
-    
+aside img { 
     width: 160%;
     object-fit: cover;
 }
@@ -355,14 +328,10 @@ div.image-popular-card {
 
 /* activities section */
 
-section.activities {
+.activities {
     margin-top: 60px;
     padding: 0 50px 40px;
-}
-.activities figure {
-    background-color: white;
-    width: 303px;
-    border-radius: 20px;
+    /*background-color: cyan;*/
 }
 .activities figcaption {
     margin: 20px 20px 0;
@@ -373,9 +342,11 @@ section.activities {
 }
 .activities-content {
     margin-top: 20px;
-    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.activities-card {
+    width: 303px;
 }
 .activities-image {
     width: 303px;
@@ -397,18 +368,14 @@ section.activities {
 .longchamp {
     height: 155px;
 }
-.middle-left, .right {
-    display: flex;
+.superimposed-cards {
     flex-direction: column;
     justify-content: space-between;
 }
 
-
 /* footer */
 
 footer {
-    background-color: #f2f2f2;
-    display: flex;
     flex-wrap: wrap;
 }
 footer div {
@@ -420,17 +387,11 @@ footer div:nth-child(3) {
     padding-bottom: 50px;
 }
 footer h3 {
-    margin: 0;
     padding-bottom: 10px;
 }
 footer ul {
     padding: 0;
-    margin: 0;
 }
-
 footer li {
     margin-top: 10px;
-}
-footer a:hover {
-    color: #0065fc;
 }
