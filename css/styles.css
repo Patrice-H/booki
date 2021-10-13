@@ -220,7 +220,8 @@ div.main-top {
 section.accommodations {
     background-color: #f2f2f2;
     max-width: 800px;
-    padding: 0 40px 30px;
+    /*height: 100%;*/
+    padding: 0 40px 40px;
     border-radius: 20px;
     flex-basis: 534px;
     /*flex-basis: 741px;*/
@@ -234,14 +235,17 @@ div.accommodations-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /*height: 80%;
-    align-items: space-between;*/
+    /*height: 85%;*/
+    min-height: 500px;
+    align-items: space-between;
+}
+.accommodations-content a {
+    height: 217px;
 }
 div.card {
     background-color: white;
     width: 247px;
     padding: 5px 0;
-    margin-bottom: 40px;
     border-radius: 20px;
 }
 figure {
@@ -254,6 +258,7 @@ figure {
     object-fit: cover;
 }
 .accommodations > p {
+    margin: 40px 0 0;
     font-weight: 700;
 }
 .accommodations > p a:hover {
@@ -279,9 +284,10 @@ div.image {
 aside {
     background-color: #f2f2f2;
     width: 420px;
-    /*margin-right: 50px;*/
     border-radius: 20px;
-    /*order: 1;*/
+}
+aside a {
+    display: block;
 }
 .aside-top {
     width: 340px;
@@ -299,6 +305,7 @@ aside {
     color: #0065fc;
 }
 div.aside-content {
+    padding: 0 40px;
     height: 78%;
     display: flex;
     flex-direction: column;
@@ -308,8 +315,6 @@ div.aside-content {
     width: 340px;
     height: 140px;
     background-color: white;
-    /*margin: 10px auto;*/
-    margin: auto;
     padding-top: 5px;
     border-radius: 20px;
 }
@@ -344,9 +349,53 @@ div.image-popular-card {
 /* activities section */
 
 section.activities {
-    margin-top: 10px;
-    /*order: 3;*/
+    margin-top: 60px;
+    padding: 0 50px 40px;
 }
+.activities figure {
+    background-color: white;
+    width: 303px;
+    border-radius: 20px;
+}
+.activities figcaption {
+    margin: 20px 20px 0;
+    padding-bottom: 20px;
+}
+.activities a {
+    width: 303px;
+}
+.activities-content {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.activities-image {
+    width: 303px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+.port-calanques {
+    height: 390px;
+}
+.pomegues {
+    height: 180px;
+}
+.frioul {
+    height: 110px;
+}
+.nd-la-garde {
+    height: 140px;
+}
+.longchamp {
+    height: 155px;
+}
+.middle-left, .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 
 /* footer */
 
