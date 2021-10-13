@@ -131,6 +131,9 @@ button.desktop-version {
 button.mobile-version {
     display: none;
 }
+button:hover {
+    background-color: #3283fc;
+}
 
 
 .filter {
