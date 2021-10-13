@@ -133,6 +133,7 @@ button.mobile-version {
 }
 button:hover {
     background-color: #3283fc;
+    cursor: pointer;
 }
 
 
@@ -183,6 +184,9 @@ button:hover {
     text-align: center;
     background-color: #deebff;
     z-index: 1;
+}
+label:hover {
+    cursor: pointer;
 }
 .filter i {
     color: #0065fc;
