@@ -94,7 +94,7 @@ h1 + p {
     text-align: center;
     vertical-align: middle;
     line-height: 50px;
-    margin-top: -2px;
+    margin-top: -3px;
     border-radius: 20px 0px 0px 20px;
 }
 .text-input-field > input {
@@ -108,7 +108,7 @@ h1 + p {
     outline: none;
 }
 button.desktop-version {
-    height: 50px;
+    height: 50.1px;
     margin-left: -5px;
     padding: 0px 20px;
     border: none;
@@ -454,11 +454,12 @@ aside .img-3 {
 
 footer {
     flex-wrap: nowrap;
+    padding-left: 50px;
 }
 footer div {
-    width: 400px;
+    width: 500px;
     margin-top: 40px;
-    padding: 0 40px;
+    padding: 0;
 }
 footer div:nth-child(3) {
     padding-bottom: 50px;
@@ -471,4 +472,30 @@ footer ul {
 }
 footer li {
     margin-top: 10px;
+}
+
+/* Media queries */
+
+@media all and (max-width: 992px) {
+    .main-top {
+        flex-direction: column;
+    }
+    aside {
+        order: 1;
+    }
+    .aside-content {
+        padding-bottom: 40px;
+    }
+    .accommodations {
+        order: 2;
+    }
+}
+
+@media all and (max-width: 992px) and (min-width:768px) {
+    .accommodations-content a {
+        flex-basis: 45%;
+    }
+    .activities-column {
+        flex-basis: 40%;
+    }
 }
