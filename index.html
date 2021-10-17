@@ -39,7 +39,7 @@
                     <form action="#">
                         <div class="text-input-field">
                             <span><i class="fas fa-map-marker-alt"></i></span>
-                            <input type="text" value="Marseille, France" />
+                            <input type="text" name="location" value="Marseille, France" />
                             <button type="submit" class="mobile-version">
                                 <i class="fas fa-search"></i>
                             </button>
@@ -48,49 +48,57 @@
                             </button>
                         </div>
                         <div class="filter">
-                            <span class="filter-legend">Filtres</span>
-                            <input
-                                type="checkbox"
-                                name="filter"
-                                id="economic"
-                                value="economic"
-                            />
-                            <label for="economic">
-                                <span
-                                    ><i class="fas fa-money-bill-wave"></i
-                                ></span>
-                                <span>économique</span>
-                            </label>
-                            <input
-                                type="checkbox"
-                                name="filter"
-                                id="family"
-                                value="family"
-                            />
-                            <label for="family">
-                                <span><i class="fas fa-child"></i></span>
-                                <span>familial</span>
-                            </label>
-                            <input
-                                type="checkbox"
-                                name="filter"
-                                id="romantic"
-                                value="romantic"
-                            />
-                            <label for="romantic">
-                                <span><i class="fas fa-heart"></i></span>
-                                <span>romantique</span>
-                            </label>
-                            <input
-                                type="checkbox"
-                                name="filter"
-                                id="animals"
-                                value="animals"
-                            />
-                            <label for="animals">
-                                <span><i class="fas fa-dog"></i></span>
-                                <span>animaux autorisés</span>
-                            </label>
+                            <p class="filter-legend">Filtres</p>
+                            <p class="filter-button">
+                                <input
+                                    type="checkbox"
+                                    name="filter"
+                                    id="economic"
+                                    value="economic"
+                                />
+                                <label for="economic">
+                                    <span>
+                                        <i class="fas fa-money-bill-wave"></i>
+                                    </span>
+                                    <span>économique</span>
+                                </label>
+                                <input
+                                    type="checkbox"
+                                    name="filter"
+                                    id="family"
+                                    value="family"
+                                />
+                                <label for="family">
+                                    <span>
+                                        <i class="fas fa-child"></i>
+                                    </span>
+                                    <span>familial</span>
+                                </label>
+                                <input
+                                    type="checkbox"
+                                    name="filter"
+                                    id="romantic"
+                                    value="romantic"
+                                />
+                                <label for="romantic">
+                                    <span>
+                                        <i class="fas fa-heart"></i>
+                                    </span>
+                                    <span>romantique</span>
+                                </label>
+                                <input
+                                    type="checkbox"
+                                    name="filter"
+                                    id="animals"
+                                    value="animals"
+                                />
+                                <label for="animals">
+                                    <span>
+                                        <i class="fas fa-dog"></i>
+                                    </span>
+                                    <span>animaux autorisés</span>
+                                </label>
+                            </p>
                         </div>
                     </form>
                     <p class="info">
@@ -110,7 +118,7 @@
                             <a href="#">
                                 <div class="card accommodations-card">
                                     <figure>
-                                        <div class="image">
+                                        <div class="accommodations-image">
                                             <img
                                             src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
                                             alt="Chambre de l'auberge La Cannebière"
@@ -120,7 +128,7 @@
                                         <figcaption>Auberge La Cannebière</figcaption>
                                     </figure>
                                     <p class="price">Nuit à partir de <strong>25€</strong></p>
-                                    <p>
+                                    <p class="rate">
                                         <i class="fas fa-star star-on"></i>
                                         <i class="fas fa-star star-on"></i>
                                         <i class="fas fa-star star-on"></i>
@@ -132,7 +140,7 @@
                             <a href="#">
                                 <div class="card accommodations-card">
                                     <figure>
-                                        <div class="image">
+                                        <div class="accommodations-image">
                                             <img
                                             src="./images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
                                             alt="Chambre de l'hôtel du port"
@@ -142,7 +150,7 @@
                                         <figcaption>Hôtel du port</figcaption>
                                     </figure>
                                     <p class="price">Nuit à partir de 52<strong>€</strong></p>
-                                    <p>
+                                    <p class="rate">
                                         <i class="fas fa-star star-on"></i>
                                         <i class="fas fa-star star-on"></i>
                                         <i class="fas fa-star star-on"></i>
@@ -154,7 +162,7 @@
                             <a href="#">
                                 <div class="card accommodations-card">
                                     <figure>
-                                        <div class="image">
+                                        <div class="accommodations-image">
                                             <img
                                             src="./images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
                                             alt="Chambre de l'hôtel Les mouettes"
@@ -164,7 +172,7 @@
                                         <figcaption>Hôtel Les mouettes</figcaption>
                                     </figure>
                                     <p class="price">Nuit à partir de 76<strong>€</strong></p>
-                                    <p>
+                                    <p class="rate">
                                         <i class="fas fa-star star-on"></i>
                                         <i class="fas fa-star star-on"></i>
                                         <i class="fas fa-star star-on"></i>
@@ -176,7 +184,7 @@
                             <a href="#">
                                 <div class="card accommodations-card">
                                     <figure>
-                                        <div class="image">
+                                        <div class="accommodations-image">
                                             <img
                                             src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
                                             alt="Chambre de l'hôtel de la mer"
@@ -186,7 +194,7 @@
                                         <figcaption>Hôtel de la mer</figcaption>
                                     </figure>
                                     <p class="price">Nuit à partir de 46<strong>€</strong></p>
-                                    <p>
+                                    <p class="rate">
                                         <i class="fas fa-star star-on"></i>
                                         <i class="fas fa-star star-on"></i>
                                         <i class="fas fa-star star-on"></i>
@@ -198,7 +206,7 @@
                             <a href="#">
                                 <div class="card accommodations-card">
                                     <figure>
-                                        <div class="image">
+                                        <div class="accommodations-image">
                                             <img
                                             src="./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
                                             alt="Chambre de l'auberge Le Panier"
@@ -208,7 +216,7 @@
                                         <figcaption>Auberge Le Panier</figcaption>
                                     </figure>
                                     <p class="price">Nuit à partir de <strong>23€</strong></p>
-                                    <p>
+                                    <p class="rate">
                                         <i class="fas fa-star star-on"></i>
                                         <i class="fas fa-star star-on"></i>
                                         <i class="fas fa-star star-on"></i>
@@ -220,7 +228,7 @@
                             <a href="#">
                                 <div class="card accommodations-card">
                                     <figure>
-                                        <div class="image">
+                                        <div class="accommodations-image">
                                             <img
                                             src="./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
                                             alt="chambre de l'hôtel chez Amina"
@@ -230,7 +238,7 @@
                                         <figcaption>Hôtel chez Amina</figcaption>
                                     </figure>
                                     <p class="price">Nuit à partir de 96<strong>€</strong></p>
-                                    <p>
+                                    <p class="rate">
                                         <i class="fas fa-star star-on"></i>
                                         <i class="fas fa-star star-on"></i>
                                         <i class="fas fa-star star-on"></i>
@@ -328,47 +336,51 @@
                 <section class="activities">
                     <h2 id="activities-anchor">Activités à Marseille</h2>
                     <div class="activities-content flex">
-                        <a href="#">
+                        <a href="#" class="activities-column">
                             <figure class="card activities-card">
                                 <div class="activities-image port-calanques">
                                     <img
                                         src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
                                         alt="Vue du Vieux Port"
+                                        class="img-1"
                                     /> 
                                 </div>
                                 <figcaption>Vieux Port</figcaption>
                             </figure>
                         </a>
                         <div class="superimposed-cards flex">
-                            <a href="#">
+                            <a href="#" class="col-2-top">
                                 <figure class="card activities-card">
                                     <div class="activities-image pomegues">
                                         <img
                                             src="./images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
                                             alt="Vue du Fort de Pomègues"
+                                            class="img-2"
                                         />
                                     </div>
                                     <figcaption>Fort de Pomègues</figcaption>
                                 </figure>
                             </a>
-                            <a href="#">
+                            <a href="#" class="col-2-bottom">
                                 <figure class="card activities-card">
                                     <div class="activities-image frioul">
                                         <img
                                             src="./images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
                                             alt="Vue des îles du Frioul"
+                                            class="img-3"
                                         />
                                     </div>
                                     <figcaption>Îles du Frioul</figcaption>
                                 </figure>
                             </a>
                         </div>
-                        <a href="#">
+                        <a href="#" class="activities-column">
                             <figure class="card activities-card">
                                 <div class="activities-image port-calanques">
                                     <img
                                         src="./images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
                                         alt="Vue du Parc National des Calanques"
+                                        class="img-4"
                                     />
                                 </div>
                                 <figcaption>Parc National des Calanques</figcaption>
@@ -381,6 +393,7 @@
                                         <img
                                             src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
                                             alt="Vue de Notre-Dame-de-la-Garde"
+                                            class="img-5"
                                         />
                                     </div>
                                     <figcaption>Notre-Dame-de-la-Garde</figcaption>
@@ -392,6 +405,7 @@
                                         <img
                                             src="./images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
                                             alt="Vue du Parc Longchamp"
+                                            class="img-6"
                                         />
                                     </div>
                                     <figcaption>Parc Longchamp</figcaption>

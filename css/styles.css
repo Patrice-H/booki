@@ -1,11 +1,5 @@
-
-/*header, div.container, section, aside, footer {                 /* bloc à supprimer 
-    border: solid 2px red;
-}
-*/
 body {
     font-family: "Raleway";
-    /*justify-content: center;*/
 }
 div.container {
     width: 100%;
@@ -136,7 +130,12 @@ button:hover {
     font-size: 19px;
 }
 .filter-legend {
-    margin-right: 20px;
+    display: inline-block;
+    margin: 0 30px 20px 0;
+}
+.filter-button {
+    display: inline-block;
+    margin: 0;
 }
 .filter input {
     position: absolute;
@@ -148,7 +147,7 @@ button:hover {
 }
 .filter label {
     display: inline-block;
-    margin: 0px 10px;
+    margin: 0px 20px 20px 0;
 }
 .filter label > span {
     display: inline-block;
@@ -208,17 +207,19 @@ div.main-top {
     background-color: white;
     border-radius: 20px;
 }
+p.price {
+    font-size: 14px;
+}
+p.rate {
+    font-size: 11px;
+}
 
 /* accommodations section */
 
 .accommodations {
-    /*max-width: 800px;*/
     padding: 0 40px 40px;
     border-radius: 20px;
     flex-basis: 66%;
-    /*flex-basis: 534px;*/
-    /*flex-basis: 741px;*/
-    /*flex-grow: 0.9;*/
 }
 .accommodations h2 {
     margin-top: 50px;
@@ -226,17 +227,21 @@ div.main-top {
 .accommodations-content {
     margin-top: 20px;
     flex-wrap: wrap;
-    justify-content: space-between;
-    /*height: 85%;*/
-    min-height: 500px;
-    align-items: space-between;
+    gap: 30px;
 }
 .accommodations-content a {
-    height: 217px;
+    flex-basis: 30%;
+    flex-grow: 1;
+    border-radius: 20px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+.accommodations-content a:hover {
+    margin: -5px 5px 5px -5px;
+    box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4); 
 }
 .accommodations-card {
-    width: 247px;
-    padding: 5px 0;
+    padding: 5px;
+    height: 100%;
 }
 .accommodations img {
     object-fit: cover;
@@ -254,8 +259,9 @@ div.main-top {
     margin-top: -58px;
 }
 .accommodations .img-5 {
-    width: 101%;
-    margin-top: -9px;
+    width: 110%;
+    margin-top: -7px;
+    margin-left: -10px;
 }
 .accommodations .img-6 {
     width: 104%;
@@ -265,15 +271,14 @@ div.main-top {
 .accommodations > p {
     margin: 40px 0 0;
 }
-.accommodations-card figcaption, .accommodations-card p {
-    margin: 10px 17px;
+.accommodations-card figcaption {
+    margin: 10px 5px 6px 10px;
 }
-p.price {
-    font-size: 14px;
+.accommodations-card p {
+    margin: 6px 10px;
 }
-div.image {
-    margin: auto;
-    width: 237px;
+.accommodations-image {
+    width: 100%;
     height: 115px;
     overflow: hidden;  
     border-radius: 15px 15px 0px 0px;
@@ -282,13 +287,19 @@ div.image {
 /* aside */
 
 aside {
-    min-width: 300px;
+    min-width: 290px;
     flex-basis: 28.05%;
     border-radius: 20px;
     padding: 0 40px;
 }
-aside a {
+.aside-content a {
     display: block;
+    border-radius: 20px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+.aside-content a:hover {
+    margin: -5px 5px 5px -5px;
+    box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
 }
 aside img { 
     object-fit: cover;
@@ -317,15 +328,13 @@ aside .img-3 {
 }
 
 .aside-content {
-    
-    height: 78%;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 30px;
 }
 .aside-card {
     position: relative;
     height: 135px;
-    padding: 5px;
+    padding: 5px; 
 }
 .aside-card figcaption, .aside-card p {
     margin-left: 147px;
@@ -339,12 +348,8 @@ aside .img-3 {
     margin-bottom: 0;
 }
 .aside-card p.rate {
-    font-size: 11px;
     position: absolute;
     bottom: 3px;
-    display: inline-block;
-    vertical-align: bottom;
-    margin-top: 0;
     margin-bottom: 10px;
 }
 
@@ -361,55 +366,94 @@ aside .img-3 {
 .activities {
     margin-top: 60px;
     padding: 0 50px 40px;
-    /*background-color: cyan;*/
 }
 .activities figcaption {
     margin: 20px 20px 0;
     padding-bottom: 20px;
 }
 .activities a {
-    width: 303px;
+    border-radius: 20px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+.activities a:hover {
+    margin: -5px 5px 5px -5px;
+    box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
 }
 .activities img {
     object-fit: cover;
 }
 .activities-content {
     margin-top: 20px;
-    justify-content: space-between;
+    gap: 40px;
     flex-wrap: wrap;
 }
-.activities-card {
-    width: 303px;
+.activities-column {
+    flex-basis: 20%;
+    flex-grow: 1;
+}
+.superimposed-cards {
+    flex-direction: column;
+    gap: 40px;
+    flex-basis: 20%;
+    flex-grow: 1;
+}
+.col-2-top {
+    flex-basis: 53%;
+    flex-grow: 1;
+}
+.col-2-bottom {
+    flex-basis: 37.5%;
+    flex-grow: 1;
 }
 .activities-image {
-    width: 303px;
     overflow: hidden;
     border-radius: 20px 20px 0 0;
 }
 .port-calanques {
     height: 390px;
 }
+.activities .img-1 {
+    width: 225%;
+    margin-left: -185px;
+    margin-top: -5px;
+}
+.activities .img-4 {
+    width: 222%;
+    margin-left: -185px;
+}
 .pomegues {
     height: 180px;
+}
+.activities .img-2 {
+    width: 101%;
+    margin-top: -111px;
 }
 .frioul {
     height: 110px;
 }
+.activities .img-3 {
+    width: 100%;
+    margin-top: -18px;
+}
 .nd-la-garde {
     height: 140px;
+}
+.activities .img-5 {
+    width: 100%;
 }
 .longchamp {
     height: 155px;
 }
-.superimposed-cards {
-    flex-direction: column;
-    justify-content: space-between;
+.activities .img-6 {
+    width: 100%;
+    margin-top: -8px;
 }
+
 
 /* footer */
 
 footer {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 footer div {
     width: 400px;
