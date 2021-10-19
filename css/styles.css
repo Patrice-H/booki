@@ -50,7 +50,6 @@ footer {
 /* header */
 
 header {
-    width: 93%;
     margin-top: 50px;
     padding: 0 50px;
 }
@@ -107,17 +106,24 @@ h1 + p {
 .text-input-field input:focus {
     outline: none;
 }
+button {
+    border: none;
+    background-color: #0065fc;
+    color: white;
+}
 button.desktop-version {
     height: 50.1px;
     margin-left: -5px;
     padding: 0px 20px;
     border: none;
     border-radius: 0px 20px 20px 0px;
-    background-color: #0065fc;
-    color: white;
 }
 button.mobile-version {
     display: none;
+    height: 100px;
+    width: 100px;
+    font-size: 32px;
+    border-radius: 30px;
 }
 button:hover {
     background-color: #3283fc;
@@ -126,12 +132,11 @@ button:hover {
 
 
 .filter {
-    margin: 30px 10px;
-    font-size: 19px;
+    margin: 30px 0 30px 10px;
 }
 .filter-legend {
     display: inline-block;
-    margin: 0 30px 20px 0;
+    margin: 0 25px 20px 0;
 }
 .filter-button {
     display: inline-block;
@@ -179,19 +184,18 @@ label:hover {
 }
 
 
-.info i, .info span {
+.info i {
     width: 24px;
     height: 24px;
     text-align: center;
     vertical-align: middle;
     line-height: 24px;
-}
-.info i {
     border: solid 2px #f2f2f2;
     border-radius: 16px;
 }
-.info span {
-    margin-left: 10px;
+.info p {
+    margin-left: 40px;
+    margin-top: -20px;
 }
 
 /* main */
@@ -204,7 +208,6 @@ div.main-top {
     padding: 0 50px;
 }
 .card {
-    background-color: white;
     border-radius: 20px;
 }
 p.price {
@@ -230,6 +233,7 @@ p.rate {
     gap: 30px;
 }
 .accommodations-content a {
+    background-color: white;
     flex-basis: 30%;
     flex-grow: 1;
     border-radius: 20px;
@@ -241,7 +245,6 @@ p.rate {
 }
 .accommodations-card {
     padding: 5px;
-    height: 100%;
 }
 .accommodations img {
     object-fit: cover;
@@ -259,9 +262,9 @@ p.rate {
     margin-top: -58px;
 }
 .accommodations .img-5 {
-    width: 110%;
-    margin-top: -7px;
-    margin-left: -10px;
+    width: 104%;
+    margin-top: -8px;
+    margin-left: -5px;
 }
 .accommodations .img-6 {
     width: 104%;
@@ -287,7 +290,6 @@ p.rate {
 /* aside */
 
 aside {
-    min-width: 290px;
     flex-basis: 28.05%;
     border-radius: 20px;
     padding: 0 40px;
@@ -340,17 +342,17 @@ aside .img-3 {
     margin-left: 147px;
 }
 .aside-card figcaption {
-    margin-top: -122px;
+    margin-top: -128px;
     padding-right: 5px;
 }
 .aside-card p.price {
-    margin-top: 10px;
+    margin-top: 6px;
     margin-bottom: 0;
 }
 .aside-card p.rate {
     position: absolute;
     bottom: 3px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .aside-card-image {
@@ -369,11 +371,12 @@ aside .img-3 {
 }
 .activities figcaption {
     margin: 20px 20px 0;
-    padding-bottom: 20px;
+    /*padding-bottom: 20px;*/
 }
 .activities a {
     border-radius: 20px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
 }
 .activities a:hover {
     margin: -5px 5px 5px -5px;
@@ -398,11 +401,21 @@ aside .img-3 {
     flex-grow: 1;
 }
 .col-2-top {
-    flex-basis: 53%;
+    /*flex-basis: 53%;*/
     flex-grow: 1;
 }
 .col-2-bottom {
     flex-basis: 37.5%;
+    flex-grow: 1;
+}
+/*
+.col-4-top {
+    flex-basis: 53%;
+    flex-grow: 1;
+}
+*/
+.col-4-bottom {
+    /*flex-basis: 37.5%;*/
     flex-grow: 1;
 }
 .activities-image {
@@ -418,7 +431,7 @@ aside .img-3 {
     margin-top: -5px;
 }
 .activities .img-4 {
-    width: 222%;
+    width: 225%;
     margin-left: -185px;
 }
 .pomegues {
@@ -454,15 +467,11 @@ aside .img-3 {
 
 footer {
     flex-wrap: nowrap;
-    padding-left: 50px;
+    padding: 40px 0 40px 50px;
 }
 footer div {
     width: 500px;
-    margin-top: 40px;
     padding: 0;
-}
-footer div:nth-child(3) {
-    padding-bottom: 50px;
 }
 footer h3 {
     padding-bottom: 10px;
@@ -476,26 +485,340 @@ footer li {
 
 /* Media queries */
 
-@media all and (max-width: 992px) {
+@media all and (max-width: 991px) {
     .main-top {
         flex-direction: column;
     }
     aside {
         order: 1;
     }
-    .aside-content {
-        padding-bottom: 40px;
-    }
     .accommodations {
         order: 2;
     }
 }
 
-@media all and (max-width: 992px) and (min-width:768px) {
+@media all and (max-width: 1280px) and (min-width: 992px) {
+    header {
+        padding: 0 40px;
+    }
+    div.main-top {
+        gap: 30px;
+        padding: 0 40px;
+    }
+    .accommodations {
+        padding: 0 30px 40px;
+    }
+    .accommodations-content {
+        gap: 20px;
+    }
+    aside {
+        padding: 0 30px;
+    }
+    .aside-content {
+        gap: 20px;
+    }
+    .accommodations .img-1, 
+    .accommodations .img-2, 
+    .accommodations .img-3 {
+        width: 140%;
+        margin-left: -20%;
+        margin-top: -15%;
+    }
+    .accommodations .img-4 {
+        width: 140%;
+        margin-left: -40px;
+        margin-top: -75px;
+    }
+    .accommodations .img-5 {
+        width: 155%;
+        margin-left: -20px;
+        margin-top: -10px;
+    }
+    .accommodations .img-6 {
+        margin-top: -110px;
+    }
+    .activities {
+        padding: 0 40px 40px;
+    }
+    .activities .img-1 {
+        width: 340%;
+        margin-left: -250px;
+        margin-top: -20px;
+    }
+    .activities .img-4 {
+        width: 340%;
+        margin-left: -185px;
+        margin-top: -20px;
+    }
+    .activities .img-5 {
+        width: 115%;
+        margin-left: -20px;
+    }
+    footer {
+        padding: 40px 0 40px 40px;
+    }
+}
+
+/*
+@media all and (max-width: 1280px) and (min-width:768px) {
+    .activities-column {
+        flex-basis: 40%;
+    }
+}
+*/
+@media all and (max-width: 991px) and (min-width:768px) {
+    .aside-content {
+        padding-bottom: 40px;
+    }
     .accommodations-content a {
         flex-basis: 45%;
     }
     .activities-column {
         flex-basis: 40%;
+    }
+}
+
+@media all and (max-width: 767px) {
+    body {
+        font-size: 32px;
+    }
+    h1, h2, .aside-top p {
+        font-size: 44px;
+    }
+    header {
+        width: 100%;
+        margin-top: 60px;
+        padding: 0;
+    }
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        margin: 0;
+    }
+    .logo img {
+        width: 191px;
+        margin: -14px 0 -14px 71px;
+    }
+    nav {
+        margin-top: 80px;
+        width: 100%;
+    }
+    nav a {
+        width: 50%;
+        line-height: normal;
+        border-bottom: solid 5px #f2f2f2;
+        border-top: none;
+    }
+    div.look-for-form {
+        padding: 0 40px;
+        margin-top: 70px;
+    }
+    h1 + p {
+        margin-top: 30px;
+    }
+    .text-input-field {
+        display: flex;
+        margin-top: 90px;
+    }
+    .text-input-field span {
+        margin-top: 0;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        font-size: 32px;
+        border-radius: 30px 0px 0px 30px
+    }
+    .text-input-field input {
+        height: 96px;
+        flex-grow: 1;
+        font-size: 32px;
+        margin-right: -20px;
+        padding-right: 20px;
+    }
+    button.desktop-version {
+        display: none;
+    }
+    button.mobile-version{
+        display: inline-block;
+    }
+    .filter {
+        margin: 70px 0 40px;
+        font-size: 32px;
+    }
+    .filter-legend {
+        margin: 0 30px 40px 0;
+        font-size: 36px;
+    }
+    .filter label {
+        margin: 0 16px 30px 0;
+    }
+    .filter label > span {
+        border-radius: 64px;
+    }
+    .filter label > span + span {
+        height: 94px;
+        line-height: 94px;
+        margin-left: -100px;
+        padding: 0 32px 0 110px;
+        border-width: 4px;
+    }
+    .filter label > span:first-child {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+    }
+    .info i {
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        border-radius: 32px;
+    }
+    .info p {
+        margin-top: -40px;
+        margin-left: 70px;
+    }
+    div.main-top {
+        padding: 0;
+    }
+    aside {
+        border-radius: 0;
+        margin-top: 30px;
+    }
+    .aside-top {
+        margin-top: 20px;
+    }
+    .aside-content {
+        padding-bottom: 70px;
+    }
+    aside .img-1 {
+        margin-left: -86px;
+        margin-top: -8px;
+    }
+    aside .img-2 {
+        margin-left: -62px;
+        margin-top: -8px;
+    }
+    aside .img-3 {
+        margin-left: -10px;
+        margin-top: -70px;
+    }
+    .aside-card {
+        height: 270px;
+        padding: 10px;
+    }
+    .aside-card figcaption, .aside-card p {
+        margin-left: 294px;
+    }
+    .aside-card figcaption {
+        margin-top: -244px;
+    }
+    .aside-card-image {
+        height: 270px;
+        width: 254px;
+    }
+    p.price {
+        font-size: 28px;
+    }
+    p.rate {
+        font-size: 22px;
+    }
+    .accommodations {
+        background-color: white;
+    }
+    .accommodations h2 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .accommodations .img-1, 
+    .accommodations .img-2, 
+    .accommodations .img-3 {
+        margin-left: -10px;
+        margin-top: -110px;
+    }
+    .accommodations .img-4 {
+        margin-left: -10px;
+        margin-top: -200px;
+    }
+    .accommodations .img-5 {
+        margin-left: -20px;
+        margin-top: -14px;
+    }
+    .accommodations .img-6 {
+        margin-left: -10px;
+        margin-top: -390px;
+    }
+    .accommodations-content {
+        flex-direction: column;
+    }
+    .accommodations-card {
+        padding: 10px;
+    }
+    .accommodations-card figcaption {
+        margin: 20px 5px 10px 15px;
+    }
+    .accommodations-card p {
+        margin: 10px 15px;
+    }
+    .accommodations-image {
+        height: 230px;
+    }
+    .accommodations > p {
+        margin: 60px 0 0;
+        font-size: 36px;
+    }
+    
+    .activities {
+        margin-top: 70px;
+        padding: 0 40px 100px;
+    }
+    .activities-content {
+        flex-direction: column;
+        margin-top: 60px;
+        gap: 60px;
+    }
+    .superimposed-cards {
+        gap: 60px;
+    }
+    .activities figcaption {
+        margin: 40px 30px 20px;
+    }
+    .activities .img-1 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: -25px;
+    }
+    .activities .img-2 {
+        margin-top: -300px;
+    }
+    .activities .img-4 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: -25px;
+    }
+    .activities .img-6 {
+        margin-top: -50px;
+    }
+    .port-calanques, 
+    .pomegues, 
+    .frioul, 
+    .nd-la-garde, 
+    .longchamp {
+        height: 270px;
+    }
+    footer {
+        flex-direction: column;
+        padding-left: 40px;
+        padding-top: 10px;
+    }
+    footer div {
+        margin-top: 90px;
+    }
+    footer div:nth-child(3) {
+        padding-bottom: 100px;
+    }
+    footer li {
+        margin-top: 30px;
     }
 }
