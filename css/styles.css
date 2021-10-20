@@ -499,8 +499,6 @@ footer li {
     }
 }
 
-/* Tablet version */
-
 @media all and (max-width: 1280px) and (min-width: 992px) {
     header {
         padding: 0 40px;
@@ -568,7 +566,7 @@ footer li {
     }
 }
 
-/* mobile version */
+/* Tablet version */
 
 @media all and (max-width: 991px) and (min-width:768px) {
     .aside-content {
@@ -582,7 +580,9 @@ footer li {
     }
 }
 
-@media all and (max-width: 767px) {
+/* mobile version */
+
+@media all and (max-width: 767px) and (min-width: 550px) {
     body {
         font-size: 32px;
     }
@@ -739,7 +739,7 @@ footer li {
     .accommodations .img-2, 
     .accommodations .img-3 {
         margin-left: -10px;
-        margin-top: -110px;
+        margin-top: -80px;
     }
     .accommodations .img-4 {
         margin-left: -10px;
@@ -824,5 +824,188 @@ footer li {
     }
     footer li {
         margin-top: 30px;
+    }
+}
+
+/* low resolution mobile version */
+
+@media all and (max-width: 549px) {
+    body {
+        font-size: 24px;
+    }
+    h1, h2, .aside-top p {
+        font-size: 33px;
+    }
+    header {
+        margin-top: 40px;
+        padding: 0;
+    }
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        margin: 0;
+    }
+    .logo img {
+        width: 143px;
+        margin: -14px 0 -14px 53px;
+    }
+    nav {
+        margin-top: 60px;
+        width: 100%;
+    }
+    nav a {
+        width: 50%;
+        line-height: normal;
+        border-bottom: solid 5px #f2f2f2;
+        border-top: none;
+        font-size: 22px;
+    }
+    div.look-for-form {
+        padding: 0 30px;
+        margin-top: 52px;
+    }
+    h1 + p {
+        margin-top: 20px;
+    }
+    
+    .text-input-field {
+        display: flex;
+        margin-top: 67px;
+    }
+    .text-input-field span {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        margin-top: 0;
+        border-radius: 20px 0px 0px 20px;
+    }
+    .text-input-field input {
+        flex-grow: 1;
+        font-size: 24px;
+        min-width: 0;
+        margin-right: -10px;
+        padding-right: 10px;
+    }
+    
+    button.desktop-version {
+        display: none;
+    }
+    button.mobile-version{
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        font-size: 16px;
+        border-radius: 20px;
+    }
+    .filter {
+        margin: 52px 0 30px;
+        font-size: 20px;
+    }
+    .filter-legend {
+        margin: 0 30px 40px 0;
+        font-size: 24px;
+    }
+    .info i {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 24px;
+    }
+    .info p {
+        margin-top: -30px;
+        margin-left: 60px;
+    }
+    div.main-top {
+        padding: 0;
+    }
+    aside {/**/
+        border-radius: 0;
+        margin-top: 20px;
+        padding: 0 30px 40px;
+    }
+    .aside-card figcaption {
+        font-size: 22px;
+        line-height: 20px;
+    }
+    
+    .aside-top {
+        margin-bottom: 20px;
+    }
+    .accommodations {
+        background-color: white;
+        padding: 0 30px 40px;
+    }
+    .accommodations .img-1, 
+    .accommodations .img-2, 
+    .accommodations .img-3 {
+        margin-top: -27%;
+    }
+    .accommodations .img-4 {
+        margin-top: -140px;
+    }
+    
+    .accommodations .img-5 {
+        margin-top: -40px;
+    }
+    
+    .accommodations .img-6 {
+        margin-top: -300px;
+    }
+    
+    .accommodations-content {
+        flex-direction: column;
+    }
+    .activities {
+        margin-top: 30px;
+        padding: 0 30px 80px;
+    }
+    .activities-content {
+        flex-direction: column;
+    }
+    
+    .superimposed-cards {
+        gap: 40px;
+    }
+    .activities .img-1 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: -25px;
+    }
+    .activities .img-2 {
+        margin-top: -300px;
+    }
+    .activities .img-4 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: -25px;
+    }
+    .activities .img-6 {
+        margin-top: -50px;
+    }
+    
+    .port-calanques, 
+    .pomegues, 
+    .frioul, 
+    .nd-la-garde, 
+    .longchamp {
+        height: 135px;
+    }
+    
+    footer {
+        flex-direction: column;
+        padding-left: 30px;
+        padding-top: 0;
+    }
+    footer div {
+        margin-top: 50px;
+    }
+    footer div:nth-child(3) {
+        padding-bottom: 80px;
+    }
+    footer li {
+        margin-top: 20px;
+        font-size: 18px;
     }
 }
