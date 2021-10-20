@@ -298,6 +298,7 @@ aside {
     display: block;
     border-radius: 20px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    background-color: white;
 }
 .aside-content a:hover {
     margin: -5px 5px 5px -5px;
@@ -371,7 +372,6 @@ aside .img-3 {
 }
 .activities figcaption {
     margin: 20px 20px 0;
-    /*padding-bottom: 20px;*/
 }
 .activities a {
     border-radius: 20px;
@@ -396,27 +396,9 @@ aside .img-3 {
 }
 .superimposed-cards {
     flex-direction: column;
-    gap: 40px;
     flex-basis: 20%;
     flex-grow: 1;
-}
-.col-2-top {
-    /*flex-basis: 53%;*/
-    flex-grow: 1;
-}
-.col-2-bottom {
-    flex-basis: 37.5%;
-    flex-grow: 1;
-}
-/*
-.col-4-top {
-    flex-basis: 53%;
-    flex-grow: 1;
-}
-*/
-.col-4-bottom {
-    /*flex-basis: 37.5%;*/
-    flex-grow: 1;
+    justify-content: space-between;
 }
 .activities-image {
     overflow: hidden;
@@ -445,20 +427,20 @@ aside .img-3 {
     height: 110px;
 }
 .activities .img-3 {
-    width: 100%;
+    width: 101%;
     margin-top: -18px;
 }
 .nd-la-garde {
     height: 140px;
 }
 .activities .img-5 {
-    width: 100%;
+    width: 101%;
 }
 .longchamp {
     height: 155px;
 }
 .activities .img-6 {
-    width: 100%;
+    width: 101%;
     margin-top: -8px;
 }
 
@@ -496,6 +478,28 @@ footer li {
         order: 2;
     }
 }
+
+/* display bug fixes */
+
+@media all and (max-width: 1145px) and (min-width: 992px) {
+    .activities .nd-la-garde-double-line {
+        padding-bottom: 11px;
+    }
+    .activities .nd-la-garde-double-line figcaption {
+        margin: 11px 20px 0;
+    }
+}
+
+@media all and (max-width: 1240px) and (min-width: 992px) {
+    .activities .calanques-double-line {
+        padding-bottom: 11px;
+    }
+    .activities .calanques-double-line figcaption {
+        margin: 11px 20px 0;
+    }
+}
+
+/* Tablet version */
 
 @media all and (max-width: 1280px) and (min-width: 992px) {
     header {
@@ -554,18 +558,18 @@ footer li {
         width: 115%;
         margin-left: -20px;
     }
+    .activities .img-6 {
+        width: 120%;
+        margin-left: -12px;
+        margin-top: -21px;
+    }
     footer {
         padding: 40px 0 40px 40px;
     }
 }
 
-/*
-@media all and (max-width: 1280px) and (min-width:768px) {
-    .activities-column {
-        flex-basis: 40%;
-    }
-}
-*/
+/* mobile version */
+
 @media all and (max-width: 991px) and (min-width:768px) {
     .aside-content {
         padding-bottom: 40px;
