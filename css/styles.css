@@ -15,19 +15,15 @@ a {
 h1, h2, h3, ul, figure {
     margin: 0px;
 }
-h1, h2, .aside-top p {
+h2, .aside-top p {
     font-size: 22.1px;
 }
-button, 
+
 figcaption, 
-.text-input-field > input, 
-.filter, .accommodations > p {
+.accommodations > p {
     font-weight: 700;
 }
 .star-on, 
-nav a:hover, 
-.filter i, 
-.info i, 
 .accommodations > p a:hover, 
 .aside-top a:hover, 
 footer a:hover {
@@ -36,8 +32,6 @@ footer a:hover {
 .star-off {
     color: #d9d9d9;
 }
-.text-input-field span, 
-.filter label:hover > span + span, 
 .accommodations, 
 aside, 
 footer {
@@ -47,11 +41,81 @@ footer {
     display: flex;
 }
 
-/* header */
+
+        /*** header ***/
+
+
+/* typography */
+
+h1 {
+    font-size: 22px;
+}
+.text-input-field, 
+.filter {
+    font-size: 18px;
+}
+.text-input-field > input, 
+.filter,
+button {
+    font-weight: 700;
+}
+
+/* text and background color */
+
+.filter i, 
+.info i,
+nav a:hover {
+    color: #0065fc;
+}
+button, 
+.filter input:checked + label > span + span {
+    color: white;
+    background-color: #0065fc;
+}
+button:hover {
+    background-color: #3283fc;
+}
+.filter label > span:first-child {
+    background-color: #deebff;
+}
+.text-input-field span, 
+.filter label:hover > span + span {
+    background-color: #f2f2f2;
+}
+
+/* border */
+
+nav a {
+    border-top: solid 5px transparent; 
+}
+nav a:hover {
+    border-color: #0065fc;
+}
+button {
+    border: none;
+}
+button.mobile-version {
+    border-radius: 30px;
+}
+button.desktop-version {
+    border-radius: 0px 20px 20px 0px;
+}
+.text-input-field > input, 
+.info i {
+    border: solid 2px #f2f2f2;
+}
+.filter label > span + span {
+    border: solid 2px #d8d8d8;
+}
+.text-input-field span {
+    border-radius: 20px 0px 0px 20px;
+}
+
+/* layout */
 
 header {
     margin-top: 50px;
-    padding: 0 50px;
+    padding: 0 0 0 50px;
 }
 .header-top {
     justify-content: space-between;
@@ -65,10 +129,6 @@ nav a {
     height: 60px;
     text-align: center;
     line-height: 105px;
-    border-top: solid 5px transparent;
-}
-nav a:hover {
-    border-color: #0065fc;
 }
 .logo {
     margin: -8px 20px;
@@ -83,9 +143,6 @@ div.look-for-form {
 h1 + p {
     margin-top: 10px;
 }
-.text-input-field {
-    font-size: 18px;
-}
 .text-input-field span {
     display: inline-block;
     width: 50px;
@@ -94,10 +151,8 @@ h1 + p {
     vertical-align: middle;
     line-height: 50px;
     margin-top: -3px;
-    border-radius: 20px 0px 0px 20px;
 }
 .text-input-field > input {
-    border: solid 2px #f2f2f2;
     height: 46px;
     width: 220px;
     padding: 0px 0px 0px 15px;
@@ -106,37 +161,26 @@ h1 + p {
 .text-input-field input:focus {
     outline: none;
 }
-button {
-    border: none;
-    background-color: #0065fc;
-    color: white;
-}
 button.desktop-version {
-    height: 50.1px;
+    height: 50px;
     margin-left: -5px;
     padding: 0px 20px;
-    border: none;
-    border-radius: 0px 20px 20px 0px;
 }
 button.mobile-version {
     display: none;
     height: 100px;
     width: 100px;
-    font-size: 32px;
-    border-radius: 30px;
 }
 button:hover {
-    background-color: #3283fc;
     cursor: pointer;
 }
-
 
 .filter {
     margin: 30px 0 30px 10px;
 }
 .filter-legend {
     display: inline-block;
-    margin: 0 25px 20px 0;
+    margin: 0 23px 20px 0;
 }
 .filter-button {
     display: inline-block;
@@ -146,13 +190,12 @@ button:hover {
     position: absolute;
     opacity: 0;
 }
-.filter input:checked + label > span + span {
-    background-color: #0065FC;
-    color: white;
-}
 .filter label {
     display: inline-block;
-    margin: 0px 20px 20px 0;
+    margin: 0px 19px 20px 0;
+}
+.filter label:hover {
+    cursor: pointer;
 }
 .filter label > span {
     display: inline-block;
@@ -163,9 +206,8 @@ button:hover {
 .filter label > span + span {
     height: 48px;
     line-height: 48px;
-    padding: 0px 20px 0px 56px;
+    padding: 0px 16px 0px 55px;
     margin-left: -50px;
-    border: solid 2px #d8d8d8;
     z-index: 0;
 }
 .filter label > span + span::first-letter {
@@ -176,13 +218,8 @@ button:hover {
     height: 52px;
     line-height: 52px;
     text-align: center;
-    background-color: #deebff;
     z-index: 1;
 }
-label:hover {
-    cursor: pointer;
-}
-
 
 .info i {
     width: 24px;
@@ -190,7 +227,6 @@ label:hover {
     text-align: center;
     vertical-align: middle;
     line-height: 24px;
-    border: solid 2px #f2f2f2;
     border-radius: 16px;
 }
 .info p {
@@ -198,7 +234,7 @@ label:hover {
     margin-top: -20px;
 }
 
-/* main */
+        /*** main ***/
 
 main {
     margin-top: 10px;  
@@ -281,7 +317,7 @@ p.rate {
     margin: 6px 10px;
 }
 .accommodations-image {
-    width: 100%;
+    /*width: 100%;*/
     height: 115px;
     overflow: hidden;  
     border-radius: 15px 15px 0px 0px;
@@ -501,7 +537,7 @@ footer li {
 
 @media all and (max-width: 1280px) and (min-width: 992px) {
     header {
-        padding: 0 40px;
+        padding: 0 0 0 40px;
     }
     div.main-top {
         gap: 30px;
@@ -646,6 +682,7 @@ footer li {
     }
     button.mobile-version{
         display: inline-block;
+        font-size: 32px;
     }
     .filter {
         margin: 70px 0 40px;
