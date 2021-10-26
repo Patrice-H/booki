@@ -1,8 +1,5 @@
 body {
     font-family: "Raleway";
-}
-div.container {
-    width: 100%;
     flex-direction: column;
 }
 li {
@@ -12,28 +9,12 @@ a {
     text-decoration: none;
     color: black;
 }
-h1, h2, h3, ul, figure {
+h2, h3, ul {
     margin: 0px;
 }
-h2, .aside-top p {
-    font-size: 22.1px;
-}
-
-figcaption, 
-.accommodations > p {
-    font-weight: 700;
-}
-.star-on, 
-.accommodations > p a:hover, 
-.aside-top a:hover, 
 footer a:hover {
     color: #0065fc;
 }
-.star-off {
-    color: #d9d9d9;
-}
-.accommodations, 
-aside, 
 footer {
     background-color: #f2f2f2;
 }
@@ -42,7 +23,7 @@ footer {
 }
 
 
-        /*** header ***/
+        /***    header    ***/
 
 
 /* typography */
@@ -64,7 +45,7 @@ button {
 
 .filter i, 
 .info i,
-nav a:hover {
+#nav-links a:hover {
     color: #0065fc;
 }
 button, 
@@ -114,14 +95,14 @@ button.desktop-version {
 /* layout */
 
 header {
-    margin-top: 50px;
-    padding: 0 0 0 50px;
-}
-.header-top {
-    justify-content: space-between;
+    margin: 50px 0 0 55px;
 }
 nav {
+    justify-content: space-between;
+}
+#nav-links {
     margin-top: -50px;
+    margin-right: 25px;
 }
 nav a {
     display: block;
@@ -131,17 +112,20 @@ nav a {
     line-height: 105px;
 }
 .logo {
-    margin: -8px 20px;
+    margin: -8px 15px;
 }
 .logo img {
     width: 50%;
 }
-div.look-for-form {
-    padding-left: 5px;
-    margin-top: 47px;
+h1 {
+    margin: 47px 0 0;
 }
 h1 + p {
-    margin-top: 10px;
+    margin-top: 8px;
+    margin-left: 0;
+}
+.text-input-field {
+    margin-left: 0;
 }
 .text-input-field span {
     display: inline-block;
@@ -176,7 +160,7 @@ button:hover {
 }
 
 .filter {
-    margin: 30px 0 30px 10px;
+    margin: 30px 0 15px 10px;
 }
 .filter-legend {
     display: inline-block;
@@ -192,7 +176,10 @@ button:hover {
 }
 .filter label {
     display: inline-block;
-    margin: 0px 19px 20px 0;
+    margin: 0px 20px 20px 0;
+}
+.filter label:nth-child(8) {
+    margin-right: 0;
 }
 .filter label:hover {
     cursor: pointer;
@@ -224,27 +211,27 @@ button:hover {
 .info i {
     width: 24px;
     height: 24px;
+    margin-left: 0;
     text-align: center;
     vertical-align: middle;
     line-height: 24px;
     border-radius: 16px;
 }
 .info p {
-    margin-left: 40px;
-    margin-top: -20px;
+    margin: -20px 40px 0;
 }
 
-        /*** main ***/
 
-main {
-    margin-top: 10px;  
+        /***    main    ***/
+
+
+/* typography */
+
+main h2 {
+    font-size: 22px;
 }
-div.main-top {
-    gap: 40px;
-    padding: 0 50px;
-}
-.card {
-    border-radius: 20px;
+main h3 {
+    font-size: 16px;
 }
 p.price {
     font-size: 14px;
@@ -253,11 +240,70 @@ p.rate {
     font-size: 11px;
 }
 
-/* accommodations section */
+/* text and background color */
+
+.star-on {
+    color: #0065fc;
+}
+.star-off {
+    color: #d9d9d9;
+}
+
+/* border */
+
+.card {
+    border-radius: 20px;
+}
+
+/* layout */
+
+main {
+    margin: 35px 50px 0;
+}
+.main-top {
+    gap: 40px;
+}
+
+
+    /**    accommodations section    **/
+
+
+/* typography */
+
+.accommodations h3,
+.accommodations > p {
+    font-weight: 700;
+}
+
+/* text and background color */
+
+.accommodations > p a:hover {
+    color: #0065fc;
+}
+.accommodations {
+    background-color: #f2f2f2;
+}
+.accommodations-content a {
+    background-color: white;
+}
+
+/* border */
+
+.accommodations {
+    border-radius: 20px;
+}
+.accommodations-content a {
+    border-radius: 20px;
+    
+}
+.accommodations-image {
+    border-radius: 15px 15px 0px 0px;
+}
+
+/* layout */
 
 .accommodations {
     padding: 0 40px 40px;
-    border-radius: 20px;
     flex-basis: 66%;
 }
 .accommodations h2 {
@@ -269,15 +315,13 @@ p.rate {
     gap: 30px;
 }
 .accommodations-content a {
-    background-color: white;
     flex-basis: 30%;
     flex-grow: 1;
-    border-radius: 20px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
 }
 .accommodations-content a:hover {
     margin: -5px 5px 5px -5px;
-    box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4); 
+    box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
 }
 .accommodations-card {
     padding: 5px;
@@ -310,31 +354,59 @@ p.rate {
 .accommodations > p {
     margin: 40px 0 0;
 }
-.accommodations-card figcaption {
+.accommodations h3 {
     margin: 10px 5px 6px 10px;
 }
 .accommodations-card p {
     margin: 6px 10px;
 }
 .accommodations-image {
-    /*width: 100%;*/
     height: 115px;
     overflow: hidden;  
-    border-radius: 15px 15px 0px 0px;
 }
 
-/* aside */
+    /**    aside    **/
+
+
+/* typography */
+
+.aside-top p {
+    font-size: 22px;
+}
+
+/* text and background color */
+
+.aside-top a:hover {
+    color: #0065fc;
+}
+aside {
+    background-color: #f2f2f2;
+}
+.aside-content a {
+    background-color: white;
+}
+
+/* border */
+
+aside {
+    border-radius: 20px;
+}
+.aside-content a {
+    border-radius: 20px;
+}
+.aside-card-image {
+    border-radius: 15px 0 0 15px;
+}
+
+/* layout */
 
 aside {
     flex-basis: 28.05%;
-    border-radius: 20px;
     padding: 0 40px;
 }
 .aside-content a {
     display: block;
-    border-radius: 20px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
-    background-color: white;
 }
 .aside-content a:hover {
     margin: -5px 5px 5px -5px;
@@ -359,14 +431,14 @@ aside .img-3 {
     margin-top: -35px;
 }
 .aside-top {
-    width: 100%;
+    margin-top: 50px;
     justify-content: space-between;
 }
-.aside-top p, .aside-top h2 {
-    margin-top: 50px;
+.aside-top p {
+    margin: 0;
 }
-
 .aside-content {
+    margin-top: 20px;
     flex-direction: column;
     gap: 30px;
 }
@@ -375,10 +447,11 @@ aside .img-3 {
     height: 135px;
     padding: 5px; 
 }
-.aside-card figcaption, .aside-card p {
+aside h3, 
+.aside-card p {
     margin-left: 147px;
 }
-.aside-card figcaption {
+aside h3 {
     margin-top: -128px;
     padding-right: 5px;
 }
@@ -391,22 +464,29 @@ aside .img-3 {
     bottom: 3px;
     margin-bottom: 5px;
 }
-
 .aside-card-image {
     width: 127px;
     height: 135px;
     line-height: 135px;
     overflow: hidden;
-    border-radius: 15px 0 0 15px;
 }
 
-/* activities section */
+    /**    activities section    **/
+
+
+/* typography */
+
+/* text and background color */
+
+/* border */
+
+/* layout */
 
 .activities {
     margin-top: 60px;
-    padding: 0 50px 40px;
+    padding-bottom: 40px;
 }
-.activities figcaption {
+.activities h3 {
     margin: 20px 20px 0;
 }
 .activities a {
@@ -481,7 +561,16 @@ aside .img-3 {
 }
 
 
-/* footer */
+        /***    footer    ***/
+
+
+/* typography */
+
+/* text and background color */
+
+/* border */
+
+/* layout */
 
 footer {
     flex-wrap: nowrap;
@@ -491,8 +580,11 @@ footer div {
     width: 500px;
     padding: 0;
 }
-footer h3 {
+footer h2 {
     padding-bottom: 10px;
+}
+footer h2 {
+    font-size: 18px;
 }
 footer ul {
     padding: 0;
@@ -521,7 +613,7 @@ footer li {
     .activities .nd-la-garde-double-line {
         padding-bottom: 11px;
     }
-    .activities .nd-la-garde-double-line figcaption {
+    .activities .nd-la-garde-double-line h3 {
         margin: 11px 20px 0;
     }
 }
@@ -530,18 +622,20 @@ footer li {
     .activities .calanques-double-line {
         padding-bottom: 11px;
     }
-    .activities .calanques-double-line figcaption {
+    .activities .calanques-double-line h3 {
         margin: 11px 20px 0;
     }
 }
 
 @media all and (max-width: 1280px) and (min-width: 992px) {
     header {
-        padding: 0 0 0 40px;
+        margin-left: 45px;
     }
-    div.main-top {
+    main {
+        margin: 35px 40px 0;
+    }
+    .main-top {
         gap: 30px;
-        padding: 0 40px;
     }
     .accommodations {
         padding: 0 30px 40px;
@@ -574,9 +668,6 @@ footer li {
     }
     .accommodations .img-6 {
         margin-top: -110px;
-    }
-    .activities {
-        padding: 0 40px 40px;
     }
     .activities .img-1 {
         width: 340%;
@@ -622,17 +713,26 @@ footer li {
     body {
         font-size: 32px;
     }
-    h1, h2, .aside-top p {
+    h1, .aside-top p {
         font-size: 44px;
     }
     header {
-        width: 100%;
-        margin-top: 60px;
-        padding: 0;
+        margin: 60px 0 0;
     }
-    .header-top {
+    nav {
         flex-direction: column;
         align-items: center;
+    }
+    nav a {
+        width: 50%;
+        line-height: normal;
+        border-bottom: solid 5px #f2f2f2;
+        border-top: none;
+    }
+    #nav-links {
+        margin-top: 80px;
+        margin-right: 0;
+        width: 100%;
     }
     .logo {
         margin: 0;
@@ -641,26 +741,15 @@ footer li {
         width: 191px;
         margin: -14px 0 -14px 71px;
     }
-    nav {
-        margin-top: 80px;
-        width: 100%;
-    }
-    nav a {
-        width: 50%;
-        line-height: normal;
-        border-bottom: solid 5px #f2f2f2;
-        border-top: none;
-    }
-    div.look-for-form {
-        padding: 0 40px;
-        margin-top: 70px;
+    h1 {
+        margin: 70px 40px 0;
     }
     h1 + p {
-        margin-top: 30px;
+        margin: 30px 40px 0;
     }
     .text-input-field {
         display: flex;
-        margin-top: 90px;
+        margin: 90px 40px 0;
     }
     .text-input-field span {
         margin-top: 0;
@@ -685,7 +774,7 @@ footer li {
         font-size: 32px;
     }
     .filter {
-        margin: 70px 0 40px;
+        margin: 70px 40px 40px;
         font-size: 32px;
     }
     .filter-legend {
@@ -710,6 +799,9 @@ footer li {
         height: 100px;
         line-height: 100px;
     }
+    .info {
+        margin: 0 40px;
+    }
     .info i {
         width: 48px;
         height: 48px;
@@ -720,17 +812,23 @@ footer li {
         margin-top: -40px;
         margin-left: 70px;
     }
-    div.main-top {
-        padding: 0;
+    main {
+        margin: 75px 0 0;
+    }
+    main h2 {
+        font-size: 44px;
+    }
+    main h3 {
+        font-size: 32px;
     }
     aside {
         border-radius: 0;
-        margin-top: 30px;
     }
     .aside-top {
-        margin-top: 20px;
+        margin-top: 80px;
     }
     .aside-content {
+        margin-top: 50px;
         padding-bottom: 70px;
     }
     aside .img-1 {
@@ -749,10 +847,11 @@ footer li {
         height: 270px;
         padding: 10px;
     }
-    .aside-card figcaption, .aside-card p {
+    aside h3, 
+    .aside-card p {
         margin-left: 294px;
     }
-    .aside-card figcaption {
+    aside h3 {
         margin-top: -244px;
     }
     .aside-card-image {
@@ -796,7 +895,7 @@ footer li {
     .accommodations-card {
         padding: 10px;
     }
-    .accommodations-card figcaption {
+    .accommodations h3 {
         margin: 20px 5px 10px 15px;
     }
     .accommodations-card p {
@@ -809,7 +908,6 @@ footer li {
         margin: 60px 0 0;
         font-size: 36px;
     }
-    
     .activities {
         margin-top: 70px;
         padding: 0 40px 100px;
@@ -822,7 +920,7 @@ footer li {
     .superimposed-cards {
         gap: 60px;
     }
-    .activities figcaption {
+    .activities h3 {
         margin: 40px 30px 20px;
     }
     .activities .img-1 {
@@ -850,17 +948,16 @@ footer li {
     }
     footer {
         flex-direction: column;
-        padding-left: 40px;
-        padding-top: 10px;
+        padding: 10px 0 100px 40px;
     }
     footer div {
         margin-top: 90px;
     }
-    footer div:nth-child(3) {
-        padding-bottom: 100px;
-    }
     footer li {
         margin-top: 30px;
+    }
+    footer h2 {
+        font-size: 36px;
     }
 }
 
@@ -870,27 +967,15 @@ footer li {
     body {
         font-size: 24px;
     }
-    h1, h2, .aside-top p {
+    h1, .aside-top p {
         font-size: 33px;
     }
     header {
-        margin-top: 40px;
-        padding: 0;
-    }
-    .header-top {
-        flex-direction: column;
-        align-items: center;
-    }
-    .logo {
-        margin: 0;
-    }
-    .logo img {
-        width: 143px;
-        margin: -14px 0 -14px 53px;
+        margin: 40px 0 0;
     }
     nav {
-        margin-top: 60px;
-        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
     nav a {
         width: 50%;
@@ -899,17 +984,27 @@ footer li {
         border-top: none;
         font-size: 22px;
     }
-    div.look-for-form {
-        padding: 0 30px;
-        margin-top: 52px;
+    #nav-links {
+        margin-top: 60px;
+        margin-right: 0;
+        width: 100%;
+    }
+    .logo {
+        margin: 0;
+    }
+    .logo img {
+        width: 143px;
+        margin: -14px 0 -14px 53px;
+    }
+    h1 {
+        margin: 52px 30px 0;
     }
     h1 + p {
-        margin-top: 20px;
+        margin: 20px 30px 0;
     }
-    
     .text-input-field {
         display: flex;
-        margin-top: 67px;
+        margin: 67px 30px 0;
     }
     .text-input-field span {
         width: 50px;
@@ -925,7 +1020,6 @@ footer li {
         margin-right: -10px;
         padding-right: 10px;
     }
-    
     button.desktop-version {
         display: none;
     }
@@ -937,12 +1031,15 @@ footer li {
         border-radius: 20px;
     }
     .filter {
-        margin: 52px 0 30px;
+        margin: 52px 30px 30px;
         font-size: 20px;
     }
     .filter-legend {
         margin: 0 30px 40px 0;
         font-size: 24px;
+    }
+    .info {
+        margin: 0 30px;
     }
     .info i {
         width: 36px;
@@ -954,19 +1051,23 @@ footer li {
         margin-top: -30px;
         margin-left: 60px;
     }
-    div.main-top {
-        padding: 0;
+    main {
+        margin: 60px 0 0;
     }
-    aside {/**/
+    main h2 {
+        font-size: 33px;
+    }
+    main h3 {
+        font-size: 24px;
+    }
+    aside {
         border-radius: 0;
-        margin-top: 20px;
         padding: 0 30px 40px;
     }
-    .aside-card figcaption {
+    aside h3 {
         font-size: 22px;
         line-height: 20px;
     }
-    
     .aside-top {
         margin-bottom: 20px;
     }
@@ -982,15 +1083,12 @@ footer li {
     .accommodations .img-4 {
         margin-top: -140px;
     }
-    
     .accommodations .img-5 {
         margin-top: -40px;
-    }
-    
+    } 
     .accommodations .img-6 {
         margin-top: -300px;
     }
-    
     .accommodations-content {
         flex-direction: column;
     }
@@ -1001,7 +1099,6 @@ footer li {
     .activities-content {
         flex-direction: column;
     }
-    
     .superimposed-cards {
         gap: 40px;
     }
@@ -1021,28 +1118,25 @@ footer li {
     .activities .img-6 {
         margin-top: -50px;
     }
-    
     .port-calanques, 
     .pomegues, 
     .frioul, 
     .nd-la-garde, 
     .longchamp {
         height: 135px;
-    }
-    
+    }    
     footer {
         flex-direction: column;
-        padding-left: 30px;
-        padding-top: 0;
+        padding: 0 0 100px 30px;
     }
     footer div {
         margin-top: 50px;
     }
-    footer div:nth-child(3) {
-        padding-bottom: 80px;
+    footer h2 {
+        font-size: 27px;
     }
     footer li {
         margin-top: 20px;
-        font-size: 18px;
+        font-size: 21px;
     }
 }
