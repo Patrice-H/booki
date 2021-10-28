@@ -2,22 +2,14 @@ body {
     font-family: "Raleway";
     flex-direction: column;
 }
-li {
-    list-style-type: none;
-}
 a {
     text-decoration: none;
     color: black;
 }
-h2, h3, ul {
+h2, h3 {
     margin: 0px;
 }
-footer a:hover {
-    color: #0065fc;
-}
-footer {
-    background-color: #f2f2f2;
-}
+
 .flex {
     display: flex;
 }
@@ -31,36 +23,36 @@ footer {
 h1 {
     font-size: 22px;
 }
-.text-input-field, 
-.filter {
+#search-bar, 
+#filter {
     font-size: 18px;
 }
-.text-input-field > input, 
-.filter,
+#search-bar > input, 
+#filter,
 button {
     font-weight: 700;
 }
 
 /* text and background color */
 
-.filter i, 
-.info i,
+#filter i, 
+#info i,
 #nav-links a:hover {
     color: #0065fc;
 }
 button, 
-.filter input:checked + label > span + span {
+#filter input:checked + label > span + span {
     color: white;
     background-color: #0065fc;
 }
 button:hover {
     background-color: #3283fc;
 }
-.filter label > span:first-child {
+#filter label > span:first-child {
     background-color: #deebff;
 }
-.text-input-field span, 
-.filter label:hover > span + span {
+#search-bar span, 
+#filter label:hover > span + span {
     background-color: #f2f2f2;
 }
 
@@ -75,20 +67,20 @@ nav a:hover {
 button {
     border: none;
 }
-button.mobile-version {
+button#mobile {
     border-radius: 30px;
 }
-button.desktop-version {
+button#desktop {
     border-radius: 0px 20px 20px 0px;
 }
-.text-input-field > input, 
-.info i {
+#search-bar > input, 
+#info i {
     border: solid 2px #f2f2f2;
 }
-.filter label > span + span {
+#filter label > span + span {
     border: solid 2px #d8d8d8;
 }
-.text-input-field span {
+#search-bar span {
     border-radius: 20px 0px 0px 20px;
 }
 
@@ -111,10 +103,10 @@ nav a {
     text-align: center;
     line-height: 105px;
 }
-.logo {
+#logo {
     margin: -8px 15px;
 }
-.logo img {
+#logo img {
     width: 50%;
 }
 h1 {
@@ -124,10 +116,10 @@ h1 + p {
     margin-top: 8px;
     margin-left: 0;
 }
-.text-input-field {
+#search-bar {
     margin-left: 0;
 }
-.text-input-field span {
+#search-bar span {
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -136,21 +128,21 @@ h1 + p {
     line-height: 50px;
     margin-top: -3px;
 }
-.text-input-field > input {
+#search-bar > input {
     height: 46px;
     width: 220px;
     padding: 0px 0px 0px 15px;
     margin-left: -5px;
 }
-.text-input-field input:focus {
+#search-bar input:focus {
     outline: none;
 }
-button.desktop-version {
+button#desktop {
     height: 50px;
     margin-left: -5px;
     padding: 0px 20px;
 }
-button.mobile-version {
+button#mobile {
     display: none;
     height: 100px;
     width: 100px;
@@ -159,48 +151,48 @@ button:hover {
     cursor: pointer;
 }
 
-.filter {
+#filter {
     margin: 30px 0 15px 10px;
 }
-.filter-legend {
+#filter-legend {
     display: inline-block;
     margin: 0 23px 20px 0;
 }
-.filter-button {
+#filter-button {
     display: inline-block;
     margin: 0;
 }
-.filter input {
+#filter input {
     position: absolute;
     opacity: 0;
 }
-.filter label {
+#filter label {
     display: inline-block;
     margin: 0px 20px 20px 0;
 }
-.filter label:nth-child(8) {
+#filter label:nth-child(8) {
     margin-right: 0;
 }
-.filter label:hover {
+#filter label:hover {
     cursor: pointer;
 }
-.filter label > span {
+#filter label > span {
     display: inline-block;
     position: relative; 
     vertical-align: middle;
     border-radius: 32px;
 }
-.filter label > span + span {
+#filter label > span + span {
     height: 48px;
     line-height: 48px;
     padding: 0px 16px 0px 55px;
     margin-left: -50px;
     z-index: 0;
 }
-.filter label > span + span::first-letter {
+#filter label > span + span::first-letter {
     text-transform: uppercase;
 }
-.filter label > span:first-child {
+#filter label > span:first-child {
     width: 52px;
     height: 52px;
     line-height: 52px;
@@ -208,7 +200,7 @@ button:hover {
     z-index: 1;
 }
 
-.info i {
+#info i {
     width: 24px;
     height: 24px;
     margin-left: 0;
@@ -217,7 +209,7 @@ button:hover {
     line-height: 24px;
     border-radius: 16px;
 }
-.info p {
+#info p {
     margin: -20px 40px 0;
 }
 
@@ -260,7 +252,7 @@ p.rate {
 main {
     margin: 35px 50px 0;
 }
-.main-top {
+#main-top {
     gap: 40px;
 }
 
@@ -283,7 +275,7 @@ main {
 .accommodations {
     background-color: #f2f2f2;
 }
-.accommodations-content a {
+.accommodations .content a {
     background-color: white;
 }
 
@@ -292,11 +284,11 @@ main {
 .accommodations {
     border-radius: 20px;
 }
-.accommodations-content a {
+.accommodations .content a {
     border-radius: 20px;
     
 }
-.accommodations-image {
+.accommodations img {
     border-radius: 15px 15px 0px 0px;
 }
 
@@ -309,61 +301,39 @@ main {
 .accommodations h2 {
     margin-top: 50px;
 }
-.accommodations-content {
+.accommodations .content {
     margin-top: 20px;
     flex-wrap: wrap;
     gap: 30px;
 }
-.accommodations-content a {
+.accommodations .content a {
     flex-basis: 30%;
     flex-grow: 1;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
 }
-.accommodations-content a:hover {
+.accommodations .content a:hover {
     margin: -5px 5px 5px -5px;
     box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
 }
-.accommodations-card {
+.accommodations .card {
     padding: 5px;
 }
 .accommodations img {
     object-fit: cover;
+    width: 100%;
+    height: 115px;
 }
-.accommodations .img-1, 
-.accommodations .img-2, 
-.accommodations .img-3 {
-    width: 104%;
-    margin-left: -2%;
-    margin-top: -10%;
-}
-.accommodations .img-4 {
-    width: 104%;
-    margin-left: -4px;
-    margin-top: -58px;
-}
-.accommodations .img-5 {
-    width: 104%;
-    margin-top: -8px;
-    margin-left: -5px;
-}
-.accommodations .img-6 {
-    width: 104%;
-    margin-left: -4px;
-    margin-top: -127px;
-}
+
 .accommodations > p {
     margin: 40px 0 0;
 }
 .accommodations h3 {
     margin: 10px 5px 6px 10px;
 }
-.accommodations-card p {
+.accommodations .card p {
     margin: 6px 10px;
 }
-.accommodations-image {
-    height: 115px;
-    overflow: hidden;  
-}
+
 
     /**    aside    **/
 
@@ -376,13 +346,13 @@ main {
 
 /* text and background color */
 
-.aside-top a:hover {
-    color: #0065fc;
-}
 aside {
     background-color: #f2f2f2;
 }
-.aside-content a {
+.aside-top a:hover {
+    color: #0065fc;
+}
+aside .content a {
     background-color: white;
 }
 
@@ -391,10 +361,10 @@ aside {
 aside {
     border-radius: 20px;
 }
-.aside-content a {
+aside .content a {
     border-radius: 20px;
 }
-.aside-card-image {
+aside img {
     border-radius: 15px 0 0 15px;
 }
 
@@ -404,32 +374,6 @@ aside {
     flex-basis: 28.05%;
     padding: 0 40px;
 }
-.aside-content a {
-    display: block;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
-}
-.aside-content a:hover {
-    margin: -5px 5px 5px -5px;
-    box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
-}
-aside img { 
-    object-fit: cover;
-}
-aside .img-1 {
-    width: 168%;
-    margin-left: -43px;
-    margin-top: -4px;
-}
-aside .img-2 {
-    width: 150%;
-    margin-left: -31px;
-    margin-top: -4px;
-}
-aside .img-3 {
-    width: 107%;
-    margin-left: -5px;
-    margin-top: -35px;
-}
 .aside-top {
     margin-top: 50px;
     justify-content: space-between;
@@ -437,48 +381,56 @@ aside .img-3 {
 .aside-top p {
     margin: 0;
 }
-.aside-content {
+aside .content {
     margin-top: 20px;
     flex-direction: column;
     gap: 30px;
+}
+aside .content a {
+    display: block;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+aside .content a:hover {
+    margin: -5px 5px 5px -5px;
+    box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
+}
+aside img { 
+    object-fit: cover;
+    width: 127px;
+    height: 100%;
 }
 .aside-card {
     position: relative;
     height: 135px;
     padding: 5px; 
 }
-aside h3, 
-.aside-card p {
-    margin-left: 147px;
-}
 aside h3 {
     margin-top: -128px;
     padding-right: 5px;
 }
-.aside-card p.price {
+aside h3, 
+.aside-card p {
+    margin-left: 147px;
+}
+aside .price {
     margin-top: 6px;
     margin-bottom: 0;
 }
-.aside-card p.rate {
+aside .rate {
     position: absolute;
     bottom: 3px;
     margin-bottom: 5px;
 }
-.aside-card-image {
-    width: 127px;
-    height: 135px;
-    line-height: 135px;
-    overflow: hidden;
-}
+
 
     /**    activities section    **/
 
 
-/* typography */
-
-/* text and background color */
-
 /* border */
+
+.activities a {
+    border-radius: 20px;
+}
 
 /* layout */
 
@@ -490,7 +442,6 @@ aside h3 {
     margin: 20px 20px 0;
 }
 .activities a {
-    border-radius: 20px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
     padding-bottom: 20px;
 }
@@ -500,6 +451,8 @@ aside h3 {
 }
 .activities img {
     object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
 }
 .activities-content {
     margin-top: 20px;
@@ -516,48 +469,21 @@ aside h3 {
     flex-grow: 1;
     justify-content: space-between;
 }
-.activities-image {
-    overflow: hidden;
-    border-radius: 20px 20px 0 0;
-}
-.port-calanques {
+#vieux-port,
+#calanques {
     height: 390px;
 }
-.activities .img-1 {
-    width: 225%;
-    margin-left: -185px;
-    margin-top: -5px;
-}
-.activities .img-4 {
-    width: 225%;
-    margin-left: -185px;
-}
-.pomegues {
+#pomegues {
     height: 180px;
 }
-.activities .img-2 {
-    width: 101%;
-    margin-top: -111px;
-}
-.frioul {
+#frioul {
     height: 110px;
 }
-.activities .img-3 {
-    width: 101%;
-    margin-top: -18px;
-}
-.nd-la-garde {
+#nd-la-garde {
     height: 140px;
 }
-.activities .img-5 {
-    width: 101%;
-}
-.longchamp {
+#longchamp {
     height: 155px;
-}
-.activities .img-6 {
-    width: 101%;
-    margin-top: -8px;
 }
 
 
@@ -567,6 +493,13 @@ aside h3 {
 /* typography */
 
 /* text and background color */
+
+footer a:hover {
+    color: #0065fc;
+}
+footer {
+    background-color: #f2f2f2;
+}
 
 /* border */
 
@@ -588,15 +521,17 @@ footer h2 {
 }
 footer ul {
     padding: 0;
+    margin: 0;
 }
 footer li {
     margin-top: 10px;
+    list-style-type: none;
 }
 
 /* Media queries */
 
 @media all and (max-width: 991px) {
-    .main-top {
+    #main-top {
         flex-direction: column;
     }
     aside {
@@ -634,60 +569,22 @@ footer li {
     main {
         margin: 35px 40px 0;
     }
-    .main-top {
+    #main-top {
         gap: 30px;
     }
     .accommodations {
         padding: 0 30px 40px;
     }
-    .accommodations-content {
+    .accommodations .content {
         gap: 20px;
     }
     aside {
         padding: 0 30px;
     }
-    .aside-content {
+    aside .content {
         gap: 20px;
     }
-    .accommodations .img-1, 
-    .accommodations .img-2, 
-    .accommodations .img-3 {
-        width: 140%;
-        margin-left: -20%;
-        margin-top: -15%;
-    }
-    .accommodations .img-4 {
-        width: 140%;
-        margin-left: -40px;
-        margin-top: -75px;
-    }
-    .accommodations .img-5 {
-        width: 155%;
-        margin-left: -20px;
-        margin-top: -10px;
-    }
-    .accommodations .img-6 {
-        margin-top: -110px;
-    }
-    .activities .img-1 {
-        width: 340%;
-        margin-left: -250px;
-        margin-top: -20px;
-    }
-    .activities .img-4 {
-        width: 340%;
-        margin-left: -185px;
-        margin-top: -20px;
-    }
-    .activities .img-5 {
-        width: 115%;
-        margin-left: -20px;
-    }
-    .activities .img-6 {
-        width: 120%;
-        margin-left: -12px;
-        margin-top: -21px;
-    }
+    
     footer {
         padding: 40px 0 40px 40px;
     }
@@ -696,10 +593,10 @@ footer li {
 /* Tablet version */
 
 @media all and (max-width: 991px) and (min-width:768px) {
-    .aside-content {
+    aside .content {
         padding-bottom: 40px;
     }
-    .accommodations-content a {
+    .accommodations .content a {
         flex-basis: 45%;
     }
     .activities-column {
@@ -734,10 +631,10 @@ footer li {
         margin-right: 0;
         width: 100%;
     }
-    .logo {
+    #logo {
         margin: 0;
     }
-    .logo img {
+    #logo img {
         width: 191px;
         margin: -14px 0 -14px 71px;
     }
@@ -747,11 +644,11 @@ footer li {
     h1 + p {
         margin: 30px 40px 0;
     }
-    .text-input-field {
+    #search-bar {
         display: flex;
         margin: 90px 40px 0;
     }
-    .text-input-field span {
+    #search-bar span {
         margin-top: 0;
         width: 100px;
         height: 100px;
@@ -759,56 +656,56 @@ footer li {
         font-size: 32px;
         border-radius: 30px 0px 0px 30px
     }
-    .text-input-field input {
+    #search-bar input {
         height: 96px;
         flex-grow: 1;
         font-size: 32px;
         margin-right: -20px;
         padding-right: 20px;
     }
-    button.desktop-version {
+    button#desktop {
         display: none;
     }
-    button.mobile-version{
+    button#mobile{
         display: inline-block;
         font-size: 32px;
     }
-    .filter {
+    #filter {
         margin: 70px 40px 40px;
         font-size: 32px;
     }
-    .filter-legend {
+    #filter-legend {
         margin: 0 30px 40px 0;
         font-size: 36px;
     }
-    .filter label {
+    #filter label {
         margin: 0 16px 30px 0;
     }
-    .filter label > span {
+    #filter label > span {
         border-radius: 64px;
     }
-    .filter label > span + span {
+    #filter label > span + span {
         height: 94px;
         line-height: 94px;
         margin-left: -100px;
         padding: 0 32px 0 110px;
         border-width: 4px;
     }
-    .filter label > span:first-child {
+    #filter label > span:first-child {
         width: 100px;
         height: 100px;
         line-height: 100px;
     }
-    .info {
+    #info {
         margin: 0 40px;
     }
-    .info i {
+    #info i {
         width: 48px;
         height: 48px;
         line-height: 48px;
         border-radius: 32px;
     }
-    .info p {
+    #info p {
         margin-top: -40px;
         margin-left: 70px;
     }
@@ -821,27 +718,25 @@ footer li {
     main h3 {
         font-size: 32px;
     }
+    p.price {
+        font-size: 28px;
+    }
+    p.rate {
+        font-size: 22px;
+    }
     aside {
         border-radius: 0;
     }
     .aside-top {
         margin-top: 80px;
     }
-    .aside-content {
+    aside .content {
         margin-top: 50px;
         padding-bottom: 70px;
     }
-    aside .img-1 {
-        margin-left: -86px;
-        margin-top: -8px;
-    }
-    aside .img-2 {
-        margin-left: -62px;
-        margin-top: -8px;
-    }
-    aside .img-3 {
-        margin-left: -10px;
-        margin-top: -70px;
+
+    aside img {
+        width: 254px;
     }
     .aside-card {
         height: 270px;
@@ -854,16 +749,7 @@ footer li {
     aside h3 {
         margin-top: -244px;
     }
-    .aside-card-image {
-        height: 270px;
-        width: 254px;
-    }
-    p.price {
-        font-size: 28px;
-    }
-    p.rate {
-        font-size: 22px;
-    }
+    
     .accommodations {
         background-color: white;
     }
@@ -871,37 +757,19 @@ footer li {
         margin-top: 40px;
         margin-bottom: 40px;
     }
-    .accommodations .img-1, 
-    .accommodations .img-2, 
-    .accommodations .img-3 {
-        margin-left: -10px;
-        margin-top: -80px;
-    }
-    .accommodations .img-4 {
-        margin-left: -10px;
-        margin-top: -200px;
-    }
-    .accommodations .img-5 {
-        margin-left: -20px;
-        margin-top: -14px;
-    }
-    .accommodations .img-6 {
-        margin-left: -10px;
-        margin-top: -390px;
-    }
-    .accommodations-content {
+    .accommodations .content {
         flex-direction: column;
     }
-    .accommodations-card {
+    .accommodations .card {
         padding: 10px;
     }
     .accommodations h3 {
         margin: 20px 5px 10px 15px;
     }
-    .accommodations-card p {
+    .accommodations .card p {
         margin: 10px 15px;
     }
-    .accommodations-image {
+    .accommodations img {
         height: 230px;
     }
     .accommodations > p {
@@ -923,27 +791,12 @@ footer li {
     .activities h3 {
         margin: 40px 30px 20px;
     }
-    .activities .img-1 {
-        width: 100%;
-        margin-left: 0;
-        margin-top: -25px;
-    }
-    .activities .img-2 {
-        margin-top: -300px;
-    }
-    .activities .img-4 {
-        width: 100%;
-        margin-left: 0;
-        margin-top: -25px;
-    }
-    .activities .img-6 {
-        margin-top: -50px;
-    }
-    .port-calanques, 
-    .pomegues, 
-    .frioul, 
-    .nd-la-garde, 
-    .longchamp {
+    #vieux-port, 
+    #calanques, 
+    #pomegues, 
+    #frioul, 
+    #nd-la-garde, 
+    #longchamp {
         height: 270px;
     }
     footer {
@@ -953,11 +806,11 @@ footer li {
     footer div {
         margin-top: 90px;
     }
-    footer li {
-        margin-top: 30px;
-    }
     footer h2 {
         font-size: 36px;
+    }
+    footer li {
+        margin-top: 30px;
     }
 }
 
@@ -989,10 +842,10 @@ footer li {
         margin-right: 0;
         width: 100%;
     }
-    .logo {
+    #logo {
         margin: 0;
     }
-    .logo img {
+    #logo img {
         width: 143px;
         margin: -14px 0 -14px 53px;
     }
@@ -1002,52 +855,52 @@ footer li {
     h1 + p {
         margin: 20px 30px 0;
     }
-    .text-input-field {
+    #search-bar {
         display: flex;
         margin: 67px 30px 0;
     }
-    .text-input-field span {
+    #search-bar span {
         width: 50px;
         height: 50px;
         line-height: 50px;
         margin-top: 0;
         border-radius: 20px 0px 0px 20px;
     }
-    .text-input-field input {
+    #search-bar input {
         flex-grow: 1;
         font-size: 24px;
         min-width: 0;
         margin-right: -10px;
         padding-right: 10px;
     }
-    button.desktop-version {
+    button#desktop {
         display: none;
     }
-    button.mobile-version{
+    button#mobile{
         display: inline-block;
         height: 50px;
         width: 50px;
         font-size: 16px;
         border-radius: 20px;
     }
-    .filter {
+    #filter {
         margin: 52px 30px 30px;
         font-size: 20px;
     }
-    .filter-legend {
+    #filter-legend {
         margin: 0 30px 40px 0;
         font-size: 24px;
     }
-    .info {
+    #info {
         margin: 0 30px;
     }
-    .info i {
+    #info i {
         width: 36px;
         height: 36px;
         line-height: 36px;
         border-radius: 24px;
     }
-    .info p {
+    #info p {
         margin-top: -30px;
         margin-left: 60px;
     }
@@ -1075,21 +928,7 @@ footer li {
         background-color: white;
         padding: 0 30px 40px;
     }
-    .accommodations .img-1, 
-    .accommodations .img-2, 
-    .accommodations .img-3 {
-        margin-top: -27%;
-    }
-    .accommodations .img-4 {
-        margin-top: -140px;
-    }
-    .accommodations .img-5 {
-        margin-top: -40px;
-    } 
-    .accommodations .img-6 {
-        margin-top: -300px;
-    }
-    .accommodations-content {
+    .accommodations .content {
         flex-direction: column;
     }
     .activities {
@@ -1102,27 +941,12 @@ footer li {
     .superimposed-cards {
         gap: 40px;
     }
-    .activities .img-1 {
-        width: 100%;
-        margin-left: 0;
-        margin-top: -25px;
-    }
-    .activities .img-2 {
-        margin-top: -300px;
-    }
-    .activities .img-4 {
-        width: 100%;
-        margin-left: 0;
-        margin-top: -25px;
-    }
-    .activities .img-6 {
-        margin-top: -50px;
-    }
-    .port-calanques, 
-    .pomegues, 
-    .frioul, 
-    .nd-la-garde, 
-    .longchamp {
+    #vieux-port, 
+    #calanques, 
+    #pomegues, 
+    #frioul, 
+    #nd-la-garde, 
+    #longchamp {
         height: 135px;
     }    
     footer {
