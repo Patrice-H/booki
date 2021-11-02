@@ -42,7 +42,7 @@ button {
     color: #0065fc;
 }
 button, 
-#filter input:checked + label > span + span {
+#filter input:checked + label > span:nth-child(2) {
     color: white;
     background-color: #0065fc;
 }
@@ -53,7 +53,7 @@ button:hover {
     background-color: #deebff;
 }
 #search-bar span, 
-#filter label:hover > span + span {
+#filter label:hover > span:nth-child(2) {
     background-color: #f2f2f2;
 }
 
@@ -78,7 +78,7 @@ button#desktop {
 #info i {
     border: solid 2px #f2f2f2;
 }
-#filter label > span + span {
+#filter label > span:nth-child(2) {
     border: solid 2px #d8d8d8;
 }
 #search-bar span {
@@ -123,7 +123,6 @@ h1 + p {
 #search-bar span {
     display: inline-block;
     width: 50px;
-    height: 50px;
     text-align: center;
     vertical-align: middle;
     line-height: 50px;
@@ -156,7 +155,7 @@ button:hover {
 }
 #filter-legend {
     display: inline-block;
-    margin: 0 23px 20px 0;
+    margin: 0 20px 20px 0;
 }
 #filter-button {
     display: inline-block;
@@ -170,9 +169,11 @@ button:hover {
     display: inline-block;
     margin: 0px 20px 20px 0;
 }
+
 #filter label:nth-child(8) {
     margin-right: 0;
 }
+
 #filter label:hover {
     cursor: pointer;
 }
@@ -182,26 +183,23 @@ button:hover {
     vertical-align: middle;
     border-radius: 32px;
 }
-#filter label > span + span {
-    height: 48px;
+#filter label > span:nth-child(2) {
     line-height: 48px;
-    padding: 0px 16px 0px 55px;
-    margin-left: -50px;
+    margin-left: -40px;
+    padding: 0px 16px 0px 50px;
     z-index: 0;
 }
-#filter label > span + span::first-letter {
+#filter label > span:nth-child(2)::first-letter {
     text-transform: uppercase;
 }
 #filter label > span:first-child {
     width: 52px;
-    height: 52px;
     line-height: 52px;
     text-align: center;
     z-index: 1;
 }
 #info i {
     width: 24px;
-    height: 24px;
     margin-left: 0;
     text-align: center;
     vertical-align: middle;
@@ -534,6 +532,9 @@ footer li {
     #accommodations {
         order: 2;
     }
+    #filter label:nth-child(8) {
+        margin-right: 30px;
+    }
 }
 
 
@@ -694,7 +695,7 @@ footer li {
     #filter label > span {
         border-radius: 64px;
     }
-    #filter label > span + span {
+    #filter label > span:nth-child(2) {
         border-width: 4px;
     }
     #info i {
@@ -740,15 +741,15 @@ footer li {
     #filter label {
         margin: 0 16px 30px 0;
     }
-    #filter label > span + span {
-        height: 94px;
+    #filter label > span:nth-child(2) {
+        /*height: 94px;*/
         line-height: 94px;
         margin-left: -100px;
         padding: 0 32px 0 110px;
     }
     #filter label > span:first-child {
         width: 100px;
-        height: 100px;
+        /*height: 100px;*/
         line-height: 100px;
     }
     #info {
@@ -983,7 +984,7 @@ footer li {
 
     /***    break line bug fixes    ***/
 
-/* Notre Dame de la Garde */
+/* "Notre Dame de la Garde" */
 
 @media all and (max-width: 1145px) and (min-width: 992px) {
     #activities .columnX4:nth-child(4) a:nth-child(1) {
@@ -994,7 +995,7 @@ footer li {
     }
 }
 
-/* Parc National des Calanques */
+/* "Parc National des Calanques" */
 
 @media all and (max-width: 1240px) and (min-width: 992px) {
     #activities .columnX4:nth-child(3) {
@@ -1012,53 +1013,103 @@ footer li {
         margin: 6px 20px 0;
     }
 }
-
-/* Au coeur de l'eau */
-
-@media all and (max-width: 1171px) and (min-width: 992px) {
-    aside a:nth-child(2) h3 {
-        margin-top: -133px;
+@media all and (max-width: 580px) and (min-width: 550px) {
+    #activities .columnX4:nth-child(3) {
+        padding-bottom: 10px;
+    }
+    #activities .columnX4:nth-child(3) h3 {
+        margin-top: 17px;
+        margin-bottom: 18px;
     }
 }
+
+/* "Au coeur de l'eau" */
+
+@media all and (max-width: 1172px) and (min-width: 992px) {
+    aside a:nth-child(2) h3 {
+        margin-top: -133px;
+        line-height: 17px;
+    }
+}
+
 @media all and (max-width: 637px) and (min-width: 550px) {
     aside a:nth-child(2) h3 {
         margin-top: -266px;
     }
 }
 
-/* Auberge la Cannebiere 
+/* "Auberge la Cannebiere" */
 
 @media all and (max-width: 1167px) and (min-width: 992px) {
-    #accommodations a:nth-child(1) h3{
+    #accommodations .card p.price {
+        margin-top: 17px;
+    }
+    #accommodations a:nth-child(1) h3 {
         margin-top: 5px;
     }
-}*/
+    #accommodations a:nth-child(1) p.price {
+        margin-top: 6px;
+    }
+}
+@media all and (max-width: 777px) and (min-width: 768px) {
+    #accommodations .card p.price {
+        margin-top: 24px;
+    }
+    #accommodations a:nth-child(1) h3 {
+        margin-top: 5px;
+    }
+    #accommodations a:nth-child(1) p.price {
+        margin-top: 6px;
+    }
+}
+
+/* "Hotel les mouettes" */
+
+@media all and (max-width: 1038px) and (min-width: 992px) {
+    #accommodations a:nth-child(3) h3 {
+        margin-top: 5px;
+    }
+    #accommodations a:nth-child(3) p.price {
+        margin-top: 6px;
+    }
+}
+
+/* "Auberge Le Panier" */
+
+@media all and (max-width: 1009px) and (min-width: 992px) {
+    #accommodations a:nth-child(5) h3{
+        margin-top: 5px;
+    }
+    #accommodations a:nth-child(5) p.price {
+        margin-top: 6px;
+    }
+}
 
     /***    Space reduction    ***/
 
-    @media all and (max-width: 1280px) and (min-width: 992px) {
-        header {
-            margin-left: 45px;
-        }
-        main {
-            margin: 35px 40px 0;
-        }
-        #main-top {
-            gap: 30px;
-        }
-        #accommodations {
-            padding: 0 30px 40px;
-        }
-        #accommodations .content {
-            gap: 20px;
-        }
-        aside {
-            padding: 0 30px;
-        }
-        aside .content {
-            gap: 20px;
-        }      
-        footer {
-            padding: 40px 0 40px 40px;
-        }
+@media all and (max-width: 1280px) and (min-width: 992px) {
+    header {
+        margin-left: 45px;
     }
+    main {
+        margin: 35px 40px 0;
+    }
+    #main-top {
+        gap: 30px;
+    }
+    #accommodations {
+        padding: 0 30px 40px;
+    }
+    #accommodations .content {
+        gap: 20px;
+    }
+    aside {
+        padding: 0 30px;
+    }
+    aside .content {
+        gap: 20px;
+    }      
+    footer {
+        padding: 40px 0 40px 40px;
+    }
+}
