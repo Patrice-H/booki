@@ -13,8 +13,7 @@ a {
 .flex {
     display: flex;
 }
-/***    header    ***/
-/* typography */
+/* header - typography */
 h1 {
     font-size: 22px;
 }
@@ -27,7 +26,7 @@ h1 {
 button {
     font-weight: 700;
 }
-/* text and background color */
+/* header - text and background color */
 #filter i, 
 #info i,
 #nav-links a:hover {
@@ -48,7 +47,7 @@ button:hover {
 #filter label:hover > span:nth-child(2) {
     background-color: #f2f2f2;
 }
-/* border */
+/* header - border */
 nav a {
     border-top: solid 5px transparent; 
 }
@@ -74,7 +73,7 @@ button#desktop {
 #search-bar span {
     border-radius: 20px 0px 0px 20px;
 }
-/* layout */
+/* header - layout */
 header {
     margin: 50px 0 0 50px;
     padding-left: 5px;
@@ -196,8 +195,7 @@ button:hover {
 #info p {
     margin: -20px 40px 0;
 }
-/***    main    ***/
-/* typography */
+/* main - typography */
 main h2 {
     font-size: 22px;
 }
@@ -211,18 +209,18 @@ p.rate {
     font-size: 12px;
     letter-spacing: -1px;
 }
-/* text and background color */
+/* main - text and background color */
 .star-on {
     color: #0065fc;
 }
 .star-off {
     color: #d9d9d9;
 }
-/* border */
+/* main - border */
 .card {
     border-radius: 20px;
 }
-/* layout */
+/* main - layout */
 main {
     margin: 35px 50px 0;
 }
@@ -235,13 +233,12 @@ main {
 #main-top .card {
     padding: 5px;
 }
-/**    accommodations section    **/
-/* typography */
+/* accommodations section - typography */
 #accommodations h3,
 #accommodations > p {
     font-weight: 700;
 }
-/* text and background color */
+/* accommodations section - text and background color */
 #accommodations > p a:hover {
     color: #0065fc;
 }
@@ -251,7 +248,7 @@ main {
 #accommodations .content a {
     background-color: white;
 }
-/* border */
+/* accommodations section - border */
 #accommodations {
     border-radius: 20px;
 }
@@ -262,7 +259,7 @@ main {
 #accommodations img {
     border-radius: 15px 15px 0px 0px;
 }
-/* layout */
+/* accommodations section - layout */
 #accommodations {
     padding: 0 40px 40px;
     flex-basis: 66%;
@@ -297,22 +294,18 @@ main {
 #accommodations .card p {
     margin: 6px 10px;
 }
-/**    aside    **/
-/* typography */
-#aside-top p {
+/* aside - typography */
+#aside-top i {
     font-size: 22px;
 }
-/* text and background color */
+/* aside - text and background color */
 aside {
     background-color: #f2f2f2;
-}
-#aside-top a:hover {
-    color: #0065fc;
 }
 aside .content a {
     background-color: white;
 }
-/* border */
+/* aside - border */
 aside {
     border-radius: 20px;
 }
@@ -322,7 +315,7 @@ aside .content a {
 aside img {
     border-radius: 15px 0 0 15px;
 }
-/* layout */
+/* aside - layout */
 aside {
     flex-basis: 28.05%;
     padding: 0 40px;
@@ -330,9 +323,6 @@ aside {
 #aside-top {
     margin-top: 50px;
     justify-content: space-between;
-}
-#aside-top p {
-    margin: 0;
 }
 aside .content {
     margin-top: 20px;
@@ -372,12 +362,11 @@ aside .rate {
     bottom: 3px;
     margin-bottom: 5px;
 }
-/**    activities section    **/
-/* border */
+/* activities section - border */
 #activities a {
     border-radius: 20px;
 }
-/* layout */
+/* activities section - layout */
 #activities {
     margin-top: 60px;
     padding-bottom: 40px;
@@ -427,21 +416,20 @@ aside .rate {
 #longchamp {
     height: 155px;
 }
-/***    footer    ***/
-/* text and background color */
+/* footer - text and background color */
 footer a:hover {
     color: #0065fc;
 }
 footer {
     background-color: #f2f2f2;
 }
-/* layout */
+/* footer - layout */
 footer {
     flex-wrap: nowrap;
-    padding: 40px 0 40px 50px;
+    padding: 40px 150px 40px 50px;
+    justify-content: space-between;
 }
 footer div {
-    width: 500px;
     padding: 0;
 }
 footer h2 {
@@ -458,8 +446,224 @@ footer li {
     margin-top: 10px;
     list-style-type: none;
 }
-    /****    Media queries    ****/
-    /***   Space reduction   ***/
+    /* screen HD - break line "Calanques" */
+@media all and (min-width: 1900px) and (max-width: 2031px) {
+    #activities .columnX4:nth-child(3) {
+        padding-bottom: 22px;
+    }
+    #activities .columnX4:nth-child(3) h3 {
+        margin: 22px 20px 0;
+    }
+}
+    /* screen HD - break line "Cannebière" */
+@media all and (min-width: 1900px) and (max-width: 1985px) {
+    #accommodations .card p.price {
+        margin-top: 34px;
+    }
+    #accommodations a:nth-child(1) h3 {
+        margin-top: 10px;
+    }
+    #accommodations a:nth-child(1) p.price {
+        margin-top: 12px;
+    }
+}
+    /* screen HD */
+@media all and (min-width: 1900px) {
+    /* screen HD - typography */
+    h1 {
+        font-size: 44px;
+    }
+    main h2, 
+    #aside-top i {
+        font-size: 42px;
+    }
+    nav a,
+    h1 + p, 
+    #info i, 
+    #info p, 
+    #accommodations > p, 
+    footer li {
+        font-size: 32px;
+    }
+    #search-bar, 
+    #filter, 
+    footer h2 {
+        font-size: 36px;
+    }
+    main h3 {
+        font-size: 30px;
+    }
+    p.price {
+        font-size: 26px;
+    }
+    p.rate {
+        font-size: 22px;
+        letter-spacing: -2px;
+    }
+    /* screen HD - border */
+    #search-bar span {
+        border-radius: 40px 0px 0px 40px;
+    }
+    #search-bar > input, 
+    #filter label > span:nth-child(2), 
+    #info i {
+        border-width: 4px;
+    }
+    #info i {
+        border-radius: 32px;
+    }
+    button#desktop {
+        border-radius: 0px 40px 40px 0px;
+    }
+    #filter label > span {
+        border-radius: 64px;
+    }
+    /* screen HD - layout */
+    #nav-links {
+        margin-top: -50px;
+        margin-right: 25px;
+    }
+    nav a {
+        width: 320px;
+        height: 120px;
+        line-height: 210px;
+    }
+    #logo {
+        margin: 30px 30px 0;
+    }
+    #logo img {
+        width: 100%;
+    }
+    #search-bar {
+        margin-top: 32px;
+    }
+    #search-bar span {
+        width: 100px;
+        line-height: 100px;
+        margin-top: -8px;
+    }
+    #search-bar > input {
+        height: 92px;
+        width: 440px;
+        padding: 0px 0px 0px 15px;
+        margin-left: -10px;
+    }
+    button#desktop {
+        height: 100px;
+        margin-left: -10px;
+        padding: 0px 40px;
+    }
+    #filter {
+        margin: 60px 0 30px 20px;
+    }
+    #filter-legend {
+        margin: 0 20px 40px -5px;
+    }
+    #filter label {
+        margin: 0 15px 40px 0;
+    }
+    #filter label > span:first-child {
+        width: 100px;
+        line-height: 100px;
+    }
+    #filter label > span:nth-child(2) {
+        line-height: 92px;
+        margin-left: -80px;
+        padding: 0px 30px 0px 95px;
+    }
+    #info i {
+        width: 48px;
+        line-height: 48px;
+    }
+    #info p {
+        margin: -40px 80px 0;
+    }
+    main {
+        margin-top: 70px;
+    }
+    #main-top .card {
+        padding: 10px;
+    }
+    #accommodations h2, 
+    #aside-top {
+        margin-top: 100px;
+    }
+    #accommodations .content, 
+    aside .content {
+        margin-top: 40px;
+    }
+    #accommodations {
+        padding-bottom: 80px
+    }
+    #accommodations img {
+        height: 230px;
+    }
+    #accommodations h3 {
+        margin: 20px 5px 12px 10px;
+    }
+    #accommodations .card p {
+        margin: 12px 10px;
+    }
+    #accommodations > p {
+        margin-top: 80px;
+    }
+    aside .card {
+        height: 270px;
+    }
+    aside img {
+        width: 254px;
+    }
+    aside h3, 
+    aside .card p {
+        margin-left: 284px;
+    }
+    aside h3 {
+        margin-top: -256px;
+    }
+    aside .price {
+        margin-top: 12px;
+    }
+    aside .rate {
+        bottom: 8px;
+        margin-bottom: 10px;
+    }
+    #activities {
+        margin-top: 120px;
+        padding-bottom: 80px;
+    }
+    #activities a {
+        padding-bottom: 40px;
+    }
+    #activities .content {
+        margin-top: 40px;
+    }
+    #activities h3 {
+        margin-top: 40px;
+    }
+    #vieux-port,
+    #calanques {
+        height: 750px;
+    }
+    #pomegues {
+        height: 360px;
+    }
+    #frioul {
+        height: 220px;
+    }
+    #nd-la-garde {
+        height: 280px;
+    }
+    #longchamp {
+        height: 310px;
+    }
+    footer {
+        padding: 80px 300px 80px 50px;
+    }
+    footer li {
+        margin-top: 20px;
+    }
+}
+    /* space reduction */
 @media all and (max-width: 1280px) {
     header {
         margin-left: 40px;
@@ -480,11 +684,10 @@ footer li {
         padding: 0 30px;
     }
     footer {
-        padding: 40px 0 40px 40px;
-    } 
+        padding: 40px 150px 40px 40px;
+    }
 }
-    /***    break line bug fixes    ***/
-    /* "Parc National des Calanques" */
+    /* desktop version - break line "Calanques" */
 @media all and (max-width: 1240px) {
     #activities .columnX4:nth-child(3) {
         padding-bottom: 11px;
@@ -493,14 +696,14 @@ footer li {
         margin: 11px 20px 0;
     }
 }
-    /* "Au coeur de l'eau" */
+    /* desktop version - break line "coeur de l'eau" */
 @media all and (max-width: 1171px) {
     aside a:nth-child(2) h3 {
         margin-top: -133px;
         line-height: 17px;
     }
 }
-    /* "Auberge la Cannebiere" */
+    /* desktop version - break line "Cannebiere" */
 @media all and (max-width: 1167px) {
     #accommodations .card p.price {
         margin-top: 17px;
@@ -512,7 +715,7 @@ footer li {
         margin-top: 6px;
     }
 }
-    /* "Notre Dame de la Garde" */
+    /* desktop version - break line "Notre Dame de la Garde" */
 @media all and (max-width: 1145px) {
     #activities .columnX4:nth-child(4) a:nth-child(1) {
         padding-bottom: 11px;
@@ -521,7 +724,7 @@ footer li {
         margin: 11px 20px 0;
     }
 }
-    /* "Hotel les mouettes" */
+    /* desktop version - break line "les mouettes" */
 @media all and (max-width: 1038px) {
     #accommodations a:nth-child(3) h3 {
         margin-top: 5px;
@@ -530,7 +733,7 @@ footer li {
         margin-top: 6px;
     }
 }
-    /* "Auberge Le Panier" */
+    /* desktop version - break line "Le Panier" */
 @media all and (max-width: 1009px) {
     #accommodations a:nth-child(5) h3{
         margin-top: 5px;
@@ -539,12 +742,12 @@ footer li {
         margin-top: 6px;
     }
 }
-    /***   Tablet version   ***/
+    /* Tablet version */
 @media all and (max-width: 991px) {
-    /* typography */
+    /* Tablet version - typography */
     h1, 
     main h2, 
-    #aside-top  {
+    #aside-top i {
         font-size: 30px;
     }
     main h3, 
@@ -558,7 +761,7 @@ footer li {
     p.rate {
         font-size: 16px;
     }
-    /* layout */
+    /* Tablet version - layout */
     #main-top {
         flex-direction: column;
         gap: 0;
@@ -631,9 +834,14 @@ footer li {
     #filter label:nth-child(8) {
         margin-right: 30px;
     }
+    footer {
+        padding: 40px 100px 40px 40px;
+    }
+    footer li {
+        margin-top: 20px
+    }
 }
-    /***    break line fixes    ***/
-    /* "Parc National des Calanques" */
+    /* Tablet - break line "Calanques" */
 @media all and (max-width: 805px) {
     #activities .columnX4:nth-child(3) {
         padding-bottom: 10px;
@@ -642,10 +850,9 @@ footer li {
         margin: 6px 20px 0;
     }
 }
-    /***   mobile versions   ***/
-    /**  high resolution  **/
+    /**  mobile high resolution  version **/
 @media all and (max-width: 767px) {
-    /* typography */
+    /* mobile high - typography */
     body, 
     #search-bar span, 
     #search-bar input, 
@@ -658,8 +865,11 @@ footer li {
     }
     h1, 
     main h2, 
-    #aside-top  {
+    #aside-top i {
         font-size: 44px;
+    }
+    #info i {
+        font-size: 24px;
     }
     #filter-legend, 
     footer h2 {
@@ -671,11 +881,11 @@ footer li {
     p.rate {
         font-size: 22px;
     }
-    /* text and background color */
+    /* mobile high - text and background color */
     #accommodations {
         background-color: white;
     }
-    /* border */
+    /* mobile high - border */
     nav a {
         border-bottom: solid 5px #f2f2f2;
         border-top: none;
@@ -695,7 +905,7 @@ footer li {
     aside {
         border-radius: 0;
     }
-    /* layout */
+    /* mobile high - layout */
     header {
         margin: 60px 0 0 0;
         padding-left: 0;
@@ -728,7 +938,7 @@ footer li {
     }
     #search-bar {
         display: flex;
-        margin: 90px 40px 0;
+        margin: 70px 40px 0;
     }
     #search-bar span {
         width: 100px;
@@ -859,13 +1069,13 @@ footer li {
         margin-top: 30px;
     } 
 }
-    /* "Au coeur de l'eau" */
+    /* mobile high - break line "coeur de l'eau" */
 @media all and (max-width: 637px) {
     aside a:nth-child(2) h3 {
         margin-top: -266px;
     }
 }
-    /* "Parc National des Calanques" */
+    /* mobile high - break line "Calanques" */
 @media all and (max-width: 580px) {
     #activities .columnX4:nth-child(3) {
         padding-bottom: 10px;
@@ -875,49 +1085,41 @@ footer li {
         margin-bottom: 18px;
     }
 }
-    /*  low resolution  */
+    /* mobile low resolution version */
 @media all and (max-width: 549px) {
-    /* typography */
+    /* mobile low - typography */
     body,
-    h1 + p,
-    #filter-legend, 
-    #accommodations > p {
-        font-size: 24px;
+    h1 + p, 
+    nav a, 
+    main h3, 
+    button#mobile, 
+    #filter, 
+    footer li {
+        font-size: 16px;
     }
     h1, 
     main h2, 
-    #aside-top  {
-        font-size: 33px;
-    }
-    nav a, 
-    main h3 {
+    #aside-top i {
         font-size: 22px;
     }
-    #search-bar span {
+    #search-bar span,
+    #search-bar input, 
+    #filter-legend, 
+    #accommodations > p, 
+    footer h2 {
         font-size: 18px;
     }
-    #search-bar input {
-        font-size: 23px;
-    }
-    button#mobile{
-        font-size: 16px;
-    }
-    #filter {
-        font-size: 20px;
-    }
+    #info i,
     p.price {
         font-size: 14px;
     }
     p.rate {
         font-size: 12px;
     }
-    footer h2 {
-        font-size: 27px;
+    /* mobile low - border */
+    nav a {
+        border-width: 3px;
     }
-    footer li {
-        font-size: 21px;
-    }
-    /* border */
     #search-bar span {
         border-radius: 20px 0px 0px 20px;
     }
@@ -925,7 +1127,7 @@ footer li {
         border-radius: 32px;
     }
     button#mobile{
-        border-radius: 20px;
+        border-radius: 16px;
     }
     #filter label > span:nth-child(2) {
         border-width: 2px;
@@ -933,25 +1135,28 @@ footer li {
     #info i {
         border-radius: 24px;
     }
-    /* layout */
+    /* mobile low - layout */
     header {
         margin: 40px 0 0 0;
     }
+    nav a {
+        height: 35px;
+    }
     #nav-links {
-        margin-top: 60px;
+        margin-top: 35px;
     }
     #logo img {
-        width: 143px;
-        margin: -14px 0 -14px 53px;
+        width: 33%;
+        margin: -20px 0 -14px 135px;
     }
     h1 {
-        margin: 52px 30px 0;
+        margin: 30px 30px 0;
     }
     h1 + p {
-        margin: 20px 30px 0;
+        margin: 16px 30px 0;
     }
     #search-bar {
-        margin: 67px 30px 0;
+        margin: 30px 30px 0;
     }
     #search-bar span {
         width: 50px;
@@ -969,10 +1174,13 @@ footer li {
         width: 50px;
     }
     #filter {
-        margin: 52px 30px 30px;
+        margin: 35px 10px 30px 30px;
+    }
+    #filter-legend {
+        margin: 0 30px 20px 0;
     }
     #filter label {
-        margin: 0 20px 20px 0;
+        margin: 0 5px 15px 0;
     }
     #filter label > span:nth-child(2) {
         line-height: 48px;
@@ -984,18 +1192,18 @@ footer li {
         line-height: 52px;
     }
     #info {
-        margin: 0 30px;
+        margin: -20px 0 0 30px;
     }
     #info i {
-        width: 36px;
-        line-height: 36px;
+        width: 24px;
+        line-height: 24px;
     }
     #info p {
-        margin-top: -30px;
-        margin-left: 60px;
+        margin-top: -20px;
+        margin-left: 40px;
     }
     main {
-        margin: 60px 0 0;
+        margin: 35px 0 0;
     }
     #main-top .content {
         gap: 30px;
@@ -1010,8 +1218,8 @@ footer li {
         line-height: 20px;
     }
     #aside-top {
-        margin-top: 60px;
-        margin-bottom: 20px;
+        margin-top: 40px;
+        margin-bottom: 25px;
     }
     aside .content {
         margin-top: 20px;
@@ -1038,7 +1246,7 @@ footer li {
     }
     #accommodations {
         padding: 0 30px 10px;
-        margin-top: 60px;
+        margin-top: 40px;
     }
     #accommodations .content {
         margin-top: 30px;
@@ -1065,11 +1273,11 @@ footer li {
         height: 115px;
     }
     #accommodations > p {
-        margin: 40px 0 0;
+        margin: 35px 0 0;
     }
     #activities {
-        margin-top: 60px;
-        padding: 0 30px 80px;
+        margin-top: 50px;
+        padding: 0 30px 50px;
     }
     #activities .content {
         margin-top: 30px;
@@ -1096,12 +1304,12 @@ footer li {
         height: 135px;
     }    
     footer {
-        padding: 0 0 100px 30px;
+        padding: 10px 0 100px 30px;
     }
     footer div {
-        margin-top: 50px;
+        margin-top: 30px;
     }
     footer li {
-        margin-top: 20px;
+        margin-top: 15px;
     }
 }
