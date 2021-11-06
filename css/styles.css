@@ -38,7 +38,7 @@ button,
     background-color: #0065fc;
 }
 button:hover {
-    background-color: #3283fc;
+    background-color: #0049d9;
 }
 #filter label > span:first-child {
     background-color: #deebff;
@@ -897,6 +897,9 @@ footer li {
     #search-bar span {
         border-radius: 30px 0px 0px 30px
     }
+    #search-bar input {
+        border-width: 4px;
+    }
     #filter label > span {
         border-radius: 64px;
     }
@@ -949,7 +952,7 @@ footer li {
         line-height: 100px;
     }
     #search-bar input {
-        height: 96px;
+        height: 92px;
         flex-grow: 1;
         margin: 0;
         padding-right: 20px;
@@ -1126,6 +1129,9 @@ footer li {
     }
     #search-bar span {
         border-radius: 20px 0px 0px 20px;
+    }
+    #search-bar input {
+        border-width: 2px;
     }
     #filter label > span {
         border-radius: 32px;
