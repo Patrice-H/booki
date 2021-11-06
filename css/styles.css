@@ -114,20 +114,23 @@ h1 + p {
     text-align: center;
     vertical-align: middle;
     line-height: 50px;
-    margin-top: -3px;
 }
 #search-bar > input {
+    display: block;
     height: 46px;
     width: 220px;
     padding: 0px 0px 0px 15px;
-    margin-left: -5px;
+    margin-left: 48px;
+    margin-top: -50px;
 }
 #search-bar input:focus {
     outline: none;
 }
 button#desktop {
+    display: block;
     height: 50px;
-    margin-left: -5px;
+    margin-top: -50px;
+    margin-left: 285px;
     padding: 0px 20px;
 }
 button#mobile {
@@ -545,12 +548,13 @@ footer li {
     #search-bar > input {
         height: 92px;
         width: 440px;
-        padding: 0px 0px 0px 15px;
-        margin-left: -10px;
+        margin-top: -100px;
+        margin-left: 96px;
     }
     button#desktop {
         height: 100px;
-        margin-left: -10px;
+        margin-left: 555px;
+        margin-top: -100px;
         padding: 0px 40px;
     }
     #filter {
@@ -943,12 +947,11 @@ footer li {
     #search-bar span {
         width: 100px;
         line-height: 100px;
-        margin-top: 0;
     }
     #search-bar input {
         height: 96px;
         flex-grow: 1;
-        margin-right: -20px;
+        margin: 0;
         padding-right: 20px;
     }
     button#desktop {
@@ -956,6 +959,7 @@ footer li {
     }
     button#mobile {
         display: inline-block;
+        margin-left: -20px;
     }
     #filter {
         margin: 70px 40px 40px;
