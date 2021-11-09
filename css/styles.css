@@ -93,10 +93,11 @@ nav a {
     line-height: 105px;
 }
 #logo {
-    margin: -8px 15px;
+    margin: -8px -20px;
 }
 #logo img {
-    width: 50%;
+    width: 95px;
+    margin-left: 35px;
 }
 h1 {
     margin: 47px 40px 0 0;
@@ -172,20 +173,20 @@ button:hover {
     vertical-align: middle;
     border-radius: 32px;
 }
+#filter label > span:first-child {
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    z-index: 1;
+}
 #filter label > span:nth-child(2) {
-    line-height: 48px;
+    line-height: 46px;
     margin-left: -40px;
     padding: 0px 16px 0px 50px;
     z-index: 0;
 }
 #filter label > span:nth-child(2)::first-letter {
     text-transform: uppercase;
-}
-#filter label > span:first-child {
-    width: 52px;
-    line-height: 52px;
-    text-align: center;
-    z-index: 1;
 }
 #info i {
     width: 24px;
@@ -809,31 +810,13 @@ footer li {
         flex-basis: 45%;
     }
     #accommodations img {
-        height: 230px;
+        height: 220px;
     }
     #accommodations .card p.price {
         margin-top: 6px;
     }
-    #accommodations a:nth-child(1) h3, 
-    #accommodations a:nth-child(3) h3,
-    #accommodations a:nth-child(5) h3 {
-        margin-top: 12px;
-    }
-    #accommodations a:nth-child(1) p.price, 
-    #accommodations a:nth-child(3) p.price, 
-    #accommodations a:nth-child(5) p.price{
-        margin-top: 6px;
-    }
     #activities .columnX4 {
         flex-basis: 40%;
-    }
-    #activities .columnX4:nth-child(3), 
-    #activities .columnX4:nth-child(4) a:nth-child(1){
-        padding-bottom: 20px;
-    }
-    #activities .columnX4:nth-child(3) h3, 
-    #activities .columnX4:nth-child(4) a:nth-child(1) h3{
-        margin: 20px 20px 0;
     }
     #filter label:nth-child(8) {
         margin-right: 30px;
@@ -843,6 +826,25 @@ footer li {
     }
     footer li {
         margin-top: 20px
+    }
+    /* break line fixes */
+    #accommodations a:nth-child(1) h3, 
+    #accommodations a:nth-child(3) h3,
+    #accommodations a:nth-child(5) h3 {
+        margin-top: 12px;
+    }
+    #accommodations a:nth-child(1) p.price, 
+    #accommodations a:nth-child(3) p.price, 
+    #accommodations a:nth-child(5) p.price {
+        margin-top: 6px;
+    }
+    #activities .columnX4:nth-child(3), 
+    #activities .columnX4:nth-child(4) a:nth-child(1){
+        padding-bottom: 20px;
+    }
+    #activities .columnX4:nth-child(3) h3, 
+    #activities .columnX4:nth-child(4) a:nth-child(1) h3{
+        margin: 20px 20px 0;
     }
 }
     /* Tablet - break line "Calanques" */
@@ -854,57 +856,58 @@ footer li {
         margin: 6px 20px 0;
     }
 }
-    /**  mobile high resolution  version **
+    /**  mobile landscape orientation version **/
 @media all and (max-width: 767px) {
-    /* mobile high - typography *
+    /* mobile landscape - typography */
     body,
-    #search-bar span, 
-    #search-bar input, 
-    button#mobile, 
-    #filter, 
-    h1 + p,
+    h1 + p, 
     main h3, 
-    #accommodations > p {
-        font-size: 32px;
+    button#mobile, 
+    #filter {
+        font-size: 24px;
     }
     h1, 
     main h2, 
     #aside-top i {
-        font-size: 44px;
+        font-size: 33px;
     }
-    #info i {
-        font-size: 24px;
-    }
+    #search-bar span,
+    #search-bar input, 
     #filter-legend, 
+    #accommodations > p, 
     footer h2 {
-        font-size: 36px;
+        font-size: 27px;
     }
+    #info i,
     p.price {
-        font-size: 28px;
+        font-size: 21px;
     }
     p.rate {
-        font-size: 22px;
+        font-size: 18px;
     }
-    /* mobile high - text and background color *
+    /* mobile landscape - text and background color */
     #accommodations {
         background-color: white;
     }
-    /* mobile high - border *
+    /* mobile landscape - border */
     nav a {
-        border-bottom: solid 5px #f2f2f2;
+        border-bottom: solid 6px #f2f2f2;
         border-top: none;
     }
     #search-bar span {
-        border-radius: 30px 0px 0px 30px
+        border-radius: 24px 0px 0px 24px
     }
     #search-bar input {
-        border-width: 4px;
+        border-width: 3px;
     }
+    button#mobile{
+        border-radius: 24px;
+    }  
     #filter label > span {
-        border-radius: 64px;
+        border-radius: 48px;
     }
     #filter label > span:nth-child(2) {
-        border-width: 4px;
+        border-width: 3px;
     }
     #info i {
         border-radius: 32px;
@@ -912,47 +915,52 @@ footer li {
     aside {
         border-radius: 0;
     }
-    /* mobile high - layout *
+    /* mobile landscape - layout */
     header {
-        margin: 60px 0 0 0;
+        margin: 30px 30px 0;
         padding-left: 0;
     }
     nav {
         flex-direction: column;
         align-items: center;
-    }
-    #logo {
-        margin: 0;
-    }
-    #logo img {
-        width: 191px;
-        margin: -14px 0 -14px 71px;
-    }
-    #nav-links {
-        margin-top: 80px;
-        margin-right: 0;
-        width: 100%;
+        margin: 0 -30px;
     }
     nav a {
+        height: 54px;
         width: 50%;
         line-height: normal;
     }
+    #nav-links {
+        margin-top: 54px;
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    #logo {
+        margin: -8px 0;
+    }
+    #logo img {
+        width: 143px;
+        margin-left: 54px;
+    }
     h1 {
-        margin: 70px 40px 0;
+        margin: 45px 0 0;
     }
     h1 + p {
-        margin: 30px 40px 0;
+        margin: 24px 0 0;
     }
     #search-bar {
         display: flex;
-        margin: 70px 40px 0;
+        margin: 45px 0 0;
     }
     #search-bar span {
-        width: 100px;
-        line-height: 100px;
+        width: 75px;
+        line-height: 75px;
     }
     #search-bar input {
-        height: 92px;
+        height: 69px;
+        min-width: 0;
         flex-grow: 1;
         margin: 0;
         padding-right: 20px;
@@ -962,101 +970,95 @@ footer li {
     }
     button#mobile {
         display: inline-block;
+        height: 75px;
+        width: 75px;
         margin-left: -20px;
     }
     #filter {
-        margin: 70px 40px 40px;
+        margin: 45px -30px 40px 0;
     }
     #filter-legend {
-        margin: 0 30px 40px 0;
-    }
-    #filter label {
-        margin: 0 16px 30px 0;
-    }
-    #filter label > span:nth-child(2) {
-        line-height: 94px;
-        margin-left: -100px;
-        padding: 0 32px 0 110px;
+        margin: 0 30px 25px 0;
     }
     #filter label > span:first-child {
-        width: 100px;
-        line-height: 100px;
+        width: 75px;
+        line-height: 75px;
+    }
+    #filter label > span:nth-child(2) {
+        line-height: 69px;
+        margin-left: -64px;
+        padding: 0 24px 0 75px;
+    }
+    #filter label:nth-child(8) {
+        margin-right: 0;
     }
     #info {
-        margin: 0 40px;
+        margin: -30px 0 0 0;
     }
     #info i {
-        width: 48px;
-        line-height: 48px;
+        width: 36px;
+        line-height: 36px;
     }
     #info p {
-        margin-top: -40px;
-        margin-left: 70px;
+        margin-top: -30px;
+        margin-left: 60px;
     }
     main {
-        margin: 75px 0 0;
-    }   
-    #aside-top {
-        margin-top: 80px;
+        margin: 54px 0 0;
     }
-    aside .content {
-        margin-top: 50px;
+    #main-top .content {
+        margin-top: 25px;
+    }
+    aside {
+        padding: 0 30px 60px;
+    }
+    #aside-top {
+        margin-top: 40px;
+    }
+    aside h3, 
+    aside .card p{
+        margin-left: 280px;
     }
     aside a:nth-child(2) h3 {
-        line-height: 35px;
+        line-height: normal;
     }
     #accommodations {
-        margin-top: 80px;
-        padding: 0 40px 10px;
+        margin-top: 40px;
+        padding: 0 30px 10px;
     }
     #accommodations .content, 
     #activities .content, 
     footer {
         flex-direction: column;
     }
-    #accommodations .content {
-        margin-top: 40px;
-    }
     #accommodations h2 {
         margin-top: 0;
     }
     #accommodations h3 {
-        margin: 20px 5px 10px 15px;
+        margin: 14px 5px 5px 15px;
     }
     #accommodations .card p {
-        margin: 10px 15px;
+        margin: 10px 15px 5px;
     }
     #accommodations .card p.price {
-        margin-top: 10px;
-    }
-    #accommodations a:nth-child(1) h3 {
-        margin-top: 20px;
-    }
-    #accommodations a:nth-child(1) p.price {
         margin-top: 10px;
     }
     #accommodations > p {
         margin: 60px 0 0;
     }
     #activities {
-        margin-top: 80px;
-        padding: 0 40px 100px;
+        margin-top: 60px;
+        padding: 0 30px 75px;
+    }
+    #activities a {
+        padding-bottom: 0;
     }
     #activities .content {
-        margin-top: 60px;
+        margin-top: 40px;
         gap: 40px;
     }
-    #activities .columnX4:nth-child(3) {
-        padding-bottom: 20px;
-    }
-    #activities .columnX4:nth-child(3) h3 {
-        margin: 20px 20px 0;
-    }
-    .rowX2 {
-        gap: 40px;
-    }
-    #activities h3 {
-        margin: 40px 30px 20px;
+    #activities img {
+        object-position: center -10px;
     }
     #vieux-port, 
     #calanques, 
@@ -1066,35 +1068,49 @@ footer li {
     #longchamp {
         height: 270px;
     }
+    .rowX2 {
+        gap: 40px;
+    }
+    #activities h3 {
+        margin: 20px 30px;
+    }
     footer {
-        padding: 10px 0 100px 40px;
+        flex-direction: column;
+        padding: 0 0 75px 30px;
     }
     footer div {
-        margin-top: 90px;
+        margin-top: 45px;
     }
     footer li {
-        margin-top: 30px;
-    } 
-}
-    /* mobile high - break line "coeur de l'eau" */
-@media all and (max-width: 637px) {
-    aside a:nth-child(2) h3 {
-        margin-top: -266px;
+        margin-top: 22px;
+    }
+    /* pomegues image positioning  */
+    #activities .columnX4:nth-child(2) a:nth-child(1) img {
+        object-position: center -280px;
+    }
+    /* break line fixes */
+    #accommodations a:nth-child(1) h3, 
+    #accommodations a:nth-child(3) h3,
+    #accommodations a:nth-child(5) h3 {
+        margin-top: 14px;
+    }
+    #accommodations a:nth-child(1) p.price, 
+    #accommodations a:nth-child(3) p.price, 
+    #accommodations a:nth-child(5) p.price {
+        margin-top: 10px;
+    }
+    #activities .columnX4:nth-child(3), 
+    #activities .columnX4:nth-child(4) a:nth-child(1){
+        padding-bottom: 20px;
+    }
+    #activities .columnX4:nth-child(3) h3, 
+    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
+        margin: 20px 30px;
     }
 }
-    /* mobile high - break line "Calanques" */
-@media all and (max-width: 580px) {
-    #activities .columnX4:nth-child(3) {
-        padding-bottom: 10px;
-    }
-    #activities .columnX4:nth-child(3) h3 {
-        margin-top: 17px;
-        margin-bottom: 18px;
-    }
-}
-    /* mobile low resolution version */
+    /* mobile portrait orientation version */
 @media all and (max-width: 480px) {
-    /* mobile low - typography */
+    /* mobile portrait - typography */
     body,
     h1 + p, 
     main h3, 
@@ -1121,103 +1137,86 @@ footer li {
     p.rate {
         font-size: 12px;
     }
-    /* mobile low - text and background color */
-    #accommodations {
-        background-color: white;
-    }
-    /* mobile low - border */
+    /* mobile portrait - border */
     nav a {
-        border-bottom: solid 3px #f2f2f2;
-        border-top: none;
+        border-width: 4px;
     }
     #search-bar span {
-        border-radius: 20px 0px 0px 20px;
+        border-radius: 16px 0px 0px 16px;
     }
     #search-bar input {
         border-width: 2px;
     }
-    #filter label > span {
-        border-radius: 32px;
-    }
     button#mobile{
         border-radius: 16px;
-    }
+    }  
+    #filter label > span {
+        border-radius: 32px;
+    } 
     #filter label > span:nth-child(2) {
         border-width: 2px;
     }
     #info i {
         border-radius: 24px;
     }
-    /* mobile low - layout */
+    /* mobile portrait - layout */
     header {
-        margin: 40px 0 0 20px;
+        margin: 30px 20px 0;
     }
     nav {
-        flex-direction: column;
-        align-items: center;
-        margin-left: -25px;
+        margin: 0 -20px;
     }
     nav a {
-        height: 35px;
-        width: 50%;
-        line-height: normal;
+        height: 36px;
     }
     #nav-links {
-        margin-top: 35px;
-        margin-right: 0;
-        margin-left: 0;
-        width: 100%;
+        margin-top: 36px;
     }
     #logo img {
-        width: 33%;
-        margin: -20px 0 -14px 135px;
+        width: 95px;
+        margin-left: 35px;
     }
     h1 {
-        margin: 30px 20px 0 0;
+        margin: 30px 0 0;
     }
     h1 + p {
         margin: 16px 0 0;
     }
     #search-bar {
-        display: flex;
-        margin: 30px 20px 0 0;
+        margin: 30px 0 0;
     }
     #search-bar span {
         width: 50px;
-        height: 50px;
         line-height: 50px;
     }
     #search-bar input {
         height: 46px;
-        min-width: 0;
-        margin: 0;
         padding-right: 10px;
-        flex-grow: 1;
-    }
-    button#desktop {
-        display: none;
     }
     button#mobile{
-        display: inline-block;
         height: 50px;
         width: 50px;
-        margin-left: -20px;
     }
     #filter {
-        margin: 35px 10px 30px 0;
+        margin: 35px -20px 30px 0;
     }
     #filter-legend {
         margin: 0 30px 20px 0;
     }
-    #filter label {
-        margin: 0 5px 15px 0;
+    #filter-button {
+        margin: 0 10px 0 0;
     }
-    #filter label > span:nth-child(2) {
-        padding: 0 16px 0 50px;
+    #filter label {
+        margin: 0 10px 15px 0;
     }
     #filter label > span:first-child {
-        width: 52px;
-        line-height: 52px;
+        width: 50px;
+        line-height: 50px;
+    }
+    #filter label > span:nth-child(2) {
+        line-height: 46px;
+        margin-left: -40px;
+        padding: 0 16px 0 50px;
     }
     #info {
         margin: -20px 0 0 0;
@@ -1241,7 +1240,7 @@ footer li {
         padding: 5px;
     }
     aside {
-        padding: 0 20px 30px;
+        padding: 0 20px 40px;
     }
     aside h3 {
         line-height: 20px;
@@ -1274,12 +1273,8 @@ footer li {
         padding: 0 20px 10px;
         margin-top: 40px;
     }
-    #accommodations .content {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-    #accommodations h2 {
-        margin-top: 0;
+    #accommodations img {
+        height: 114px;
     }
     #accommodations h3 {
         margin: 7px 5px 5px 10px;
@@ -1289,17 +1284,6 @@ footer li {
     }
     #accommodations .card p.price {
         margin-top: 5px;
-    }
-    #accommodations a:nth-child(1) h3,
-    #accommodations a:nth-child(3) h3, 
-    #accommodations a:nth-child(5) h3 {
-        margin-top: 7px;
-    }
-    #accommodations a:nth-child(1) p.price {
-        margin-top: 5px;
-    }
-    #accommodations img {
-        height: 114px;
     }
     #accommodations > p {
         margin: 25px 0 0;
@@ -1316,30 +1300,6 @@ footer li {
         margin-top: 25px;
         gap: 25px;
     }
-    #activities img {
-        object-position: center -10px;
-    }
-    #activities .columnX4:nth-child(2) a:nth-child(1) img {
-        object-position: center -150px;
-    }
-    #activities .columnX4:nth-child(3) {
-        padding-bottom: 17px;
-    }
-    #activities .columnX4:nth-child(3) h3 {
-        margin: 17px 20px 0;
-    }
-    #activities .columnX4:nth-child(4) a:nth-child(1) {
-        padding-bottom: 17px;
-    }
-    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
-        margin-top: 17px;
-    }
-    .rowX2 {
-        gap: 25px;
-    }
-    #activities h3 {
-        margin: 17px 20px 0;
-    }
     #vieux-port, 
     #calanques, 
     #pomegues, 
@@ -1347,9 +1307,14 @@ footer li {
     #nd-la-garde, 
     #longchamp {
         height: 130px;
+    }
+    .rowX2 {
+        gap: 25px;
+    }
+    #activities h3 {
+        margin: 17px 20px 0;
     }    
     footer {
-        flex-direction: column;
         padding: 10px 0 50px 30px;
     }
     footer div {
@@ -1357,5 +1322,28 @@ footer li {
     }
     footer li {
         margin-top: 15px;
+    }
+    /* pomegues image positioning  */
+    #activities .columnX4:nth-child(2) a:nth-child(1) img {
+        object-position: center -200px;
+    }
+    /* break line fixes */
+    #accommodations a:nth-child(1) h3,
+    #accommodations a:nth-child(3) h3, 
+    #accommodations a:nth-child(5) h3 {
+        margin-top: 7px;
+    }
+    #accommodations a:nth-child(1) p.price, 
+    #accommodations a:nth-child(3) p.price, 
+    #accommodations a:nth-child(5) p.price {
+        margin-top: 5px;
+    }
+    #activities .columnX4:nth-child(3), 
+    #activities .columnX4:nth-child(4) a:nth-child(1) {
+        padding-bottom: 17px;
+    }
+    #activities .columnX4:nth-child(3) h3, 
+    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
+        margin: 17px 20px 0;
     }
 }
