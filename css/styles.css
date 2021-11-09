@@ -854,10 +854,10 @@ footer li {
         margin: 6px 20px 0;
     }
 }
-    /**  mobile high resolution  version **/
+    /**  mobile high resolution  version **
 @media all and (max-width: 767px) {
-    /* mobile high - typography */
-    body, 
+    /* mobile high - typography *
+    body,
     #search-bar span, 
     #search-bar input, 
     button#mobile, 
@@ -885,11 +885,11 @@ footer li {
     p.rate {
         font-size: 22px;
     }
-    /* mobile high - text and background color */
+    /* mobile high - text and background color *
     #accommodations {
         background-color: white;
     }
-    /* mobile high - border */
+    /* mobile high - border *
     nav a {
         border-bottom: solid 5px #f2f2f2;
         border-top: none;
@@ -912,7 +912,7 @@ footer li {
     aside {
         border-radius: 0;
     }
-    /* mobile high - layout */
+    /* mobile high - layout *
     header {
         margin: 60px 0 0 0;
         padding-left: 0;
@@ -1093,15 +1093,13 @@ footer li {
     }
 }
     /* mobile low resolution version */
-@media all and (max-width: 549px) {
+@media all and (max-width: 480px) {
     /* mobile low - typography */
     body,
     h1 + p, 
-    nav a, 
     main h3, 
     button#mobile, 
-    #filter, 
-    footer li {
+    #filter {
         font-size: 16px;
     }
     h1, 
@@ -1123,9 +1121,14 @@ footer li {
     p.rate {
         font-size: 12px;
     }
+    /* mobile low - text and background color */
+    #accommodations {
+        background-color: white;
+    }
     /* mobile low - border */
     nav a {
-        border-width: 3px;
+        border-bottom: solid 3px #f2f2f2;
+        border-top: none;
     }
     #search-bar span {
         border-radius: 20px 0px 0px 20px;
@@ -1147,26 +1150,37 @@ footer li {
     }
     /* mobile low - layout */
     header {
-        margin: 40px 0 0 0;
+        margin: 40px 0 0 20px;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        margin-left: -25px;
     }
     nav a {
         height: 35px;
+        width: 50%;
+        line-height: normal;
     }
     #nav-links {
         margin-top: 35px;
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
     }
     #logo img {
         width: 33%;
         margin: -20px 0 -14px 135px;
     }
     h1 {
-        margin: 30px 30px 0;
+        margin: 30px 20px 0 0;
     }
     h1 + p {
-        margin: 16px 30px 0;
+        margin: 16px 0 0;
     }
     #search-bar {
-        margin: 30px 30px 0;
+        display: flex;
+        margin: 30px 20px 0 0;
     }
     #search-bar span {
         width: 50px;
@@ -1176,15 +1190,21 @@ footer li {
     #search-bar input {
         height: 46px;
         min-width: 0;
-        margin-right: -10px;
+        margin: 0;
         padding-right: 10px;
+        flex-grow: 1;
+    }
+    button#desktop {
+        display: none;
     }
     button#mobile{
+        display: inline-block;
         height: 50px;
         width: 50px;
+        margin-left: -20px;
     }
     #filter {
-        margin: 35px 10px 30px 30px;
+        margin: 35px 10px 30px 0;
     }
     #filter-legend {
         margin: 0 30px 20px 0;
@@ -1193,8 +1213,6 @@ footer li {
         margin: 0 5px 15px 0;
     }
     #filter label > span:nth-child(2) {
-        line-height: 48px;
-        margin-left: -40px;
         padding: 0 16px 0 50px;
     }
     #filter label > span:first-child {
@@ -1202,7 +1220,7 @@ footer li {
         line-height: 52px;
     }
     #info {
-        margin: -20px 0 0 30px;
+        margin: -20px 0 0 0;
     }
     #info i {
         width: 24px;
@@ -1216,13 +1234,14 @@ footer li {
         margin: 35px 0 0;
     }
     #main-top .content {
-        gap: 30px;
+        gap: 10px;
+        margin-top: 20px;
     }
     #main-top .card {
         padding: 5px;
     }
     aside {
-        padding: 0 30px 30px;
+        padding: 0 20px 30px;
     }
     aside h3 {
         line-height: 20px;
@@ -1230,9 +1249,6 @@ footer li {
     #aside-top {
         margin-top: 40px;
         margin-bottom: 25px;
-    }
-    aside .content {
-        margin-top: 20px;
     }
     aside img {
         width: 127px;
@@ -1255,55 +1271,74 @@ footer li {
         bottom: 3px;
     }
     #accommodations {
-        padding: 0 30px 10px;
+        padding: 0 20px 10px;
         margin-top: 40px;
     }
     #accommodations .content {
-        margin-top: 30px;
+        flex-direction: column;
+        margin-top: 20px;
     }
     #accommodations h2 {
         margin-top: 0;
     }
     #accommodations h3 {
-        margin: 12px 5px 6px 10px;
+        margin: 7px 5px 5px 10px;
     }
     #accommodations .card p {
-        margin: 6px 10px;
+        margin: 5px 10px;
     }
     #accommodations .card p.price {
-        margin-top: 6px;
+        margin-top: 5px;
     }
-    #accommodations a:nth-child(1) h3 {
-        margin-top: 12px;
+    #accommodations a:nth-child(1) h3,
+    #accommodations a:nth-child(3) h3, 
+    #accommodations a:nth-child(5) h3 {
+        margin-top: 7px;
     }
     #accommodations a:nth-child(1) p.price {
-        margin-top: 6px;
+        margin-top: 5px;
     }
     #accommodations img {
-        height: 115px;
+        height: 114px;
     }
     #accommodations > p {
-        margin: 35px 0 0;
+        margin: 25px 0 0;
     }
     #activities {
         margin-top: 50px;
         padding: 0 30px 50px;
     }
+    #activities a {
+        padding-bottom: 17px;
+    }
     #activities .content {
-        margin-top: 30px;
-        gap: 30px;
+        flex-direction: column;
+        margin-top: 25px;
+        gap: 25px;
+    }
+    #activities img {
+        object-position: center -10px;
+    }
+    #activities .columnX4:nth-child(2) a:nth-child(1) img {
+        object-position: center -150px;
     }
     #activities .columnX4:nth-child(3) {
-        padding-bottom: 20px;
+        padding-bottom: 17px;
     }
     #activities .columnX4:nth-child(3) h3 {
-        margin: 20px 20px 0;
+        margin: 17px 20px 0;
+    }
+    #activities .columnX4:nth-child(4) a:nth-child(1) {
+        padding-bottom: 17px;
+    }
+    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
+        margin-top: 17px;
     }
     .rowX2 {
-        gap: 30px;
+        gap: 25px;
     }
     #activities h3 {
-        margin: 20px 20px 0;
+        margin: 17px 20px 0;
     }
     #vieux-port, 
     #calanques, 
@@ -1311,10 +1346,11 @@ footer li {
     #frioul, 
     #nd-la-garde, 
     #longchamp {
-        height: 135px;
+        height: 130px;
     }    
     footer {
-        padding: 10px 0 100px 30px;
+        flex-direction: column;
+        padding: 10px 0 50px 30px;
     }
     footer div {
         margin-top: 30px;
