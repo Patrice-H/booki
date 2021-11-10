@@ -376,11 +376,10 @@ aside .rate {
     padding-bottom: 40px;
 }
 #activities h3 {
-    margin: 20px 20px 0;
+    margin: 20px;
 }
 #activities a {
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
-    padding-bottom: 20px;
 }
 #activities a:hover {
     margin: -5px 5px 5px -5px;
@@ -450,7 +449,7 @@ footer li {
     margin-top: 10px;
     list-style-type: none;
 }
-    /* screen HD - break line "Calanques" */
+    /* screen HD - line break "Calanques" *
 @media all and (min-width: 1900px) and (max-width: 2031px) {
     #activities .columnX4:nth-child(3) {
         padding-bottom: 22px;
@@ -458,8 +457,8 @@ footer li {
     #activities .columnX4:nth-child(3) h3 {
         margin: 22px 20px 0;
     }
-}
-    /* screen HD - break line "Cannebière" */
+}*/
+    /* screen HD - line break "Cannebière" *
 @media all and (min-width: 1900px) and (max-width: 1985px) {
     #accommodations .card p.price {
         margin-top: 34px;
@@ -470,10 +469,10 @@ footer li {
     #accommodations a:nth-child(1) p.price {
         margin-top: 12px;
     }
-}
-    /* screen HD */
+}*/
+    /* screen HD *
 @media all and (min-width: 1900px) {
-    /* screen HD - typography */
+    /* screen HD - typography *
     h1 {
         font-size: 44px;
     }
@@ -504,7 +503,7 @@ footer li {
         font-size: 22px;
         letter-spacing: -2px;
     }
-    /* screen HD - border */
+    /* screen HD - border *
     #search-bar span {
         border-radius: 40px 0px 0px 40px;
     }
@@ -522,7 +521,7 @@ footer li {
     #filter label > span {
         border-radius: 64px;
     }
-    /* screen HD - layout */
+    /* screen HD - layout *
     #nav-links {
         margin-top: -50px;
         margin-right: 25px;
@@ -668,7 +667,7 @@ footer li {
         margin-top: 20px;
     }
 }
-    /* space reduction */
+    /* Desktop - space reduction */
 @media all and (max-width: 1280px) {
     header {
         margin-left: 40px;
@@ -692,178 +691,66 @@ footer li {
         padding: 40px 150px 40px 40px;
     }
 }
-    /* desktop version - break line "Calanques" */
+    /* Desktop - line break "Calanques" */
 @media all and (max-width: 1240px) {
-    #activities .columnX4:nth-child(3) {
-        padding-bottom: 11px;
-    }
     #activities .columnX4:nth-child(3) h3 {
-        margin: 11px 20px 0;
+        margin: 11px 20px;
+        padding-right: 5px;
     }
 }
-    /* desktop version - break line "coeur de l'eau" */
+    /* Desktop - line break "coeur de l'eau" */
 @media all and (max-width: 1171px) {
     aside a:nth-child(2) h3 {
         margin-top: -133px;
         line-height: 17px;
     }
 }
-    /* desktop version - break line "Cannebiere" */
-@media all and (max-width: 1167px) {
+    /* Desktop - line break "Cannebiere" */
+@media all and (max-width: 1166px) {
+    #accommodations a:nth-child(1) p.price {
+        margin-top: 6px;
+    }
     #accommodations .card p.price {
         margin-top: 17px;
     }
     #accommodations a:nth-child(1) h3 {
         margin-top: 5px;
     }
-    #accommodations a:nth-child(1) p.price {
-        margin-top: 6px;
-    }
 }
-    /* desktop version - break line "Notre Dame de la Garde" */
-@media all and (max-width: 1145px) {
-    #activities .columnX4:nth-child(4) a:nth-child(1) {
-        padding-bottom: 11px;
-    }
+    /* Desktop - letter spacing "Notre Dame de la Garde" */
+@media all and (max-width: 1144px) {
     #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
-        margin: 11px 20px 0;
+        margin: 20px 0 20px 15px;
+        letter-spacing: -1px;
     }
 }
-    /* desktop version - break line "les mouettes" */
-@media all and (max-width: 1038px) {
+    /* Desktop - line break "les mouettes" */
+@media all and (max-width: 1035px) {
     #accommodations a:nth-child(3) h3 {
         margin-top: 5px;
+        padding-right: 5px;
     }
     #accommodations a:nth-child(3) p.price {
         margin-top: 6px;
     }
 }
-    /* desktop version - break line "Le Panier" */
-@media all and (max-width: 1009px) {
-    #accommodations a:nth-child(5) h3{
+    /* Desktop - line break "Le Panier" */
+@media all and (max-width: 1008px) {
+    #accommodations a:nth-child(5) h3 {
         margin-top: 5px;
     }
     #accommodations a:nth-child(5) p.price {
         margin-top: 6px;
     }
 }
-    /* Tablet version */
+    /*** Tablet version ***/
 @media all and (max-width: 991px) {
-    /* Tablet version - typography */
-    h1, 
-    main h2, 
-    #aside-top i {
-        font-size: 30px;
-    }
-    main h3, 
-    h1 + p, 
-    #accommodations > p {
-        font-size: 22px;
-    }
-    p.price {
-        font-size: 18px;
-    }
-    p.rate {
-        font-size: 16px;
-    }
-    /* Tablet version - layout */
-    #main-top {
-        flex-direction: column;
-        gap: 0;
-    }
-    #main-top .content {
-        gap: 40px;
-    }
-    #main-top .card{
-        padding: 10px;
-    }
-    aside {
-        padding: 0 40px 40px;
-        order: 1;
-    }
-    aside .card {
-        height: 270px;
-    }
-    aside img {
-        width: 254px;
-    }
-    aside a:nth-child(2) h3 {
-        margin-top: -244px;
-        line-height: 25px;
-    }
-    aside h3 {
-        margin-top: -244px;
-    }
-    aside h3, 
-    aside .card p {
-        margin-left: 294px;
-    }
-    aside .rate {
-        bottom: 8px;
-    }
-    #accommodations {
-        margin-top: 60px;
-        padding: 0 40px 40px;
-        order: 2;
-    }
-    #accommodations .content a {
-        flex-basis: 45%;
-    }
-    #accommodations img {
-        height: 220px;
-    }
-    #accommodations .card p.price {
-        margin-top: 6px;
-    }
-    #activities .columnX4 {
-        flex-basis: 40%;
-    }
-    #filter label:nth-child(8) {
-        margin-right: 30px;
-    }
-    footer {
-        padding: 40px 100px 40px 40px;
-    }
-    footer li {
-        margin-top: 20px
-    }
-    /* break line fixes */
-    #accommodations a:nth-child(1) h3, 
-    #accommodations a:nth-child(3) h3,
-    #accommodations a:nth-child(5) h3 {
-        margin-top: 12px;
-    }
-    #accommodations a:nth-child(1) p.price, 
-    #accommodations a:nth-child(3) p.price, 
-    #accommodations a:nth-child(5) p.price {
-        margin-top: 6px;
-    }
-    #activities .columnX4:nth-child(3), 
-    #activities .columnX4:nth-child(4) a:nth-child(1){
-        padding-bottom: 20px;
-    }
-    #activities .columnX4:nth-child(3) h3, 
-    #activities .columnX4:nth-child(4) a:nth-child(1) h3{
-        margin: 20px 20px 0;
-    }
-}
-    /* Tablet - break line "Calanques" */
-@media all and (max-width: 805px) {
-    #activities .columnX4:nth-child(3) {
-        padding-bottom: 10px;
-    }
-    #activities .columnX4:nth-child(3) h3 {
-        margin: 6px 20px 0;
-    }
-}
-    /**  mobile landscape orientation version **/
-@media all and (max-width: 767px) {
-    /* mobile landscape - typography */
+    /* Tablet - typography */
     body,
     h1 + p, 
     main h3, 
-    button#mobile, 
-    #filter {
+    #filter, 
+    footer h2{
         font-size: 24px;
     }
     h1, 
@@ -873,36 +760,30 @@ footer li {
     }
     #search-bar span,
     #search-bar input, 
+    button#desktop, 
     #filter-legend, 
-    #accommodations > p, 
-    footer h2 {
+    #accommodations > p {
         font-size: 27px;
     }
     #info i,
     p.price {
         font-size: 21px;
     }
-    p.rate {
+    p.rate, 
+    footer li {
         font-size: 18px;
     }
-    /* mobile landscape - text and background color */
+    /* Tablet - text and background color */
     #accommodations {
         background-color: white;
     }
-    /* mobile landscape - border */
-    nav a {
-        border-bottom: solid 6px #f2f2f2;
-        border-top: none;
-    }
+    /* Tablet - border */
     #search-bar span {
         border-radius: 24px 0px 0px 24px
     }
     #search-bar input {
         border-width: 3px;
     }
-    button#mobile{
-        border-radius: 24px;
-    }  
     #filter label > span {
         border-radius: 48px;
     }
@@ -915,44 +796,34 @@ footer li {
     aside {
         border-radius: 0;
     }
-    /* mobile landscape - layout */
+    /* Tablet - layout */
     header {
-        margin: 30px 30px 0;
+        margin: 60px 40px 0;
         padding-left: 0;
     }
-    nav {
-        flex-direction: column;
-        align-items: center;
-        margin: 0 -30px;
+    #nav-links {
+        margin: -60px 0 0;
     }
     nav a {
-        height: 54px;
-        width: 50%;
-        line-height: normal;
+        width: 200px;
+        height: 80px;
+        line-height: 120px;
     }
-    #nav-links {
-        margin-top: 54px;
-        margin-right: 0;
-        margin-left: 0;
-        width: 100%;
-    }
-    
     #logo {
-        margin: -8px 0;
+        margin: -22px -35px;
     }
     #logo img {
         width: 143px;
         margin-left: 54px;
     }
     h1 {
-        margin: 45px 0 0;
+        margin: 75px 0 0;
     }
     h1 + p {
         margin: 24px 0 0;
     }
     #search-bar {
-        display: flex;
-        margin: 45px 0 0;
+        margin: 70px 0 0;
     }
     #search-bar span {
         width: 75px;
@@ -960,25 +831,23 @@ footer li {
     }
     #search-bar input {
         height: 69px;
-        min-width: 0;
-        flex-grow: 1;
-        margin: 0;
+        width: 300px;
+        margin: -75px 0 0 75px;
         padding-right: 20px;
     }
     button#desktop {
-        display: none;
-    }
-    button#mobile {
-        display: inline-block;
         height: 75px;
-        width: 75px;
-        margin-left: -20px;
+        margin-top: -75px;
+        margin-left: 375px;
     }
     #filter {
-        margin: 45px -30px 40px 0;
+        margin: 70px -40px 45px 0;
     }
     #filter-legend {
-        margin: 0 30px 25px 0;
+        margin: 0 40px 40px 0;
+    }
+    #filter label {
+        margin: 0 40px 40px 0;
     }
     #filter label > span:first-child {
         width: 75px;
@@ -1004,6 +873,194 @@ footer li {
         margin-left: 60px;
     }
     main {
+        margin: 35px 0 0;
+    }
+    #main-top {
+        flex-direction: column;
+        gap: 0;
+    }
+    #main-top .content {
+        gap: 22px;
+    }
+    #main-top .card{
+        padding: 10px;
+    }
+    aside {
+        padding: 0 40px 40px;
+        order: 1;
+    }
+    aside .card {
+        height: 270px;
+    }
+    aside img {
+        width: 254px;
+    }
+    aside a:nth-child(2) h3 {
+        line-height: 25px;
+    }
+    aside h3, 
+    aside a:nth-child(2) h3 {
+        margin-top: -244px;
+    }
+    aside a:nth-child(2) h3 {
+        line-height: normal;
+    }
+    aside h3, 
+    aside .card p {
+        margin-left: 294px;
+    }
+    aside .rate {
+        bottom: 8px;
+    }
+    #accommodations {
+        margin-top: 60px;
+        padding: 0 40px 40px;
+        order: 2;
+    }
+    #accommodations .content a {
+        flex-basis: 45%;
+    }
+    #accommodations img {
+        height: 180px;
+    }
+    #accommodations h3, 
+    #accommodations a:nth-child(1) h3, 
+    #accommodations a:nth-child(3) h3, 
+    #accommodations a:nth-child(5) h3 {
+        margin-top: 10px;
+    }
+    #accommodations a:nth-child(3) h3 {
+        padding-right: 0;
+    }
+    #accommodations .card p.price {
+        margin-top: 6px;
+    }
+    #activities {
+        padding: 0 40px 40px;
+    }
+    #activities .content {
+        gap: 25px;
+    }
+    #activities .columnX4 {
+        flex-basis: 40%;
+    }
+    #activities .columnX4:nth-child(3) h3, 
+    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
+        margin: 20px;
+        letter-spacing: normal;
+        padding-right: 0;
+    }
+    #filter label:nth-child(8) {
+        margin-right: 30px;
+    }
+    footer {
+        padding: 40px;
+    }
+    footer div:nth-child(2) {
+        min-width: 220px;
+        margin-left: 60px;
+    }
+    footer div:nth-child(3) {
+        min-width: 128px;
+        margin-left: 60px;
+    }
+    footer li {
+        margin-top: 20px
+    }
+}
+    /* Tablet - line break "Calanques" */
+@media all and (max-width: 845px) {
+    #activities .columnX4:nth-child(3) h3 {
+        margin: 4px 20px 0;
+        padding-bottom: 10px;
+    }
+}
+    /* Tablet - letter spacing "Notre Dame de la Garde" */
+@media all and (max-width: 773px) {
+    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
+        letter-spacing: -1px;
+    }
+}
+    /***  Mobile landscape orientation version ***/
+@media all and (max-width: 767px) {
+    /* Mobile landscape - typography */ 
+    h1, 
+    main h2, 
+    #aside-top i {
+        font-size: 33px;
+    }
+    button#mobile, 
+    footer li {
+        font-size: 24px;
+    }
+    footer h2 {
+        font-size: 27px;
+    }
+    /* Mobile landscape - border */
+    nav a {
+        border-bottom: solid 6px #f2f2f2;
+        border-top: none;
+    }
+    button#mobile{
+        border-radius: 24px;
+    }    
+    /* Mobile landscape - layout */
+    header {
+        margin: 30px 30px 0;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 -30px;
+    }
+    nav a {
+        height: 54px;
+        width: 50%;
+        line-height: normal;
+    }
+    #nav-links {
+        margin-top: 54px;
+        width: 100%;
+    }
+    #logo {
+        margin: -8px 0;
+    }
+    h1 {
+        margin: 45px 0 0;
+    }
+    h1 + p {
+        margin: 24px 0 0;
+    }
+    #search-bar {
+        display: flex;
+        margin: 45px 0 0;
+    }
+    #search-bar input {
+        min-width: 0;
+        flex-grow: 1;
+        margin: 0;
+        padding-right: 20px;
+    }
+    button#desktop {
+        display: none;
+    }
+    button#mobile {
+        display: inline-block;
+        height: 75px;
+        width: 75px;
+        margin-left: -20px;
+    }
+    #filter {
+        margin: 45px -30px 40px 0;
+    }
+    #filter label {
+        margin: 0 15px 20px 0;
+    }
+    #filter-legend {
+        margin: 0 30px 25px 0;
+    }
+
+    main {
         margin: 54px 0 0;
     }
     #main-top .content {
@@ -1019,12 +1076,9 @@ footer li {
     aside .card p{
         margin-left: 280px;
     }
-    aside a:nth-child(2) h3 {
-        line-height: normal;
-    }
     #accommodations {
         margin-top: 40px;
-        padding: 0 30px 10px;
+        padding: 0 20px 10px;
     }
     #accommodations .content, 
     #activities .content, 
@@ -1034,13 +1088,22 @@ footer li {
     #accommodations h2 {
         margin-top: 0;
     }
-    #accommodations h3 {
+    #accommodations img {
+        height: 210px;
+    }
+    #accommodations h3, 
+    #accommodations a:nth-child(1) h3, 
+    #accommodations a:nth-child(3) h3, 
+    #accommodations a:nth-child(5) h3 {
         margin: 14px 5px 5px 15px;
     }
     #accommodations .card p {
         margin: 10px 15px 5px;
     }
-    #accommodations .card p.price {
+    #accommodations .card p.price, 
+    #accommodations a:nth-child(1) p.price, 
+    #accommodations a:nth-child(3) p.price, 
+    #accommodations a:nth-child(5) p.price {
         margin-top: 10px;
     }
     #accommodations > p {
@@ -1071,8 +1134,13 @@ footer li {
     .rowX2 {
         gap: 40px;
     }
-    #activities h3 {
+    #activities h3, 
+    #activities .columnX4:nth-child(3) h3 {
         margin: 20px 30px;
+        padding-bottom: 0;
+    }
+    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
+        letter-spacing: normal;
     }
     footer {
         flex-direction: column;
@@ -1081,6 +1149,11 @@ footer li {
     footer div {
         margin-top: 45px;
     }
+    footer div:nth-child(2), 
+    footer div:nth-child(3) {
+        min-width: 0;
+        margin-left: 0;
+    }
     footer li {
         margin-top: 22px;
     }
@@ -1088,34 +1161,16 @@ footer li {
     #activities .columnX4:nth-child(2) a:nth-child(1) img {
         object-position: center -280px;
     }
-    /* break line fixes */
-    #accommodations a:nth-child(1) h3, 
-    #accommodations a:nth-child(3) h3,
-    #accommodations a:nth-child(5) h3 {
-        margin-top: 14px;
-    }
-    #accommodations a:nth-child(1) p.price, 
-    #accommodations a:nth-child(3) p.price, 
-    #accommodations a:nth-child(5) p.price {
-        margin-top: 10px;
-    }
-    #activities .columnX4:nth-child(3), 
-    #activities .columnX4:nth-child(4) a:nth-child(1){
-        padding-bottom: 20px;
-    }
-    #activities .columnX4:nth-child(3) h3, 
-    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
-        margin: 20px 30px;
-    }
 }
-    /* mobile portrait orientation version */
+    /*** Mobile portrait orientation version ***/
 @media all and (max-width: 480px) {
-    /* mobile portrait - typography */
+    /* Mobile portrait - typography */
     body,
     h1 + p, 
     main h3, 
     button#mobile, 
-    #filter {
+    #filter, 
+    footer li{
         font-size: 16px;
     }
     h1, 
@@ -1137,7 +1192,7 @@ footer li {
     p.rate {
         font-size: 12px;
     }
-    /* mobile portrait - border */
+    /* Mobile portrait - border */
     nav a {
         border-width: 4px;
     }
@@ -1159,7 +1214,7 @@ footer li {
     #info i {
         border-radius: 24px;
     }
-    /* mobile portrait - layout */
+    /* Mobile portrait - layout */
     header {
         margin: 30px 20px 0;
     }
@@ -1188,14 +1243,16 @@ footer li {
     #search-bar span {
         width: 50px;
         line-height: 50px;
+        min-width: 50px;
     }
     #search-bar input {
         height: 46px;
-        padding-right: 10px;
+        padding-right: 20px;
     }
     button#mobile{
         height: 50px;
         width: 50px;
+        min-width: 50px;
     }
     #filter {
         margin: 35px -20px 30px 0;
@@ -1233,7 +1290,7 @@ footer li {
         margin: 35px 0 0;
     }
     #main-top .content {
-        gap: 10px;
+        gap: 12px;
         margin-top: 20px;
     }
     #main-top .card {
@@ -1241,9 +1298,6 @@ footer li {
     }
     aside {
         padding: 0 20px 40px;
-    }
-    aside h3 {
-        line-height: 20px;
     }
     #aside-top {
         margin-top: 40px;
@@ -1259,11 +1313,8 @@ footer li {
     aside .card p {
         margin-left: 147px;
     }
+    aside h3, 
     aside a:nth-child(2) h3 {
-        margin-top: -128px;
-        line-height: 20px;
-    }
-    aside h3 {
         margin-top: -128px;
     }
     aside .rate {
@@ -1276,13 +1327,19 @@ footer li {
     #accommodations img {
         height: 114px;
     }
-    #accommodations h3 {
+    #accommodations h3, 
+    #accommodations a:nth-child(1) h3, 
+    #accommodations a:nth-child(3) h3, 
+    #accommodations a:nth-child(5) h3 {
         margin: 7px 5px 5px 10px;
     }
     #accommodations .card p {
         margin: 5px 10px;
     }
-    #accommodations .card p.price {
+    #accommodations .card p.price, 
+    #accommodations a:nth-child(1) p.price, 
+    #accommodations a:nth-child(3) p.price, 
+    #accommodations a:nth-child(5) p.price {
         margin-top: 5px;
     }
     #accommodations > p {
@@ -1290,10 +1347,7 @@ footer li {
     }
     #activities {
         margin-top: 50px;
-        padding: 0 30px 50px;
-    }
-    #activities a {
-        padding-bottom: 17px;
+        padding: 0 20px 50px;
     }
     #activities .content {
         flex-direction: column;
@@ -1311,8 +1365,9 @@ footer li {
     .rowX2 {
         gap: 25px;
     }
-    #activities h3 {
-        margin: 17px 20px 0;
+    #activities h3, 
+    #activities .columnX4:nth-child(3) h3 {
+        margin: 17px 20px;
     }    
     footer {
         padding: 10px 0 50px 30px;
@@ -1326,24 +1381,5 @@ footer li {
     /* pomegues image positioning  */
     #activities .columnX4:nth-child(2) a:nth-child(1) img {
         object-position: center -200px;
-    }
-    /* break line fixes */
-    #accommodations a:nth-child(1) h3,
-    #accommodations a:nth-child(3) h3, 
-    #accommodations a:nth-child(5) h3 {
-        margin-top: 7px;
-    }
-    #accommodations a:nth-child(1) p.price, 
-    #accommodations a:nth-child(3) p.price, 
-    #accommodations a:nth-child(5) p.price {
-        margin-top: 5px;
-    }
-    #activities .columnX4:nth-child(3), 
-    #activities .columnX4:nth-child(4) a:nth-child(1) {
-        padding-bottom: 17px;
-    }
-    #activities .columnX4:nth-child(3) h3, 
-    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
-        margin: 17px 20px 0;
     }
 }
