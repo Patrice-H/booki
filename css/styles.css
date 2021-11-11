@@ -181,7 +181,7 @@ button:hover {
 }
 #filter label > span:nth-child(2) {
     line-height: 46px;
-    margin-left: -40px;
+    margin-left: -45px;
     padding: 0px 16px 0px 50px;
     z-index: 0;
 }
@@ -554,7 +554,7 @@ footer li {
     }
     #filter label > span:nth-child(2) {
         line-height: 92px;
-        margin-left: -80px;
+        margin-left: -90px;
         padding: 0px 30px 0px 95px;
     }
     #info i {
@@ -872,7 +872,7 @@ footer li {
     }
     #filter label > span:nth-child(2) {
         line-height: 69px;
-        margin-left: -64px;
+        margin-left: -70px;
         padding: 0 24px 0 75px;
     }
     #filter label:nth-child(8) {
@@ -1291,7 +1291,7 @@ footer li {
     }
     #filter label > span:nth-child(2) {
         line-height: 46px;
-        margin-left: -40px;
+        margin-left: -45px;
         padding: 0 16px 0 50px;
     }
     #info {
