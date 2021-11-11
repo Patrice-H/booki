@@ -408,16 +408,19 @@ aside .rate {
     height: 390px;
 }
 #pomegues {
-    height: 180px;
+    height: 178px;
 }
 #frioul {
     height: 110px;
+    object-position: center -15px;
 }
 #nd-la-garde {
-    height: 140px;
+    height: 138px;
+    object-position: center top;
 }
 #longchamp {
-    height: 155px;
+    height: 150px;
+    object-position: center top;
 }
 /* footer - text and background color */
 footer a:hover {
@@ -449,30 +452,9 @@ footer li {
     margin-top: 10px;
     list-style-type: none;
 }
-    /* screen HD - line break "Calanques" *
-@media all and (min-width: 1900px) and (max-width: 2031px) {
-    #activities .columnX4:nth-child(3) {
-        padding-bottom: 22px;
-    }
-    #activities .columnX4:nth-child(3) h3 {
-        margin: 22px 20px 0;
-    }
-}*/
-    /* screen HD - line break "Cannebière" *
-@media all and (min-width: 1900px) and (max-width: 1985px) {
-    #accommodations .card p.price {
-        margin-top: 34px;
-    }
-    #accommodations a:nth-child(1) h3 {
-        margin-top: 10px;
-    }
-    #accommodations a:nth-child(1) p.price {
-        margin-top: 12px;
-    }
-}*/
-    /* screen HD *
-@media all and (min-width: 1900px) {
-    /* screen HD - typography *
+    /* Screen HD */
+@media all and (min-width: 1920px) {
+    /* Screen HD - typography */
     h1 {
         font-size: 44px;
     }
@@ -503,7 +485,7 @@ footer li {
         font-size: 22px;
         letter-spacing: -2px;
     }
-    /* screen HD - border *
+    /* Screen HD - border */
     #search-bar span {
         border-radius: 40px 0px 0px 40px;
     }
@@ -521,7 +503,7 @@ footer li {
     #filter label > span {
         border-radius: 64px;
     }
-    /* screen HD - layout *
+    /* Screen HD - layout */
     #nav-links {
         margin-top: -50px;
         margin-right: 25px;
@@ -605,8 +587,17 @@ footer li {
     #accommodations h3 {
         margin: 20px 5px 12px 10px;
     }
+    #accommodations a:nth-child(1) h3 {
+        margin-top: 10px;
+    }
     #accommodations .card p {
         margin: 12px 10px;
+    }
+    #accommodations .card p.price {
+        margin-top: 34px;
+    }
+    #accommodations a:nth-child(1) p.price {
+        margin-top: 12px;
     }
     #accommodations > p {
         margin-top: 80px;
@@ -635,36 +626,62 @@ footer li {
         margin-top: 120px;
         padding-bottom: 80px;
     }
-    #activities a {
-        padding-bottom: 40px;
-    }
     #activities .content {
         margin-top: 40px;
     }
     #activities h3 {
-        margin-top: 40px;
+        margin: 40px;
+    }
+    #activities .columnX4:nth-child(3) h3 {
+        margin: 22px 40px;
+    }
+    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
+        margin-left: 35px;
+        letter-spacing: -1px;
     }
     #vieux-port,
     #calanques {
-        height: 750px;
+        height: 740px;
     }
     #pomegues {
-        height: 360px;
+        height: 356px;
     }
     #frioul {
         height: 220px;
     }
     #nd-la-garde {
-        height: 280px;
+        height: 276px;
     }
     #longchamp {
-        height: 310px;
+        height: 300px;
     }
     footer {
         padding: 80px 300px 80px 50px;
     }
     footer li {
         margin-top: 20px;
+    }
+}
+    /* Screen HD - line break "Cannebière" */
+@media all and (min-width: 1984px) {
+    #accommodations a:nth-child(1) h3 {
+        margin-top: 20px;
+    }
+    #accommodations .card p.price {
+        margin-top: 12px;
+    }
+}
+    /* Screen HD - letter spacing "Notre Dame de la Garde" */
+@media all and (min-width: 2012px) {
+    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
+        margin: 40px;
+        letter-spacing: normal;
+    }
+}
+    /* screen HD - line break "Calanques" */
+@media all and (min-width: 2188px) {
+    #activities .columnX4:nth-child(3) h3 {
+        margin: 40px 40px 40px 35px;
     }
 }
     /* Desktop - space reduction */
@@ -950,6 +967,12 @@ footer li {
         letter-spacing: normal;
         padding-right: 0;
     }
+    #frioul {
+        object-position: center -50px;
+    }
+    #longchamp {
+        object-position: center;
+    }
     #filter label:nth-child(8) {
         margin-right: 30px;
     }
@@ -1120,9 +1143,6 @@ footer li {
         margin-top: 40px;
         gap: 40px;
     }
-    #activities img {
-        object-position: center -10px;
-    }
     #vieux-port, 
     #calanques, 
     #pomegues, 
@@ -1130,6 +1150,9 @@ footer li {
     #nd-la-garde, 
     #longchamp {
         height: 270px;
+    }
+    #frioul {
+        object-position: center -10px;
     }
     .rowX2 {
         gap: 40px;
@@ -1156,10 +1179,6 @@ footer li {
     }
     footer li {
         margin-top: 22px;
-    }
-    /* pomegues image positioning  */
-    #activities .columnX4:nth-child(2) a:nth-child(1) img {
-        object-position: center -280px;
     }
 }
     /*** Mobile portrait orientation version ***/
@@ -1377,9 +1396,5 @@ footer li {
     }
     footer li {
         margin-top: 15px;
-    }
-    /* pomegues image positioning  */
-    #activities .columnX4:nth-child(2) a:nth-child(1) img {
-        object-position: center -200px;
     }
 }
