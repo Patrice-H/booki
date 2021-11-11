@@ -990,7 +990,7 @@ footer li {
     }
 }
     /* Tablet - line break "Calanques" */
-@media all and (max-width: 845px) {
+@media all and (max-width: 844px) {
     #activities .columnX4:nth-child(3) h3 {
         margin: 4px 20px 0;
         padding-bottom: 10px;
@@ -1099,7 +1099,7 @@ footer li {
     }
     #accommodations {
         margin-top: 40px;
-        padding: 0 20px 10px;
+        padding: 0 30px 10px;
     }
     #accommodations .content, 
     #activities .content, 
