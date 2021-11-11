@@ -57,11 +57,11 @@ nav a:hover {
 button {
     border: none;
 }
-button#mobile {
-    border-radius: 30px;
-}
 button#desktop {
     border-radius: 0px 16px 16px 0px;
+}
+#search-bar span {
+    border-radius: 16px 0px 0px 16px;
 }
 #search-bar > input, 
 #info i {
@@ -73,8 +73,8 @@ button#desktop {
 #filter label > span {
     border-radius: 32px;
 }
-#search-bar span {
-    border-radius: 16px 0px 0px 16px;
+#info i {
+    border-radius: 16px;
 }
 /* header - layout */
 header {
@@ -139,39 +139,35 @@ button#desktop {
 }
 button#mobile {
     display: none;
-    height: 100px;
-    width: 100px;
 }
-button:hover {
+button:hover, 
+#filter label:hover {
     cursor: pointer;
 }
 #filter {
     margin: 30px 0 15px 10px;
 }
-#filter-legend {
+#filter-legend, 
+#filter-button, 
+#filter label, 
+#filter label > span {
     display: inline-block;
+}
+#filter-legend, 
+#filter label {
     margin: 0 20px 20px 0;
 }
 #filter-button {
-    display: inline-block;
     margin: 0;
 }
 #filter input {
     position: absolute;
     opacity: 0;
 }
-#filter label {
-    display: inline-block;
-    margin: 0px 20px 20px 0;
-}
 #filter label:nth-child(8) {
     margin-right: 0;
 }
-#filter label:hover {
-    cursor: pointer;
-}
 #filter label > span {
-    display: inline-block;
     position: relative; 
     vertical-align: middle;
 }
@@ -196,7 +192,6 @@ button:hover {
     text-align: center;
     vertical-align: middle;
     line-height: 24px;
-    border-radius: 16px;
 }
 #info p {
     margin: -20px 40px 0;
@@ -496,14 +491,14 @@ footer li {
     #info i {
         border-width: 4px;
     }
-    #info i {
-        border-radius: 32px;
-    }
     button#desktop {
         border-radius: 0px 32px 32px 0px;
     }
     #filter label > span {
         border-radius: 64px;
+    }
+    #info i {
+        border-radius: 32px;
     }
     /* Screen HD - layout */
     #nav-links {
@@ -800,7 +795,8 @@ footer li {
     #search-bar span {
         border-radius: 20px 0px 0px 20px
     }
-    #search-bar input {
+    #search-bar input, 
+    #filter label > span:nth-child(2) {
         border-width: 3px;
     }
     button#desktop {
@@ -808,9 +804,6 @@ footer li {
     }
     #filter label > span {
         border-radius: 48px;
-    }
-    #filter label > span:nth-child(2) {
-        border-width: 3px;
     }
     #info i {
         border-radius: 32px;
