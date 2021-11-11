@@ -61,7 +61,7 @@ button#mobile {
     border-radius: 30px;
 }
 button#desktop {
-    border-radius: 0px 20px 20px 0px;
+    border-radius: 0px 16px 16px 0px;
 }
 #search-bar > input, 
 #info i {
@@ -70,8 +70,11 @@ button#desktop {
 #filter label > span:nth-child(2) {
     border: solid 2px #d8d8d8;
 }
+#filter label > span {
+    border-radius: 32px;
+}
 #search-bar span {
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 16px 0px 0px 16px;
 }
 /* header - layout */
 header {
@@ -171,7 +174,6 @@ button:hover {
     display: inline-block;
     position: relative; 
     vertical-align: middle;
-    border-radius: 32px;
 }
 #filter label > span:first-child {
     width: 50px;
@@ -487,7 +489,7 @@ footer li {
     }
     /* Screen HD - border */
     #search-bar span {
-        border-radius: 40px 0px 0px 40px;
+        border-radius: 32px 0px 0px 32px;
     }
     #search-bar > input, 
     #filter label > span:nth-child(2), 
@@ -498,7 +500,7 @@ footer li {
         border-radius: 32px;
     }
     button#desktop {
-        border-radius: 0px 40px 40px 0px;
+        border-radius: 0px 32px 32px 0px;
     }
     #filter label > span {
         border-radius: 64px;
@@ -796,10 +798,13 @@ footer li {
     }
     /* Tablet - border */
     #search-bar span {
-        border-radius: 24px 0px 0px 24px
+        border-radius: 20px 0px 0px 20px
     }
     #search-bar input {
         border-width: 3px;
+    }
+    button#desktop {
+        border-radius: 0px 20px 20px 0px;
     }
     #filter label > span {
         border-radius: 48px;
