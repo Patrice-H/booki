@@ -225,6 +225,9 @@ p.rate {
 main {
     margin: 35px 50px 0;
 }
+main .card {
+    position: relative;
+}
 #main-top {
     gap: 40px;
 }
@@ -254,8 +257,7 @@ main {
     border-radius: 20px;
 }
 #accommodations .content a {
-    border-radius: 20px;
-    
+    border-radius: 20px;   
 }
 #accommodations img {
     border-radius: 15px 15px 0px 0px;
@@ -276,24 +278,35 @@ main {
     flex-basis: 30%;
     flex-grow: 1;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    padding-bottom: 42px;
 }
 #accommodations .content a:hover {
     margin: -5px 5px 5px -5px;
     box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
 }
+#accommodations .card {
+    height: 100%;
+}
 #accommodations img {
     object-fit: cover;
     width: 100%;
-    height: 115px;
+    height: 114px;
 }
 #accommodations > p {
     margin: 40px 0 0;
 }
 #accommodations h3 {
-    margin: 12px 5px 6px 10px;
+    margin: 6px 5px 6px 10px;
 }
 #accommodations .card p {
+    position: absolute;
     margin: 6px 10px;
+}
+#accommodations p.price {
+    bottom: -7px;
+}
+#accommodations p.rate {
+    bottom: -27px;
 }
 /* aside - typography */
 #aside-top i {
@@ -343,16 +356,16 @@ aside img {
     height: 100%;
 }
 aside .card {
-    position: relative;
     height: 135px;
 }
 aside h3 {
-    margin-top: -128px;
-    padding-right: 5px;
+    margin-top: -133px;
+    line-height: 17px;
 }
 aside h3, 
 aside .card p {
     margin-left: 147px;
+    padding-right: 5px;
 }
 aside .price {
     margin-top: 6px;
@@ -373,9 +386,13 @@ aside .rate {
     padding-bottom: 40px;
 }
 #activities h3 {
-    margin: 20px;
+    position: absolute;
+    bottom: -40px;
+    line-height: 15px;
+    margin: 0 20px;
 }
 #activities a {
+    padding-bottom: 60px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
 }
 #activities a:hover {
@@ -392,32 +409,30 @@ aside .rate {
     gap: 40px;
     flex-wrap: wrap;
 }
-#activities .columnX4 {
+#activities .column {
     flex-basis: 20%;
     flex-grow: 1;
 }
-.rowX2 {
+.row {
     flex-direction: column;
     justify-content: space-between;
 }
-#vieux-port,
-#calanques {
+#activities .column:nth-child(1) img,
+#activities .column:nth-child(3) img {
     height: 390px;
 }
-#pomegues {
+#activities .column:nth-child(2) a:nth-child(1) img {
     height: 178px;
 }
-#frioul {
-    height: 110px;
-    object-position: center -15px;
+#activities .column:nth-child(2) a:nth-child(2) img {
+    height: 108px;
 }
-#nd-la-garde {
-    height: 138px;
+#activities .column:nth-child(4) a:nth-child(1) img {
+    height: 136px;
     object-position: center top;
 }
-#longchamp {
+#activities .column:nth-child(4) a:nth-child(2) img {
     height: 150px;
-    object-position: center top;
 }
 /* footer - text and background color */
 footer a:hover {
@@ -578,23 +593,23 @@ footer li {
     #accommodations {
         padding-bottom: 80px
     }
+    #accommodations .content a {
+        padding-bottom: 74px;
+    }
     #accommodations img {
         height: 230px;
     }
     #accommodations h3 {
-        margin: 20px 5px 12px 10px;
-    }
-    #accommodations a:nth-child(1) h3 {
-        margin-top: 10px;
+        margin: 12px 5px 6px 10px;
     }
     #accommodations .card p {
         margin: 12px 10px;
     }
-    #accommodations .card p.price {
-        margin-top: 34px;
+    #accommodations p.price {
+        bottom: -14px;
     }
-    #accommodations a:nth-child(1) p.price {
-        margin-top: 12px;
+    #accommodations p.rate {
+        bottom: -50px;
     }
     #accommodations > p {
         margin-top: 80px;
@@ -611,6 +626,7 @@ footer li {
     }
     aside h3 {
         margin-top: -256px;
+        line-height: 34px;
     }
     aside .price {
         margin-top: 12px;
@@ -626,30 +642,28 @@ footer li {
     #activities .content {
         margin-top: 40px;
     }
+    #activities a {
+        padding-bottom: 120px;
+    }
     #activities h3 {
-        margin: 40px;
+        margin: 0 40px;
+        bottom: -80px;
+        line-height: 30px;
     }
-    #activities .columnX4:nth-child(3) h3 {
-        margin: 22px 40px;
-    }
-    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
-        margin-left: 35px;
-        letter-spacing: -1px;
-    }
-    #vieux-port,
-    #calanques {
+    #activities .column:nth-child(1) img,
+    #activities .column:nth-child(3) img {
         height: 740px;
     }
-    #pomegues {
+    #activities .column:nth-child(2) a:nth-child(1) img {
         height: 356px;
     }
-    #frioul {
+    #activities .column:nth-child(2) a:nth-child(2) img {
         height: 220px;
     }
-    #nd-la-garde {
+    #activities .column:nth-child(4) a:nth-child(1) img {
         height: 276px;
     }
-    #longchamp {
+    #activities .column:nth-child(4) a:nth-child(2) img {
         height: 300px;
     }
     footer {
@@ -659,37 +673,16 @@ footer li {
         margin-top: 20px;
     }
 }
-    /* Screen HD - line break "Cannebière" */
-@media all and (min-width: 1984px) {
-    #accommodations a:nth-child(1) h3 {
-        margin-top: 20px;
-    }
-    #accommodations .card p.price {
-        margin-top: 12px;
-    }
-}
-    /* Screen HD - letter spacing "Notre Dame de la Garde" */
-@media all and (min-width: 2012px) {
-    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
-        margin: 40px;
-        letter-spacing: normal;
-    }
-}
-    /* screen HD - line break "Calanques" */
-@media all and (min-width: 2188px) {
-    #activities .columnX4:nth-child(3) h3 {
-        margin: 40px 40px 40px 35px;
-    }
-}
     /* Desktop - space reduction */
-@media all and (max-width: 1280px) {
+@media all and (max-width: 1279px) {
     header {
         margin-left: 40px;
     }
     main {
         margin: 35px 40px 0;
     }
-    #main-top {
+    #main-top, 
+    #activities .content{
         gap: 30px;
     }
     #main-top .content {
@@ -701,60 +694,12 @@ footer li {
     aside {
         padding: 0 30px;
     }
+    #activities .column:nth-child(1) img, 
+    #activities .column:nth-child(3) img {
+        height: 380px;
+    }
     footer {
         padding: 40px 150px 40px 40px;
-    }
-}
-    /* Desktop - line break "Calanques" */
-@media all and (max-width: 1240px) {
-    #activities .columnX4:nth-child(3) h3 {
-        margin: 11px 20px;
-        padding-right: 5px;
-    }
-}
-    /* Desktop - line break "coeur de l'eau" */
-@media all and (max-width: 1171px) {
-    aside a:nth-child(2) h3 {
-        margin-top: -133px;
-        line-height: 17px;
-    }
-}
-    /* Desktop - line break "Cannebiere" */
-@media all and (max-width: 1166px) {
-    #accommodations a:nth-child(1) p.price {
-        margin-top: 6px;
-    }
-    #accommodations .card p.price {
-        margin-top: 17px;
-    }
-    #accommodations a:nth-child(1) h3 {
-        margin-top: 5px;
-    }
-}
-    /* Desktop - letter spacing "Notre Dame de la Garde" */
-@media all and (max-width: 1144px) {
-    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
-        margin: 20px 0 20px 15px;
-        letter-spacing: -1px;
-    }
-}
-    /* Desktop - line break "les mouettes" */
-@media all and (max-width: 1035px) {
-    #accommodations a:nth-child(3) h3 {
-        margin-top: 5px;
-        padding-right: 5px;
-    }
-    #accommodations a:nth-child(3) p.price {
-        margin-top: 6px;
-    }
-}
-    /* Desktop - line break "Le Panier" */
-@media all and (max-width: 1008px) {
-    #accommodations a:nth-child(5) h3 {
-        margin-top: 5px;
-    }
-    #accommodations a:nth-child(5) p.price {
-        margin-top: 6px;
     }
 }
     /*** Tablet version ***/
@@ -910,19 +855,13 @@ footer li {
     aside img {
         width: 254px;
     }
-    aside a:nth-child(2) h3 {
-        line-height: 25px;
-    }
-    aside h3, 
-    aside a:nth-child(2) h3 {
-        margin-top: -244px;
-    }
-    aside a:nth-child(2) h3 {
+    aside h3 {
+        margin-top: -260px;
         line-height: normal;
     }
     aside h3, 
     aside .card p {
-        margin-left: 294px;
+        margin-left: 280px;
     }
     aside .rate {
         bottom: 8px;
@@ -934,42 +873,41 @@ footer li {
     }
     #accommodations .content a {
         flex-basis: 45%;
+        padding-bottom: 56px;
     }
     #accommodations img {
         height: 180px;
     }
-    #accommodations h3, 
-    #accommodations a:nth-child(1) h3, 
-    #accommodations a:nth-child(3) h3, 
-    #accommodations a:nth-child(5) h3 {
+    #accommodations h3 {
         margin-top: 10px;
     }
-    #accommodations a:nth-child(3) h3 {
-        padding-right: 0;
+    #accommodations p.price {
+        bottom: -3px;
     }
-    #accommodations .card p.price {
-        margin-top: 6px;
+    #accommodations p.rate {
+        bottom: -30px;
     }
     #activities {
         padding: 0 40px 40px;
     }
     #activities .content {
-        gap: 25px;
+        gap: 22px;
     }
-    #activities .columnX4 {
+    #activities a {
+        padding-bottom: 80px;
+    }
+    #activities .column {
         flex-basis: 40%;
     }
-    #activities .columnX4:nth-child(3) h3, 
-    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
-        margin: 20px;
-        letter-spacing: normal;
-        padding-right: 0;
+    #activities .column:nth-child(2) a:nth-child(1) img {
+        height: 165px;
     }
-    #frioul {
-        object-position: center -50px;
+    #activities .column:nth-child(4) a:nth-child(1) img {
+        height: 123px;
     }
-    #longchamp {
-        object-position: center;
+    #activities h3 {
+        bottom: -52px;
+        line-height: 20px;
     }
     #filter label:nth-child(8) {
         margin-right: 30px;
@@ -987,19 +925,6 @@ footer li {
     }
     footer li {
         margin-top: 20px
-    }
-}
-    /* Tablet - line break "Calanques" */
-@media all and (max-width: 844px) {
-    #activities .columnX4:nth-child(3) h3 {
-        margin: 4px 20px 0;
-        padding-bottom: 10px;
-    }
-}
-    /* Tablet - letter spacing "Notre Dame de la Garde" */
-@media all and (max-width: 773px) {
-    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
-        letter-spacing: -1px;
     }
 }
     /***  Mobile landscape orientation version ***/
@@ -1027,7 +952,7 @@ footer li {
     }    
     /* Mobile landscape - layout */
     header {
-        margin: 30px 30px 0;
+        margin: 20px 30px 0;
     }
     nav {
         flex-direction: column;
@@ -1080,7 +1005,6 @@ footer li {
     #filter-legend {
         margin: 0 30px 25px 0;
     }
-
     main {
         margin: 54px 0 0;
     }
@@ -1092,10 +1016,6 @@ footer li {
     }
     #aside-top {
         margin-top: 40px;
-    }
-    aside h3, 
-    aside .card p{
-        margin-left: 280px;
     }
     #accommodations {
         margin-top: 40px;
@@ -1110,22 +1030,13 @@ footer li {
         margin-top: 0;
     }
     #accommodations img {
-        height: 210px;
+        height: 226px;
     }
-    #accommodations h3, 
-    #accommodations a:nth-child(1) h3, 
-    #accommodations a:nth-child(3) h3, 
-    #accommodations a:nth-child(5) h3 {
-        margin: 14px 5px 5px 15px;
+    #accommodations p.price {
+        bottom: -20px;
     }
-    #accommodations .card p {
-        margin: 10px 15px 5px;
-    }
-    #accommodations .card p.price, 
-    #accommodations a:nth-child(1) p.price, 
-    #accommodations a:nth-child(3) p.price, 
-    #accommodations a:nth-child(5) p.price {
-        margin-top: 10px;
+    #accommodations p.rate {
+        bottom: -48px;
     }
     #accommodations > p {
         margin: 60px 0 0;
@@ -1135,33 +1046,26 @@ footer li {
         padding: 0 30px 75px;
     }
     #activities a {
-        padding-bottom: 0;
+        padding-bottom: 76px;
     }
     #activities .content {
         margin-top: 40px;
         gap: 40px;
     }
-    #vieux-port, 
-    #calanques, 
-    #pomegues, 
-    #frioul, 
-    #nd-la-garde, 
-    #longchamp {
+    #activities .column:nth-child(1) img, 
+    #activities .column:nth-child(3) img, 
+    #activities .column:nth-child(2) a:nth-child(1) img, 
+    #activities .column:nth-child(2) a:nth-child(2) img, 
+    #activities .column:nth-child(4) a:nth-child(1) img, 
+    #activities .column:nth-child(4) a:nth-child(2) img {
         height: 270px;
     }
-    #frioul {
-        object-position: center -10px;
-    }
-    .rowX2 {
+    .row {
         gap: 40px;
     }
-    #activities h3, 
-    #activities .columnX4:nth-child(3) h3 {
-        margin: 20px 30px;
-        padding-bottom: 0;
-    }
-    #activities .columnX4:nth-child(4) a:nth-child(1) h3 {
-        letter-spacing: normal;
+    #activities h3 {
+        margin: 0 30px;
+        bottom: -46px;
     }
     footer {
         flex-direction: column;
@@ -1180,7 +1084,7 @@ footer li {
     }
 }
     /*** Mobile portrait orientation version ***/
-@media all and (max-width: 480px) {
+@media all and (max-width: 479px) {
     /* Mobile portrait - typography */
     body,
     h1 + p, 
@@ -1233,7 +1137,7 @@ footer li {
     }
     /* Mobile portrait - layout */
     header {
-        margin: 30px 20px 0;
+        margin: 20px 20px 0;
     }
     nav {
         margin: 0 -20px;
@@ -1242,7 +1146,7 @@ footer li {
         height: 36px;
     }
     #nav-links {
-        margin-top: 36px;
+        margin-top: 32px;
     }
     #logo img {
         width: 95px;
@@ -1272,7 +1176,7 @@ footer li {
         min-width: 50px;
     }
     #filter {
-        margin: 35px -20px 30px 0;
+        margin: 30px -20px 30px 0;
     }
     #filter-legend {
         margin: 0 30px 20px 0;
@@ -1330,9 +1234,9 @@ footer li {
     aside .card p {
         margin-left: 147px;
     }
-    aside h3, 
-    aside a:nth-child(2) h3 {
-        margin-top: -128px;
+    aside h3 {
+        margin-top: -133px;
+        line-height: 17px;
     }
     aside .rate {
         bottom: 3px;
@@ -1344,20 +1248,20 @@ footer li {
     #accommodations img {
         height: 114px;
     }
-    #accommodations h3, 
-    #accommodations a:nth-child(1) h3, 
-    #accommodations a:nth-child(3) h3, 
-    #accommodations a:nth-child(5) h3 {
+    #accommodations h3 {
         margin: 7px 5px 5px 10px;
+    }
+    #accommodations .content a {
+        padding-bottom: 39px;
     }
     #accommodations .card p {
         margin: 5px 10px;
     }
-    #accommodations .card p.price, 
-    #accommodations a:nth-child(1) p.price, 
-    #accommodations a:nth-child(3) p.price, 
-    #accommodations a:nth-child(5) p.price {
-        margin-top: 5px;
+    #accommodations p.price {
+        bottom: -15px;
+    }
+    #accommodations p.rate {
+        bottom: -34px;
     }
     #accommodations > p {
         margin: 25px 0 0;
@@ -1371,20 +1275,23 @@ footer li {
         margin-top: 25px;
         gap: 25px;
     }
-    #vieux-port, 
-    #calanques, 
-    #pomegues, 
-    #frioul, 
-    #nd-la-garde, 
-    #longchamp {
+    #activities a {
+        padding-bottom: 52px;
+    }
+    #activities .column:nth-child(1) img, 
+    #activities .column:nth-child(3) img, 
+    #activities .column:nth-child(2) a:nth-child(1) img, 
+    #activities .column:nth-child(2) a:nth-child(2) img, 
+    #activities .column:nth-child(4) a:nth-child(1) img, 
+    #activities .column:nth-child(4) a:nth-child(2) img {
         height: 130px;
     }
-    .rowX2 {
+    .row {
         gap: 25px;
     }
-    #activities h3, 
-    #activities .columnX4:nth-child(3) h3 {
-        margin: 17px 20px;
+    #activities h3 {
+        margin: 0 20px;
+        bottom: -35px;
     }    
     footer {
         padding: 10px 0 50px 30px;
